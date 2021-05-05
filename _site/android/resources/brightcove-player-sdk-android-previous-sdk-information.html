@@ -1,0 +1,3783 @@
+﻿<!doctype html>
+<html lang="es-es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="En este tema se muestran las versiones anteriores del SDK y del complemento del SDK del Reproductor nativo para Android.">
+  
+  <title>Brightcove Player SDK para Android: Información anterior del SDK</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">  
+  <link data-react-helmet="true" rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500&amp;display=swap">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/prism.css">
+  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/styles.css">
+  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/landing-page.css">
+  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/tabs.css">
+  <link rel="stylesheet" href="/assets/css/local.css">
+  <link data-react-helmet="true" rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500&display=swap">
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/381443caa8.js" crossorigin="anonymous"></script>
+  <script src="https://support.brightcove.com/site-assets/js/site/google-analytics.js"></script>
+  <script src="/assets/js/sajari-head.js"></script>
+</head>
+
+<body class="body">
+
+<header>
+  <div class="div-header">
+    <a href="/"><img class="product-logo" src="https://support.brightcove.com/site-assets/images/site/product-logos/Video_Cloud_Logo.svg" alt="logotipo del producto" style="max-height: 100px;max-width: 232px;"/></a>
+<!-- GTranslate: https://gtranslate.io/ -->
+<select onchange="doGTranslate(this);"><option value="">Seleccionar idioma</option><option value="en|en" translate="No">English</option><option value="en|zh-TW" translate="No">繁體中文</option><option value="en|fr" translate="No">Français</option><option value="en|de" translate="No">Deutsche</option><option value="en|ja" translate="No">日本語</option><option value="en|ko" translate="No">한국어</option><option value="en|es" translate="No">Español</option></select>
+
+<script>
+/* <![CDATA[ */
+function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;if(lang_pair=='')return;var lang=lang_pair.split('|')[1];var plang=location.hostname.split('.')[0];if(plang.length !=2 && plang.toLowerCase() != 'zh-cn' && plang.toLowerCase() != 'zh-tw')plang='en';location.href=location.protocol+'//'+(lang == 'en' ? '' : lang+'.')+location.hostname.replace('www.', '').replace(RegExp('^' + plang + '\\.'), '')+location.pathname+location.search;}
+/* ]]> */
+</script>
+
+    
+
+
+    <span class="secondary-nav"><a href="https://supportportal.brightcove.com/s/login/?"><img src="https://support.brightcove.com/site-assets/images/site/support.png" alt="soporte"/> Contactar con Soporte</a> <span style="vertical-align: top;margin-left:1em;margin-right:1em;">|</span> <a href="https://status.brightcove.com/">Estado<img src="https://support.brightcove.com/site-assets/images/site/status.png" alt="estado del sistema"/> del sistema</a></span> <br/>
+    
+  </div>
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb arr-right">
+      
+      <li class="breadcrumb-item"><a href="/">Inicio</a></li>
+      
+      
+      
+      <li class="breadcrumb-item">Recursos<a href="/android/resources/"></a></li>
+      
+      <li class="breadcrumb-item active" aria-current="page">Brightcove Player SDK para Android: Información anterior del SDK</li>
+    </ol>
+  </nav>
+</header>
+<div class="container">
+    <div class="row">
+            <div class="col-sm-3 left-side-bar">
+        <select id="site_select" class="bcls-select" style="margin-right: 1rem;">
+          <option value="">Otros documentos de Brightcove</option>
+          
+            
+              <option value="https://support.brightcove.com">Documentación Inicio</option>
+            
+          
+            
+              <option value="https://audience.support.brightcove.com">Audiencia de Brightcove</option>
+            
+          
+            
+              <option value="https://beacon.support.brightcove.com">Baliza Brightcove</option>
+            
+          
+            
+              <option value="https://campaign.support.brightcove.com">Campaña de Brightcove</option>
+            
+          
+            
+              <option value="https://engage.support.brightcove.com">Brightcove Engage</option>
+            
+          
+            
+              <option value="https://live.support.brightcove.com">Brightcove Live</option>
+            
+          
+            
+              <option value="https://gallery.support.brightcove.com">Brightcove Gallery</option>
+            
+          
+            
+              <option value="https://ssai.support.brightcove.com">Brightcove SSAI</option>
+            
+          
+            
+              <option value="https://social.support.brightcove.com">Brightcove Social</option>
+            
+          
+            
+              <option value="https://studio.support.brightcove.com">Video Cloud Studio</option>
+            
+          
+            
+              <option value="https://player.support.brightcove.com">Desarrollo de jugadores de Brightcove</option>
+            
+          
+            
+              <option value="https://apis.support.brightcove.com">API para la plataforma de Video Cloud</option>
+            
+          
+            
+              <option value="https://sdks.support.brightcove.com">SDK de dispositivos de Video Cloud</option>
+            
+          
+            
+              <option value="https://integrations.support.brightcove.com">Integraciones y conectores CMS</option>
+            
+          
+            
+              <option value="https://general.support.brightcove.com">Información general de Video Cloud</option>
+            
+          
+            
+              <option value="https://zencoder.support.brightcove.com">Zencoder</option>
+            
+          
+        </select>
+
+        <nav class="sidenav" id="side_nav">
+          
+            
+            <h5><a href="/index.html">Inicio</a></h5>
+            
+          
+            
+              <select id="site_select" class="bcls-select" style="margin-right: 1rem;">
+					<option value="">기타 브라이트코브 문서</option>
+					
+						
+							<option value="https://support.brightcove.com">설명서 홈</option>
+						
+					
+						
+							<option value="https://audience.support.brightcove.com">브라이트코브 대상</option>
+						
+					
+						
+							<option value="https://beacon.support.brightcove.com">브라이트코브 비콘</option>
+						
+					
+						
+							<option value="https://campaign.support.brightcove.com">브라이트코브 캠페인</option>
+						
+					
+						
+							<option value="https://engage.support.brightcove.com">브라이트코브 참여</option>
+						
+					
+						
+							<option value="https://live.support.brightcove.com">Brightcove Live</option>
+						
+					
+						
+							<option value="https://gallery.support.brightcove.com">Brightcove Gallery</option>
+						
+					
+						
+							<option value="https://ssai.support.brightcove.com">Brightcove SSAI</option>
+						
+					
+						
+							<option value="https://social.support.brightcove.com">브라이트코브 소셜</option>
+						
+					
+						
+							<option value="https://studio.support.brightcove.com">비디오 클라우드 스튜디오</option>
+						
+					
+						
+							<option value="https://player.support.brightcove.com">브라이트코브 플레이어 개발</option>
+						
+					
+						
+							<option value="https://apis.support.brightcove.com">비디오 클라우드 플랫폼 API</option>
+						
+					
+						
+							<option value="https://sdks.support.brightcove.com">비디오 클라우드 디바이스 SDK</option>
+						
+					
+						
+							<option value="https://integrations.support.brightcove.com">통합 및 CMS 커넥터</option>
+						
+					
+						
+							<option value="https://general.support.brightcove.com">비디오 클라우드 일반 정보</option>
+						
+					
+						
+							<option value="https://zencoder.support.brightcove.com">Zencoder</option>
+						
+			<h5 class="submenu-header"><a href="/getting-started/index.html"><strong>+</strong> Empezar</a></h5>		
+				</select>
+        <nav class="sidenav" id="side_nav">
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li>Los SDK nativos de Brightcove<a href="/getting-started/brightcove-native-player-sdks.html"></a></li>
+                  
+                
+                  
+                    <li>Reproducción nativa de vídeo<a href="/getting-started/native-video-playback.html"></a></li>
+                  
+                
+                  
+                    <li>Características nativas del SDK<a href="/getting-started/brightcove-native-sdk-features.html"></a></li>
+                  
+                
+                  
+                    <li>Tabla de soporte de funciones<a href="/getting-started/brightcove-native-sdks-feature-support.html"></a></li>
+                  
+                
+                  
+                    <li>Ejecución de aplicaciones de ejemplo de Android<a href="/getting-started/running-sample-apps-native-sdk-android.html"></a></li>
+                  
+                
+                  
+                    <li>Ejecución de aplicaciones de ejemplo de iOS/tvOS<a href="/getting-started/running-sample-apps-native-sdk-ios.html"></a></li>
+                  
+                
+                  
+                    <li>Vídeos de capacitación nativos sobre SDK<a href="/getting-started/brightcove-native-sdks-training-videos.html"></a></li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header">Características +<a href="/features/index.html"><strong></strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/features/using-360deg-videos-native-sdks.html">Vídeo de 360 grados</a></li>
+                  
+                
+                  
+                    <li><a href="/features/advertising-sdks.html">Publicidad</a></li>
+                  
+                
+                  
+                    <li><a href="/features/analytics-sdks.html">Analytics</a></li>
+                  
+                
+                  
+                    <li><a href="/features/using-captions-brightcove-native-sdks.html">Leyendas</a></li>
+                  
+                
+                  
+                    <li><a href="/features/connected-tv-set-top-box-apps.html">TV conectada</a></li>
+                  
+                
+                  
+                    <li><a href="/features/content-security-drm-native-player-sdks.html">Seguridad de contenido (DRM)</a></li>
+                  
+                
+                  
+                    <li><a href="/features/cross-device-resume-sdks.html">Reanudamiento entre dispositivos</a></li>
+                  
+                
+                  
+                    <li>Transmisiones en vivo<a href="/features/live-streams-native-sdks.html"></a></li>
+                  
+                
+                  
+                    <li>Varias pistas de audio<a href="/features/multiple-audio-tracks-native-sdks.html"></a></li>
+                  
+                
+                  
+                    <li>Reproducción sin conexión<a href="/features/offline-playback-native-player-sdks.html"></a></li>
+                  
+                
+                  
+                    <li>Controles de<a href="/features/brightcove-native-player-controls.html"></a></li>
+                  
+                
+                  
+                    <li>Imagen en imagen<a href="/features/picture-picture-native-sdks.html"></a></li>
+                  
+                
+                  
+                    <li>Formatos de vídeo y subtítulos<a href="/features/video-formats-and-captioning-native-sdks.html"></a></li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/android/index.html">Desarrollo de Android <strong>+</strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li class="submenu-header">
+                      <a href="/android/basics/index.html">Conceptos básicos <strong>+</strong></a>
+                      <ul class="sidenav-subsubmenu" style="display:none;">
+                        
+                        <li>v6.16.0:<a href="/android/basics/overview-brightcove-player-sdk-android.html"> Descripción general de Player SDK para Android</a></li>
+                        
+                        <li><a href="/android/basics/architecture-brightcove-player-sdk-android.html">La arquitectura</a></li>
+                        
+                        <li><a href="/android/basics/android-understanding-brightcoveplayer-class.html">Clase BrightCovePlayer</a></li>
+                        
+                        <li><a href="/android/basics/android-choosing-video-view.html">Elegir una vista de vídeo</a></li>
+                        
+                        <li><a href="/android/basics/android-brightcove-registration.html">Registro de Brightcove</a></li>
+                        
+                        <li>Descripción de los eventos<a href="/android/basics/understanding-events-native-sdk-android.html"></a></li>
+                        
+                        <li>Trabajar con contenido multimedia<a href="/android/basics/android-working-media-content.html"></a></li>
+                        
+                        <li>Vídeos de capacitación nativos sobre SDK<a href="/android/basics/training-demand-developing-brightcove-native-player-sdk-android.html"></a></li>
+                        
+                        <li>Paso a paso:<a href="/android/basics/step-step-simple-video-app-using-native-sdk-android.html"> Aplicación de vídeo simple</a></li>
+                        
+                      </ul>
+                    </li>
+                  
+                
+                  
+                    <li class="submenu-header">
+                      <a href="/android/advertising/index.html">Publicidad <strong>+</strong></a>
+                      <ul class="sidenav-subsubmenu" style="display:none;">
+                        
+                        <li><a href="/android/advertising/android-ad-ui-customization-server-side-ad-insertion-ssai.html">Personalización de la interfaz de usuario de anuncios con SSAI</a></li>
+                        
+                        <li><a href="/features/appending-ad-query-params-native-sdks.html">Anexar parámetros de consulta de anuncios</a></li>
+                        
+                        <li><a href="/features/ima-open-measurement-native-sdks.html">Medición abierta IMA</a></li>
+                        
+                        <li><a href="/android/advertising/migrating-to-ima-plugin-6-15-0.html">Complemento IMA 6.15.0</a></li>
+                        
+                        <li><a href="/features/implementing-client-side-ads-native-sdks.html">Implementación de anuncios del lado del cliente (CSAI)</a></li>
+                        
+                        <li><a href="/features/implementing-server-side-ads-native-player-sdks.html">Implementación de anuncios del lado del servidor (SSAI)</a></li>
+                        
+                        <li><a href="/android/advertising/using-pulse-plugin-native-sdk-android.html">Complemento Invidi Pulse</a></li>
+                        
+                        <li>Complemento SSAI para Android<a href="/android/advertising/ssai-plugin-native-sdk-android.html"></a></li>
+                        
+                      </ul>
+                    </li>
+                  
+                
+                  
+                    <li class="submenu-header">
+                      <a href="/android/analytics/index.html">Analytics <strong>+</strong></a>
+                      <ul class="sidenav-subsubmenu" style="display:none;">
+                        
+                        <li><a href="/android/analytics/analytics-related-offline-playback-native-sdks.html">Análisis relacionados con la reproducción sin conexión</a></li>
+                        
+                        <li>Envío de Brightcove Analytics<a href="/android/analytics/sending-brightcove-analytics-native-sdk-android.html"></a></li>
+                        
+                        <li>Visualización de Brightcove Analytics<a href="/features/viewing-brightcove-analytics-player-sdks.html"></a></li>
+                        
+                      </ul>
+                    </li>
+                  
+                
+                  
+                    <li class="submenu-header">
+                      <a href="/android/captions/index.html">Leyendas <strong>+</strong></a>
+                      <ul class="sidenav-subsubmenu" style="display:none;">
+                        
+                        <li>Eliminación de la imagen de fondo de subtítulos<a href="/android/captions/removing-android-captions-background-image.html"></a></li>
+                        
+                        <li>Selección de subtítulos mediante programación<a href="/android/captions/selecting-captions-programmatically-native-sdk-android.html"></a></li>
+                        
+                        <li>Sincronización de subtítulos WebVTT<a href="/features/synchronizing-webvtt-captions.html"></a></li>
+                        
+                      </ul>
+                    </li>
+                  
+                
+                  
+                    <li class="submenu-header">
+                      <a href="/android/tv/index.html">TV conectada <strong>+</strong></a>
+                      <ul class="sidenav-subsubmenu" style="display:none;">
+                        
+                        <li><a href="/android/tv/cast-plugin-native-sdk-android.html">Complemento Chromecast</a></li>
+                        
+                        <li><a href="/features/connected-tv-set-top-box-apps.html">Aplicaciones de TV conectadas</a></li>
+                        
+                        <li><a href="/android/tv/customizing-android-tv-controls.html">Personalización de los controles de Android TV</a></li>
+                        
+                      </ul>
+                    </li>
+                  
+                
+                  
+                    <li class="submenu-header">
+                      <a href="/android/content-protection/index.html">Protección de contenido <strong>+</strong></a>
+                      <ul class="sidenav-subsubmenu" style="display:none;">
+                        
+                        <li><a href="/features/content-security-drm-native-player-sdks.html">Seguridad de contenido (DRM)</a></li>
+                        
+                      </ul>
+                    </li>
+                  
+                
+                  
+                    <li class="submenu-header">
+                      <a href="/android/framework/index.html">Framework <strong>+</strong></a>
+                      <ul class="sidenav-subsubmenu" style="display:none;">
+                        
+                        <li><a href="/android/framework/android-adding-viewmanaging-layout.html">Adición de vista/Administración de presentación</a></li>
+                        
+                        <li><a href="/android/framework/android-pie-support-native-sdk-android.html">Soporte para Android Pie</a></li>
+                        
+                        <li><a href="/android/framework/creating-plugin-native-sdk-android.html">Creación de un Plugin</a></li>
+                        
+                        <li>Migración a ExoPlayer 2 Framework<a href="/android/framework/migrating-exoplayer-2-framework.html"></a></li>
+                        
+                        <li>Cambiar el tamaño de la vista de vídeo<a href="/android/framework/resizing-video-view.html"></a></li>
+                        
+                      </ul>
+                    </li>
+                  
+                
+                  
+                    <li class="submenu-header">
+                      Vivo +<a href="/android/live/index.html"><strong></strong></a>
+                      <ul class="sidenav-subsubmenu" style="display:none;">
+                        
+                        <li>Uso de Live SSAI<a href="/features/using-live-ssai-native-sdks.html"></a></li>
+                        
+                        <li>Mejoras del jugador para SSAI en vivo<a href="/features/using-player-enhancements-live-ssai-native-sdks.html"></a></li>
+                        
+                        <li><a href="/features/client-side-ads-with-live-ssai.html">Anuncios pre-roll del lado del cliente con SSAI en vivo</a></li>
+                        
+                      </ul>
+                    </li>
+                  
+                
+                  
+                    <li class="submenu-header">
+                      Reproducción +<a href="/android/playback/index.html"><strong></strong></a>
+                      <ul class="sidenav-subsubmenu" style="display:none;">
+                        
+                        <li><a href="/android/playback/hevc-selection-native-sdk-android.html">Selección HEVC</a></li>
+                        
+                        <li><a href="/android/playback/hls-playback-native-sdk-android.html">Reproducción HLS</a></li>
+                        
+                        <li>Localización del Reproductor<a href="/features/localization-with-native-sdks.html"></a></li>
+                        
+                        <li>Administrar los controles del reproductor<a href="/android/playback/android-managing-player-controls.html"></a></li>
+                        
+                        <li>Varias pistas de audio para reproducción sin conexión<a href="/android/playback/multiple-audio-tracks-offline-playback-native-sdk-android.html"></a></li>
+                        
+                        <li>Reproducción sin conexión<a href="/features/offline-playback-native-player-sdks.html"></a></li>
+                        
+                        <li>Cambio de orientación<a href="/android/playback/handling-orientation-change-native-sdk-android.html"></a></li>
+                        
+                        <li>Selección de origen<a href="/android/playback/android-source-selection.html"></a></li>
+                        
+                        <li>Objetos de vídeo y lista de reproducción de JSON<a href="/android/playback/video-and-playlist-objects-json.html"></a></li>
+                        
+                      </ul>
+                    </li>
+                  
+                
+                  
+                    <li class="submenu-header">
+                      Solución de problemas +<a href="/android/troubleshooting/index.html"><strong></strong></a>
+                      <ul class="sidenav-subsubmenu" style="display:none;">
+                        
+                        <li><a href="/android/troubleshooting/error-messages-native-sdk-android.html">Guía de mensajes de error</a></li>
+                        
+                        <li>Eliminación de mensajes de registro de Android<a href="/android/troubleshooting/removing-android-log-messages.html"></a></li>
+                        
+                      </ul>
+                    </li>
+                  
+                
+                  
+                    <li class="submenu-header">
+                      Recursos +<a href="/android/resources/index.html"><strong></strong></a>
+                      <ul class="sidenav-subsubmenu" style="display:none;">
+                        
+                        <li><a href="https://github.com/BrightcoveOS/android-player-samples">Ejemplos de código de Android</a></li>
+                        
+                        <li><a href="/android/resources/code-snippets-using-native-sdk-android.html">Fragmentos de código</a></li>
+                        
+                        <li>Referencia de SDK nativo para Android<a href="https://docs.brightcove.com/android-sdk/javadoc/index.html"></a></li>
+                        
+                        <li>Referencias del complemento<a href="https://docs.brightcove.com/index.html"></a></li>
+                        
+                        <li>Versiones anteriores<a href="/android/resources/brightcove-player-sdk-android-previous-sdk-information.html"></a></li>
+                        
+                        <li>Notas de versión<a href="/android/resources/brightcove-native-sdk-android-release-notes.html"></a></li>
+                        
+                      </ul>
+                    </li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/ios/index.html">Desarrollo iOS <strong>+</strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li class="submenu-header">
+                      <a href="/ios/basics/index.html">Conceptos básicos <strong>+</strong></a>
+                      <ul class="sidenav-subsubmenu" style="display:none;">
+                        
+                        <li>v6.8.1:<a href="/ios/basics/overview-brightcove-player-sdk-ios.html"> Descripción general de Player SDK para iOS</a></li>
+                        
+                        <li><a href="/ios/basics/architecture-brightcove-player-sdk-ios.html">La arquitectura</a></li>
+                        
+                        <li><a href="/ios/basics/ios-brightcove-registration.html">Registro de Brightcove</a></li>
+                        
+                        <li>Trabajar con contenido multimedia<a href="/ios/basics/ios-working-media-content.html"></a></li>
+                        
+                        <li>Descripción de los eventos<a href="/ios/basics/understanding-events-native-sdk-ios.html"></a></li>
+                        
+                        <li>Vídeos de capacitación nativos sobre SDK<a href="/ios/basics/training-demand-developing-brightcove-native-player-sdk-ios.html"></a></li>
+                        
+                        <li>Paso a paso:<a href="/ios/basics/step-step-simple-video-app-using-objective-c.html"> Aplicación de vídeo simple usando Objective-C</a></li>
+                        
+                        <li>Paso a paso:<a href="/ios/basics/step-step-simple-video-app-using-swift.html"> Aplicación de vídeo simple usando Swift</a></li>
+                        
+                      </ul>
+                    </li>
+                  
+                
+                  
+                    <li class="submenu-header">
+                      <a href="/ios/advertising/index.html">Publicidad <strong>+</strong></a>
+                      <ul class="sidenav-subsubmenu" style="display:none;">
+                        
+                        <li><a href="/features/implementing-client-side-ads-native-sdks.html">Implementación de anuncios del lado del cliente (CSAI)</a></li>
+                        
+                        <li><a href="/features/implementing-server-side-ads-native-player-sdks.html">Implementación de anuncios del lado del servidor (SSAI)</a></li>
+                        
+                        <li><a href="/features/appending-ad-query-params-native-sdks.html">Anexar parámetros de consulta de anuncios</a></li>
+                        
+                        <li><a href="/features/ima-open-measurement-native-sdks.html">Medición abierta IMA</a></li>
+                        
+                      </ul>
+                    </li>
+                  
+                
+                  
+                    <li class="submenu-header">
+                      <a href="/ios/analytics/index.html">Analytics <strong>+</strong></a>
+                      <ul class="sidenav-subsubmenu" style="display:none;">
+                        
+                        <li>Envío de Brightcove Analytics<a href="/ios/analytics/sending-brightcove-analytics-native-sdk-ios.html"></a></li>
+                        
+                        <li>Visualización de Brightcove Analytics<a href="/features/viewing-brightcove-analytics-player-sdks.html"></a></li>
+                        
+                      </ul>
+                    </li>
+                  
+                
+                  
+                    <li class="submenu-header">
+                      <a href="/ios/captions/index.html">Leyendas <strong>+</strong></a>
+                      <ul class="sidenav-subsubmenu" style="display:none;">
+                        
+                        <li>Sincronización de subtítulos WebVTT<a href="/features/synchronizing-webvtt-captions.html"></a></li>
+                        
+                      </ul>
+                    </li>
+                  
+                
+                  
+                    <li class="submenu-header">
+                      <a href="/ios/tv/index.html">TV conectada <strong>+</strong></a>
+                      <ul class="sidenav-subsubmenu" style="display:none;">
+                        
+                        <li><a href="https://github.com/brightcove/brightcove-player-sdk-ios-googlecast">Complemento Chromecast</a></li>
+                        
+                        <li><a href="/features/connected-tv-set-top-box-apps.html">Aplicaciones de TV conectadas</a></li>
+                        
+                      </ul>
+                    </li>
+                  
+                
+                  
+                    <li class="submenu-header">
+                      <a href="/ios/content-protection/index.html">Protección de contenido <strong>+</strong></a>
+                      <ul class="sidenav-subsubmenu" style="display:none;">
+                        
+                        <li><a href="/features/content-security-drm-native-player-sdks.html">Seguridad de contenido (DRM)</a></li>
+                        
+                      </ul>
+                    </li>
+                  
+                
+                  
+                    <li class="submenu-header">
+                      <a href="/ios/framework/index.html">Framework <strong>+</strong></a>
+                      <ul class="sidenav-subsubmenu" style="display:none;">
+                        
+                        <li>Trabajar con seguridad de transporte de aplicaciones (ATS)<a href="/ios/framework/working-app-transport-security-ats.html"></a></li>
+                        
+                      </ul>
+                    </li>
+                  
+                
+                  
+                    <li class="submenu-header">
+                      Vivo +<a href="/ios/live/index.html"><strong></strong></a>
+                      <ul class="sidenav-subsubmenu" style="display:none;">
+                        
+                        <li>Uso de Live SSAI<a href="/features/using-live-ssai-native-sdks.html"></a></li>
+                        
+                        <li>Mejoras del jugador para SSAI en vivo<a href="/features/using-player-enhancements-live-ssai-native-sdks.html"></a></li>
+                        
+                        <li><a href="/features/client-side-ads-with-live-ssai.html">Anuncios pre-roll del lado del cliente con SSAI en vivo</a></li>
+                        
+                      </ul>
+                    </li>
+                  
+                
+                  
+                    <li class="submenu-header">
+                      Reproducción +<a href="/ios/playback/index.html"><strong></strong></a>
+                      <ul class="sidenav-subsubmenu" style="display:none;">
+                        
+                        <li>Localización del Reproductor<a href="/features/localization-with-native-sdks.html"></a></li>
+                        
+                        <li>Reproducción sin conexión<a href="/features/offline-playback-native-player-sdks.html"></a></li>
+                        
+                        <li>Selección de origen<a href="/ios/playback/ios-source-selection.html"></a></li>
+                        
+                      </ul>
+                    </li>
+                  
+                
+                  
+                    <li class="submenu-header">
+                      Solución de problemas +<a href="/ios/troubleshooting/index.html"><strong></strong></a>
+                      <ul class="sidenav-subsubmenu" style="display:none;">
+                        
+                        <li><a href="/ios/troubleshooting/error-handling-native-sdk-ios.html">Gestión de errores</a></li>
+                        
+                      </ul>
+                    </li>
+                  
+                
+                  
+                    <li class="submenu-header">
+                      Recursos +<a href="/ios/resources/index.html"><strong></strong></a>
+                      <ul class="sidenav-subsubmenu" style="display:none;">
+                        
+                        <li><a href="https://github.com/BrightcoveOS/ios-player-samples">Ejemplos de código iOS</a></li>
+                        
+                        <li><a href="/ios/resources/code-snippets-using-native-sdk-ios.html">Fragmentos de código</a></li>
+                        
+                        <li>Referencia de SDK nativo para iOS<a href="https://docs.brightcove.com/ios-sdk/index.html"></a></li>
+                        
+                        <li>Referencias del complemento<a href="https://docs.brightcove.com/index.html"></a></li>
+                        
+                        <li>Notas de versión<a href="https://github.com/brightcove/brightcove-player-sdk-ios/blob/master/CHANGELOG.md"></a></li>
+                        
+                        <li>Versiones anteriores<a href="/ios/resources/brightcove-player-sdk-ios-previous-sdk-information.html"></a></li>
+                        
+                      </ul>
+                    </li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header">Desarrollo de tvOS +<a href="/tvos/index.html"><strong></strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li class="submenu-header">
+                      <a href="/tvos/basics/index.html">Conceptos básicos <strong>+</strong></a>
+                      <ul class="sidenav-subsubmenu" style="display:none;">
+                        
+                        <li>v6.8.1:<a href="/tvos/basics/overview-brightcove-player-sdk-tvos.html"> Descripción general de Player SDK para tvOS</a></li>
+                        
+                        <li><a href="/ios/basics/architecture-brightcove-player-sdk-ios.html">La arquitectura</a></li>
+                        
+                        <li><a href="/ios/basics/ios-brightcove-registration.html">Registro de Brightcove</a></li>
+                        
+                        <li>Trabajar con contenido multimedia<a href="/ios/basics/ios-working-media-content.html"></a></li>
+                        
+                        <li>Descripción de los eventos<a href="/ios/basics/understanding-events-native-sdk-ios.html"></a></li>
+                        
+                        <li><a href="/features/connected-tv-set-top-box-apps.html">Aplicaciones de TV conectadas</a></li>
+                        
+                        <li>Vídeos de capacitación nativos sobre SDK<a href="/ios/basics/training-demand-developing-brightcove-native-player-sdk-ios.html"></a></li>
+                        
+                        <li>Paso a paso:<a href="/tvos/basics/step-step-simple-tv-video-app-using-swift.html"> Aplicación Simple TV Video usando Swift</a></li>
+                        
+                      </ul>
+                    </li>
+                  
+                
+                  
+                    <li class="submenu-header">
+                      <a href="/tvos/advertising/index.html">Publicidad <strong>+</strong></a>
+                      <ul class="sidenav-subsubmenu" style="display:none;">
+                        
+                        <li><a href="/features/implementing-client-side-ads-native-sdks.html">Implementación de anuncios del lado del cliente (CSAI)</a></li>
+                        
+                        <li><a href="/features/implementing-server-side-ads-native-player-sdks.html">Implementación de anuncios del lado del servidor (SSAI)</a></li>
+                        
+                        <li><a href="/features/appending-ad-query-params-native-sdks.html">Anexar parámetros de consulta de anuncios</a></li>
+                        
+                        <li><a href="/features/ima-open-measurement-native-sdks.html">Medición abierta IMA</a></li>
+                        
+                      </ul>
+                    </li>
+                  
+                
+                  
+                    <li class="submenu-header">
+                      <a href="/tvos/analytics/index.html">Analytics <strong>+</strong></a>
+                      <ul class="sidenav-subsubmenu" style="display:none;">
+                        
+                        <li>Envío de Brightcove Analytics<a href="/ios/analytics/sending-brightcove-analytics-native-sdk-ios.html"></a></li>
+                        
+                        <li>Visualización de Brightcove Analytics<a href="/features/viewing-brightcove-analytics-player-sdks.html"></a></li>
+                        
+                      </ul>
+                    </li>
+                  
+                
+                  
+                    <li class="submenu-header">
+                      <a href="/tvos/captions/index.html">Leyendas <strong>+</strong></a>
+                      <ul class="sidenav-subsubmenu" style="display:none;">
+                        
+                        <li>Sincronización de subtítulos WebVTT<a href="/features/synchronizing-webvtt-captions.html"></a></li>
+                        
+                      </ul>
+                    </li>
+                  
+                
+                  
+                    <li class="submenu-header">
+                      <a href="/tvos/content-protection/index.html">Protección de contenido <strong>+</strong></a>
+                      <ul class="sidenav-subsubmenu" style="display:none;">
+                        
+                        <li><a href="/features/content-security-drm-native-player-sdks.html">Seguridad de contenido (DRM)</a></li>
+                        
+                        <li><a href="/tvos/content-protection/adding-fairplay-protection-your-apple-tv-apps.html">Apple TV con FairPlay</a></li>
+                        
+                      </ul>
+                    </li>
+                  
+                
+                  
+                    <li class="submenu-header">
+                      <a href="/tvos/framework/index.html">Framework <strong>+</strong></a>
+                      <ul class="sidenav-subsubmenu" style="display:none;">
+                        
+                        <li>Trabajar con seguridad de transporte de aplicaciones (ATS)<a href="/ios/framework/working-app-transport-security-ats.html"></a></li>
+                        
+                      </ul>
+                    </li>
+                  
+                
+                  
+                    <li class="submenu-header">
+                      Vivo +<a href="/tvos/live/index.html"><strong></strong></a>
+                      <ul class="sidenav-subsubmenu" style="display:none;">
+                        
+                        <li>Uso de Live SSAI<a href="/features/using-live-ssai-native-sdks.html"></a></li>
+                        
+                        <li>Mejoras del jugador para SSAI en vivo<a href="/features/using-player-enhancements-live-ssai-native-sdks.html"></a></li>
+                        
+                        <li><a href="/features/client-side-ads-with-live-ssai.html">Anuncios pre-roll del lado del cliente con SSAI en vivo</a></li>
+                        
+                      </ul>
+                    </li>
+                  
+                
+                  
+                    <li class="submenu-header">
+                      Reproducción +<a href="/tvos/playback/index.html"><strong></strong></a>
+                      <ul class="sidenav-subsubmenu" style="display:none;">
+                        
+                        <li><a href="/tvos/playback/apple-tv-ui-controls-native-sdk-tvos.html">Controles de la interfaz de usuario</a></li>
+                        
+                        <li>Localización del Reproductor<a href="/features/localization-with-native-sdks.html"></a></li>
+                        
+                        <li>Selección de origen<a href="/ios/playback/ios-source-selection.html"></a></li>
+                        
+                      </ul>
+                    </li>
+                  
+                
+                  
+                    <li class="submenu-header">
+                      Solución de problemas +<a href="/tvos/troubleshooting/index.html"><strong></strong></a>
+                      <ul class="sidenav-subsubmenu" style="display:none;">
+                        
+                        <li><a href="/ios/troubleshooting/error-handling-native-sdk-ios.html">Gestión de errores</a></li>
+                        
+                      </ul>
+                    </li>
+                  
+                
+                  
+                    <li class="submenu-header">
+                      Recursos +<a href="/tvos/resources/index.html"><strong></strong></a>
+                      <ul class="sidenav-subsubmenu" style="display:none;">
+                        
+                        <li><a href="https://github.com/BrightcoveOS/ios-player-samples/tree/master/Player/AppleTV">Ejemplo básico de Apple TV</a></li>
+                        
+                        <li><a href="https://github.com/BrightcoveOS/ios-player-samples/tree/master/SSAI/BasicSSAItvOSPlayer">Apple TV con SSAI</a></li>
+                        
+                        <li>Referencia de SDK nativo para iOS<a href="https://docs.brightcove.com/ios-sdk/index.html"></a></li>
+                        
+                        <li>Referencias del complemento<a href="https://docs.brightcove.com/index.html"></a></li>
+                        
+                        <li>Notas de versión<a href="https://github.com/brightcove/brightcove-player-sdk-ios/blob/master/CHANGELOG.md"></a></li>
+                        
+                        <li>Versiones anteriores<a href="/tvos/resources/brightcove-player-sdk-tvos-previous-sdk-information.html"></a></li>
+                        
+                      </ul>
+                    </li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/developer-support/index.html">Soporte para desarrolladores <strong>+</strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li class="submenu-header">
+                      <a href="/developer-support/announcements/index.html">Anuncios <strong>+</strong></a>
+                      <ul class="sidenav-subsubmenu" style="display:none;">
+                        
+                        <li><a href="/developer-support/announcements/native-sdk-android-will-eol-support-exoplayer-1.html">Compatibilidad con Android SDK EOL para ExoPlayer 1</a></li>
+                        
+                        <li><a href="/developer-support/announcements/announcement-brightcove-sdk-android-version-support.html">Compatibilidad con versiones de Android</a></li>
+                        
+                        <li><a href="/developer-support/announcements/apple-announces-new-app-submission-requirement.html">Requisito de envío de aplicaciones de Apple</a></li>
+                        
+                        <li><a href="/developer-support/announcements/native-sdk-ios-eol-support-iostvos-10.html">Compatibilidad con iOS SDK EOL para iOS/tvOS 10</a></li>
+                        
+                      </ul>
+                    </li>
+                  
+                
+                  
+                    <li class="submenu-header">
+                      Preguntas y Problemas +<a href="/developer-support/questions/index.html"><strong></strong></a>
+                      <ul class="sidenav-subsubmenu" style="display:none;">
+                        
+                        <li>Archivo del Foro de Desarrolladores SDK<a href="https://groups.google.com/forum/#!forum/brightcove-native-player-sdks"></a></li>
+                        
+                        <li><a href="/developer-support/questions/faq-brightcove-native-player-sdks.html">Preguntas Frecuentes</a></li>
+                        
+                        <li>Notas de versión<a href="/developer-support/questions/release-notes-brightcove-native-sdks.html"></a></li>
+                        
+                        <li>Problemas conocidos<a href="/developer-support/questions/known-issues-brightcove-native-player-sdks.html"></a></li>
+                        
+                        <li>Informar de un problema<a href="/developer-support/questions/report-issue-brightcove-native-sdks.html"></a></li>
+                        
+                      </ul>
+                    </li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header">Soporte +<a href="/support/index.html"><strong></strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    
+                  
+                
+                  
+                    <li>Visualización de la página Estado del Sistema de Brightcove<a href="/support/viewing-brightcove-system-status-page.html"></a></li>
+                  
+                
+                  
+                    <li><a href="/support/contact-sales.html">Contacto con Ventas</a></li>
+                  
+                
+                  
+                    <li>Apertura de un caso de soporte<a href="/support/opening-case-with-brightcove-support.html"></a></li>
+                  
+                
+              </ul>
+            
+          
+      </nav>
+    </div>
+    <div class="col-lg-7" style="background-color: white;color: #333333;margin-top: -1em;margin-bottom: -1em;padding-bottom:1em;">
+  <!-- bootstrap layout -->
+
+<p id="bc_veggie_burger_wrapper" style="display: none;"><img id="bc_veggie_burger" src="/assets/images/feather/menu.svg" alt="Menú de navegación"/></p>
+
+<!-- search bar -->
+<div id="nav-search-box" style="margin-top: 1rem;"></div>
+<!-- in-page navigation for narrow screens -->
+<details class="centered-inpage-nav" id="centered_inpage_nav">
+  <summary><h6 class="toc">Contenido de la página</h6></summary>
+  <nav id="centered_toc"></nav>
+  <ul id="centered_in_page_toc" class="list-none"></ul>
+</details>
+<!-- open in new tab/window -->
+<a id="open_new_tab" href="#" target="_blank" style="display: none;"><img src="/assets/images/feather/external-link.svg" alt="abrir en una nueva pestaña" style="margin-top:4em;width: 1.5em;"/></a>
+
+
+
+  
+    
+
+
+<h1>Brightcove Player SDK para Android: Información anterior del SDK</h1>
+<article class="bcls-article">
+  <summary>En este tema se muestran las versiones anteriores del SDK y del complemento del SDK del Reproductor nativo para Android.</summary>
+
+<header id="bcls_header" class="bcls-header"><!-- <p>This topic shows the previous SDK and plugin versions for the Native Player SDK for Android.</p> -->
+<aside class="bcls-aside bcls-aside--warning">Los siguientes vínculos de la versión anterior del SDK de Brightcove Native Player para Android son sólo como referencia. Se recomienda utilizar la última versión del SDK junto con las integraciones de plugin.</aside>
+</header>
+
+<section class="bcls-section">
+<h2 id="Previous_SDK_version">Versiones anteriores</h2>
+<!-- <h3>SDK v6.16.0</h3>
+  <h4>14 Oct 2020</h4>
+  <p>
+  The supported framework uses ExoPlayer 2 v2.10.8
+  </p>
+  <p>
+  The following table contains the Brightcove plugins and partner plugin versions associated with the previous version of the Brightcove Native SDK:
+  </p> -->
+	<!-- add table here -->
+
+  <h3>SDK v6.15.1</h3>
+  <h4>22 sep 2020</h4>
+  <p>
+  El marco soportado usa ExoPlayer 2 v2.10.8
+  </p>
+  <p>
+  La tabla siguiente contiene los complementos de Brightcove y las versiones del complemento asociado a la versión anterior del SDK nativo de Brightcove:
+  </p>
+	<!-- add table here -->
+  <table class="bcls-table">
+	<thead class="bcls-table__head">
+		<tr>
+			<th style="border-bottom:1px solid #707070;">Categoría</th>
+			<th style="border-bottom:1px solid #707070;width: 20%;">Complemento de Brightcove</th>
+			<th style="border-bottom:1px solid #707070;">Complemento de socio o proveedor admitido</th>
+		</tr>
+	</thead>
+	<tbody class="bcls-table__body">
+		<tr>
+			<td rowspan="4" style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Publicidad</td>
+			<td>Plugin FreeWheel 6.15.1 </td>
+			<td>Librería de FreeWheel AdManager 6.28.0</td>
+		</tr>
+		<tr>
+			<td>Complemento IMA 6.15.1 </td>
+			<td>Google IMA 3.19.4</td>
+		</tr>
+		<tr>
+			<td>Plugin Pulse 6.15.1</td>
+			<td>Pulse SDK 2.5.20.1.0</td>
+		</tr>
+		<tr>
+			<td>Complemento SSAI 6.15.1</td>
+			<td>Ninguno</td>
+		</tr>
+		<tr>
+			<td style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Analytics</td>
+			<td>Complemento Omniture 6.15.1 </td>
+			<td>AdobeVideoLibrary 4.11.0<br/> <br/> VideoHeartbeat 2.0.0</td>
+		</tr>
+		<tr>
+			<td style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Chromecast</td>
+			<td>Complemento de lanzamiento 6.15.1</td>
+			<td>Extensión de lanzamiento ExoPlayer 2.10.8</td>
+		</tr>
+	</tbody>
+</table>
+
+  <h3>SDK v6.15.0</h3>
+  <h4>25 ago 2020</h4>
+  <p>
+  El marco soportado usa ExoPlayer 2 v2.10.8
+  </p>
+  <p>
+  La tabla siguiente contiene los complementos de Brightcove y las versiones del complemento asociado a la versión anterior del SDK nativo de Brightcove:
+  </p>
+	<!-- add table here -->
+  <table class="bcls-table">
+	<thead class="bcls-table__head">
+		<tr>
+			<th style="border-bottom:1px solid #707070;">Categoría</th>
+			<th style="border-bottom:1px solid #707070;width: 20%;">Complemento de Brightcove</th>
+			<th style="border-bottom:1px solid #707070;">Complemento de socio o proveedor admitido</th> 
+		</tr>
+	</thead>
+	<tbody class="bcls-table__body">
+		<tr>
+			<td rowspan="4" style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Publicidad</td>
+			<td>Plugin FreeWheel 6.15.0 </td>
+			<td>Librería de FreeWheel AdManager 6.28.0</td>
+		</tr>
+		<tr>
+			<td>Complemento IMA 6.15.0 </td>
+			<td>Google IMA 3.19.4</td>
+		</tr>
+		<tr>
+			<td>Plugin Pulse 6.15.0</td>
+			<td>Pulse SDK 2.5.20.1.0</td>
+		</tr>
+		<tr>
+			<td>Plugin SSAI 6.15.0</td>
+			<td>Ninguno</td>
+		</tr>
+		<tr>
+			<td style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Analytics</td>
+			<td>Complemento Omniture 6.15.0 </td>
+			<td>AdobeVideoLibrary 4.11.0<br/> <br/> VideoHeartbeat 2.0.0</td>
+		</tr>
+		<tr>
+			<td style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Chromecast</td>
+			<td>Complemento Cast 6.15.0</td>
+			<td>Extensión de lanzamiento ExoPlayer 2.10.8</td>
+		</tr>
+	</tbody>
+</table>
+
+  <h3>SDK v6.14.0</h3>
+  <h4>8 Jul 2020</h4>
+  <p>
+  El marco soportado usa ExoPlayer 2 v2.10.8
+  </p>
+  <p>
+  La tabla siguiente contiene los complementos de Brightcove y las versiones del complemento asociado a la versión anterior del SDK nativo de Brightcove:
+  </p>
+	<!-- add table here -->
+  <table class="bcls-table">
+	<thead class="bcls-table__head">
+		<tr>
+			<th style="border-bottom:1px solid #707070;">Categoría</th>
+			<th style="border-bottom:1px solid #707070;width: 20%;">Complemento de Brightcove</th>
+			<th style="border-bottom:1px solid #707070;">Complemento de socio o proveedor admitido</th> 
+		</tr>
+	</thead>
+	<tbody class="bcls-table__body">
+		<tr>
+			<td rowspan="5" style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Publicidad</td>
+			<td>Plugin FreeWheel 6.14.0 </td>
+			<td>Librería de FreeWheel AdManager 6.28.0</td>
+		</tr>
+		<tr>
+			<td>Plugin IMA 6.14.0 </td>
+			<td>Google IMA 3.11.2</td>
+		</tr>
+		<tr>
+			<td>Plugin Pulse 6.14.0</td>
+			<td>Pulse SDK 2.5.20.1.0</td>
+		</tr>
+		<tr>
+			<td>Complemento SSAI 6.14.0</td>
+			<td>Ninguno</td>
+		</tr>
+		<tr>
+			<td>Complemento VMAP 6.14.0 </td>
+			<td>Ninguno</td>
+		</tr>
+		<tr>
+			<td style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Analytics</td>
+			<td>Complemento Omniture 6.14.0 </td>
+			<td>AdobeVideoLibrary 4.11.0<br/> <br/> VideoHeartbeat 2.0.0</td>
+		</tr>
+		<tr>
+			<td style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Chromecast</td>
+			<td>Complemento de lanzamiento 6.14.0</td>
+			<td>Extensión de lanzamiento ExoPlayer 2.10.8</td>
+		</tr>
+	</tbody>
+</table>
+
+  <h3>SDK v6.13.3</h3>
+  <h4>21 de mayo de 2020</h4>
+  <p>
+  El marco soportado usa ExoPlayer 2 v2.10.8
+  </p>
+  <p>
+  La tabla siguiente contiene los complementos de Brightcove y las versiones del complemento asociado a la versión anterior del SDK nativo de Brightcove:
+  </p>
+	<!-- add table here -->
+  <table class="bcls-table">
+	<thead class="bcls-table__head">
+		<tr>
+			<th style="border-bottom:1px solid #707070;">Categoría</th>
+			<th style="border-bottom:1px solid #707070;width: 20%;">Complemento de Brightcove</th>
+			<th style="border-bottom:1px solid #707070;">Complemento de socio o proveedor admitido</th>
+		</tr>
+	</thead>
+	<tbody class="bcls-table__body">
+		<tr>
+			<td rowspan="5" style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Publicidad</td>
+			<td>Complemento FreeWheel 6.13.3 </td>
+			<td>Librería de FreeWheel AdManager 6.28.0</td>
+		</tr>
+		<tr>
+			<td>Plugin IMA 6.13.3 </td>
+			<td>Google IMA 3.11.2</td>
+		</tr>
+		<tr>
+			<td>Plugin Pulse 6.13.3</td>
+			<td>Pulse SDK 2.5.20.1.0</td>
+		</tr>
+		<tr>
+			<td>Complemento SSAI 6.13.3</td>
+			<td>Ninguno</td>
+		</tr>
+		<tr>
+			<td>Complemento VMAP 6.13.3 </td>
+			<td>Ninguno</td>
+		</tr>
+		<tr>
+			<td style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Analytics</td>
+			<td>Complemento Omniture 6.13.3</td>
+			<td>AdobeVideoLibrary 4.11.0<br/> <br/> VideoHeartbeat 2.0.0</td>
+		</tr>
+		<tr>
+			<td style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Chromecast</td>
+			<td>Complemento de lanzamiento 6.13.3</td>
+			<td>Extensión de lanzamiento ExoPlayer 2.10.8</td>
+		</tr>
+	</tbody>
+</table>
+
+  <h3>SDK v6.13.2</h3>
+  <h4>24 abr 2020</h4>
+  <p>
+  El marco soportado usa ExoPlayer 2 v2.10.8
+  </p>
+  <p>
+  La tabla siguiente contiene los complementos de Brightcove y las versiones del complemento asociado a la versión anterior del SDK nativo de Brightcove:
+  </p>
+	<!-- add table here -->
+  <table class="bcls-table">
+	<thead class="bcls-table__head">
+		<tr>
+			<th style="border-bottom:1px solid #707070;">Categoría</th>
+			<th style="border-bottom:1px solid #707070;width: 20%;">Complemento de Brightcove</th>
+			<th style="border-bottom:1px solid #707070;">Complemento de socio o proveedor admitido</th>
+		</tr>
+	</thead>
+	<tbody class="bcls-table__body">
+		<tr>
+			<td rowspan="5" style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Publicidad</td>
+			<td>Plugin FreeWheel 6.13.2 </td>
+			<td>Librería de FreeWheel AdManager 6.28.0</td>
+		</tr>
+		<tr>
+			<td>Complemento IMA 6.13.2 </td>
+			<td>Google IMA 3.11.2</td>
+		</tr>
+		<tr>
+			<td>Plugin Pulse 6.13.2</td>
+			<td>Pulse SDK 2.5.20.1.0</td>
+		</tr>
+		<tr>
+			<td>Complemento SSAI 6.13.2</td>
+			<td>Ninguno</td>
+		</tr>
+		<tr>
+			<td>Complemento VMAP 6.13.2 </td>
+			<td>Ninguno</td>
+		</tr>
+		<tr>
+			<td style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Analytics</td>
+			<td>Complemento Omniture 6.13.2 </td>
+			<td>AdobeVideoLibrary 4.11.0<br/> <br/> VideoHeartbeat 2.0.0</td>
+		</tr>
+		<tr>
+			<td style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Chromecast</td>
+			<td>Complemento Cast 6.13.2</td>
+			<td>Extensión de lanzamiento ExoPlayer 2.10.8</td>
+		</tr>
+	</tbody>
+</table>
+
+	<h3>SDK v6.13.1</h3>
+	  <h4>16 abr 2020</h4>
+	  <p>
+	  El marco soportado usa ExoPlayer 2 v2.10.8
+	  </p>
+	  <p>
+	  La tabla siguiente contiene los complementos de Brightcove y las versiones del complemento asociado a la versión anterior del SDK nativo de Brightcove:
+	  </p>
+		<!-- add table here -->
+		<table class="bcls-table">
+			<thead class="bcls-table__head">
+				<tr>
+					<th style="border-bottom:1px solid #707070;">Categoría</th>
+					<th style="border-bottom:1px solid #707070;width: 20%;">Complemento de Brightcove</th>
+					<th style="border-bottom:1px solid #707070;">Complemento de socio o proveedor admitido</th>
+				</tr>
+			</thead>
+			<tbody class="bcls-table__body">
+				<tr>
+					<td rowspan="6" style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Publicidad</td>
+					<td>Plugin FreeWheel 6.13.1 </td>
+					<td>Librería de FreeWheel AdManager 6.28.0</td>
+				</tr>
+				<tr>
+					<td>Complemento IMA 6.13.1 </td>
+					<td>Google IMA 3.11.2</td>
+				</tr>
+				<tr>
+					<td style="background-color:#dbdbdb;">Complemento OnCeux 6.13.1<br/> <span style="color:#da861a;">(obsoleto)</span> </td>
+					<td style="background-color:#dbdbdb;">onceux-android-library 2.1.17</td>
+				</tr>
+				<tr>
+					<td>Plugin Pulse 6.13.1</td>
+					<td>Pulse SDK 2.5.20.1.0</td>
+				</tr>
+				<tr>
+					<td>Plugin SSAI 6.13.1</td>
+					<td>Ninguno</td>
+				</tr>
+				<tr>
+					<td>Complemento VMAP 6.13.1 </td>
+					<td>Ninguno</td>
+				</tr>
+				<tr>
+					<td style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Analytics</td>
+					<td>Complemento Omniture 6.13.1 </td>
+					<td>AdobeVideoLibrary 4.11.0<br/> <br/> VideoHeartbeat 2.0.0</td>
+				</tr>
+				<tr>
+					<td style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Chromecast</td>
+					<td>Plugin fundido 6.13.1</td>
+					<td>Extensión de lanzamiento ExoPlayer 2.10.8</td>
+				</tr>
+			</tbody>
+		</table>
+
+	<h3>SDK v6.12.0</h3>
+	  <h4>5 Mar 2020</h4>
+	  <p>
+	  El marco soportado usa ExoPlayer 2 v2.10.8
+	  </p>
+	  <p>
+	  La tabla siguiente contiene los complementos de Brightcove y las versiones del complemento asociado a la versión anterior del SDK nativo de Brightcove:
+	  </p>
+		<!-- add table here -->
+		<table class="bcls-table">
+			<thead class="bcls-table__head">
+				<tr>
+					<th style="border-bottom:1px solid #707070;">Categoría</th>
+					<th style="border-bottom:1px solid #707070;width: 20%;">Complemento de Brightcove</th>
+					<th style="border-bottom:1px solid #707070;">Complemento de socio o proveedor admitido</th>
+				</tr>
+			</thead>
+			<tbody class="bcls-table__body">
+				<tr>
+					<td rowspan="5" style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Publicidad</td>
+					<td>Complemento FreeWheel 6.12.0</td>
+					<td>Librería de FreeWheel AdManager 6.28.0</td>
+				</tr>
+				<tr>
+					<td>Plugin IMA 6.12.0 </td>
+					<td>Google IMA 3.11.2</td>
+				</tr>
+				<tr>
+					<td style="background-color:#dbdbdb;">Plugin OnCeux 6.12.0<br/> <span style="color:#da861a;">(obsoleto)</span> </td>
+					<td style="background-color:#dbdbdb;">onceux-android-library 2.1.17</td>
+				</tr>
+				<tr>
+					<td>Complemento SSAI 6.12.0</td>
+					<td>Ninguno</td>
+				</tr>
+				<tr>
+					<td>Complemento VMAP 6.12.0</td>
+					<td>Ninguno</td>
+				</tr>
+				<tr>
+					<td style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Analytics</td>
+					<td>Complemento Omniture 6.12.0 </td>
+					<td>AdobeVideoLibrary 4.11.0<br/> <br/> VideoHeartbeat 2.0.0</td>
+				</tr>
+				<tr>
+					<td style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Chromecast</td>
+					<td>Complemento de lanzamiento 6.12.0</td>
+					<td>Extensión de lanzamiento ExoPlayer 2.10.8</td>
+				</tr>
+			</tbody>
+		</table>
+
+	<h3>SDK v6.11.0</h3>
+	  <h4>7 Feb 2020</h4>
+	  <p>
+	  El marco soportado usa ExoPlayer 2 v2.10.8
+	  </p>
+	  <p>
+	  La tabla siguiente contiene los complementos de Brightcove y las versiones del complemento asociado a la versión anterior del SDK nativo de Brightcove:
+	  </p>
+		<!-- add table here -->
+		<table class="bcls-table">
+			<thead class="bcls-table__head">
+				<tr>
+					<th style="border-bottom:1px solid #707070;">Categoría</th>
+					<th style="border-bottom:1px solid #707070;width: 20%;">Complemento de Brightcove</th>
+					<th style="border-bottom:1px solid #707070;">Complemento de socio o proveedor admitido</th>
+				</tr>
+			</thead>
+			<tbody class="bcls-table__body">
+				<tr>
+					<td rowspan="5" style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Publicidad</td>
+					<td>Complemento FreeWheel 6.11.0 </td>
+					<td>Librería de FreeWheel AdManager 6.28.0</td>
+				</tr>
+				<tr>
+					<td>Plugin IMA 6.11.0 </td>
+					<td>Google IMA 3.11.2</td>
+				</tr>
+				<tr>
+					<td style="background-color:#dbdbdb;">Complemento OnCeux 6.11.0<br/> <span style="color:#da861a;">(obsoleto)</span> </td>
+					<td style="background-color:#dbdbdb;">onceux-android-library 2.1.17</td>
+				</tr>
+				<tr>
+					<td>Complemento SSAI 6.11.0</td>
+					<td>Ninguno</td>
+				</tr>
+				<tr>
+					<td>Complemento VMAP 6.11.0 </td>
+					<td>Ninguno</td>
+				</tr>
+				<tr>
+					<td style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Analytics</td>
+					<td>Complemento Omniture 6.11.0 </td>
+					<td>AdobeVideoLibrary 4.11.0<br/> <br/> VideoHeartbeat 2.0.0</td>
+				</tr>
+				<tr>
+					<td style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Chromecast</td>
+					<td>Complemento Cast 6.11.0</td>
+					<td>Extensión de lanzamiento ExoPlayer 2.10.8</td>
+				</tr>
+			</tbody>
+		</table>
+
+<h3>SDK v6.10.1</h3>
+
+<h4>17 Ene 2020</h4>
+
+<p>El marco soportado usa ExoPlayer v2.10.8</p>
+
+<p>La tabla siguiente contiene los complementos de Brightcove y las versiones del complemento asociado a la versión anterior del SDK nativo de Brightcove:</p>
+<!-- add table here -->
+
+<table class="bcls-table">
+	<thead class="bcls-table__head">
+		<tr>
+			<th style="border-bottom:1px solid #707070;">Categoría</th>
+			<th style="border-bottom:1px solid #707070;width: 20%;">Complemento de Brightcove</th>
+			<th style="border-bottom:1px solid #707070;">Complemento de socio o proveedor admitido</th>
+		</tr>
+	</thead>
+	<tbody class="bcls-table__body">
+		<tr>
+			<td rowspan="5" style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Publicidad</td>
+			<td>Plugin FreeWheel 6.10.1</td>
+			<td>Librería de FreeWheel AdManager 6.28.0</td>
+		</tr>
+		<tr>
+			<td>Plugin IMA 6.10.1</td>
+			<td>Google IMA 3.11.2</td>
+		</tr>
+		<tr>
+			<td style="background-color:#dbdbdb;">Complemento OnCeux 6.10.1<br/> <span style="color:#da861a;">(obsoleto)</span></td>
+			<td style="background-color:#dbdbdb;">onceux-android-library 2.1.17</td>
+		</tr>
+		<tr>
+			<td>Complemento SSAI 6.10.1</td>
+			<td>Ninguno</td>
+		</tr>
+		<tr>
+			<td>Complemento VMAP 6.10.1</td>
+			<td>Ninguno</td>
+		</tr>
+		<tr>
+			<td style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Analytics</td>
+			<td>Complemento Omniture 6.10.1</td>
+			<td>AdobeVideoLibrary 4.11.0<br/> <br/> VideoHeartbeat 2.0.0</td>
+		</tr>
+		<tr>
+			<td style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Chromecast</td>
+			<td>Plugin de lanzamiento 6.10.1</td>
+			<td>Extensión de lanzamiento ExoPlayer 2.10.8</td>
+		</tr>
+	</tbody>
+</table>
+
+<h3>SDK v6.10.0</h3>
+
+<h4>19 dic 2019</h4>
+
+<p>El marco soportado usa ExoPlayer 2 v2.10.8</p>
+
+<p>La tabla siguiente contiene los complementos de Brightcove y las versiones del complemento asociado a la versión anterior del SDK nativo de Brightcove:</p>
+<!-- add table here -->
+
+<table class="bcls-table">
+	<thead class="bcls-table__head">
+		<tr>
+			<th style="border-bottom:1px solid #707070;">Categoría</th>
+			<th style="border-bottom:1px solid #707070;width: 20%;">Complemento de Brightcove</th>
+			<th style="border-bottom:1px solid #707070;">Complemento de socio o proveedor admitido</th>
+		</tr>
+	</thead>
+	<tbody class="bcls-table__body">
+		<tr>
+			<td rowspan="5" style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Publicidad</td>
+			<td>Plugin FreeWheel 6.10.0</td>
+			<td>Librería de FreeWheel AdManager 6.28.0</td>
+		</tr>
+		<tr>
+			<td>Plugin IMA 6.10.0</td>
+			<td>Google IMA 3.11.2</td>
+		</tr>
+		<tr>
+			<td style="background-color:#dbdbdb;">Complemento OnCeux 6.10.0<br/> <span style="color:#da861a;">(obsoleto)</span></td>
+			<td style="background-color:#dbdbdb;">onceux-android-library 2.1.17</td>
+		</tr>
+		<tr>
+			<td>Complemento SSAI 6.10.0</td>
+			<td>Ninguno</td>
+		</tr>
+		<tr>
+			<td>Complemento VMAP 6.10.0 <sup><a href="#n4"> [4]</a></sup> <sup><a href="#n4"> [6]</a></sup></td>
+			<td>Ninguno</td>
+		</tr>
+		<tr>
+			<td style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Analytics</td>
+			<td>Complemento Omniture 6.10.0</td>
+			<td>AdobeVideoLibrary 4.11.0<br/> <br/> VideoHeartbeat 2.0.0</td>
+		</tr>
+		<tr>
+			<td style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Chromecast</td>
+			<td>Plugin de lanzamiento 6.10.0</td>
+			<td>Extensión de lanzamiento ExoPlayer 2.10.8</td>
+		</tr>
+	</tbody>
+</table>
+
+<h3>SDK v6.9.0</h3>
+
+<h4>22 Oct 2019</h4>
+
+<p>El marco soportado utiliza ExoPlayer 2 v2.9.3</p>
+
+<p>La tabla siguiente contiene los complementos de Brightcove y las versiones del complemento asociado a la versión anterior del SDK nativo de Brightcove:</p>
+<!-- add table here -->
+
+<table class="bcls-table">
+	<thead class="bcls-table__head">
+		<tr>
+			<th style="border-bottom:1px solid #707070;">Categoría</th>
+			<th style="border-bottom:1px solid #707070;width: 20%;">Complemento de Brightcove</th>
+			<th style="border-bottom:1px solid #707070;">Complemento de socio o proveedor admitido</th>
+		</tr>
+	</thead>
+	<tbody class="bcls-table__body">
+		<tr>
+			<td rowspan="5" style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Publicidad</td>
+			<td>Plugin FreeWheel 6.9.0</td>
+			<td>Librería de FreeWheel AdManager 6.28.0</td>
+		</tr>
+		<tr>
+			<td>Plugin IMA 6.9.0</td>
+			<td>Google IMA 3.11.2</td>
+		</tr>
+		<tr>
+			<td style="background-color:#dbdbdb;">Complemento OnCeux 6.9.0<br/> <span style="color:#da861a;">(obsoleto)</span></td>
+			<td style="background-color:#dbdbdb;">onceux-android-library 2.1.17</td>
+		</tr>
+		<tr>
+			<td>Complemento SSAI 6.9.0</td>
+			<td>Ninguno</td>
+		</tr>
+		<tr>
+			<td>Complemento VMAP 6.9.0</td>
+			<td>Ninguno</td>
+		</tr>
+		<tr>
+			<td style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Analytics</td>
+			<td>Complemento Omniture 6.9.0</td>
+			<td>AdobeVideoLibrary 4.11.0<br/> <br/> VideoHeartbeat 2.0.0</td>
+		</tr>
+		<tr>
+			<td style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Chromecast</td>
+			<td>Complemento Cast 6.9.0</td>
+			<td>Extensión de lanzamiento de ExoPlayer 2.9.3</td>
+		</tr>
+	</tbody>
+</table>
+
+<h3>SDK v6.8.1</h3>
+
+<h4>31 Mayo 2019</h4>
+
+<p>El marco soportado utiliza ExoPlayer 2 v2.9.3</p>
+
+<p>La tabla siguiente contiene los complementos de Brightcove y las versiones del complemento asociado a la versión anterior del SDK nativo de Brightcove:</p>
+<!-- add table here -->
+
+<table class="bcls-table">
+	<thead class="bcls-table__head">
+		<tr>
+			<th style="border-bottom:1px solid #707070;">Categoría</th>
+			<th style="border-bottom:1px solid #707070;width: 20%;">Complemento de Brightcove</th>
+			<th style="border-bottom:1px solid #707070;">Complemento de socio o proveedor admitido</th>
+		</tr>
+	</thead>
+	<tbody class="bcls-table__body">
+		<tr>
+			<td rowspan="5" style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Publicidad</td>
+			<td>Plugin FreeWheel 6.8.1</td>
+			<td>Librería de FreeWheel AdManager 6.28.0</td>
+		</tr>
+		<tr>
+			<td>Plugin IMA 6.8.1</td>
+			<td>Google IMA 3.11.2</td>
+		</tr>
+		<tr>
+			<td style="background-color:#dbdbdb;">Complemento OnCeux 6.8.1<br/> <span style="color:#da861a;">(obsoleto)</span></td>
+			<td style="background-color:#dbdbdb;">onceux-android-library 2.1.17</td>
+		</tr>
+		<tr>
+			<td>Plugin SSAI 6.8.1</td>
+			<td>Ninguno</td>
+		</tr>
+		<tr>
+			<td>Complemento VMAP 6.8.1</td>
+			<td>Ninguno</td>
+		</tr>
+		<tr>
+			<td style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Analytics</td>
+			<td>Complemento Omniture 6.8.1</td>
+			<td>AdobeVideoLibrary 4.11.0<br/> <br/> VideoHeartbeat 2.0.0</td>
+		</tr>
+		<tr>
+			<td style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Chromecast</td>
+			<td>Plugin de lanzamiento 6.8.1</td>
+			<td>Extensión de lanzamiento de ExoPlayer 2.9.3</td>
+		</tr>
+	</tbody>
+</table>
+
+<h3>SDK v6.8.0</h3>
+
+<h4>1 Mayo 2019</h4>
+
+<p>El marco soportado utiliza ExoPlayer 2 v2.9.6</p>
+
+<p>La tabla siguiente contiene los complementos de Brightcove y las versiones del complemento asociado a la versión anterior del SDK nativo de Brightcove:</p>
+<!-- add table here -->
+
+<table class="bcls-table">
+	<thead class="bcls-table__head">
+		<tr>
+			<th style="border-bottom:1px solid #707070;">Categoría</th>
+			<th style="border-bottom:1px solid #707070;width: 20%;">Complemento de Brightcove</th>
+			<th style="border-bottom:1px solid #707070;">Complemento de socio o proveedor admitido</th>
+		</tr>
+	</thead>
+	<tbody class="bcls-table__body">
+		<tr>
+			<td rowspan="5" style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Publicidad</td>
+			<td>Plugin FreeWheel 6.8.0</td>
+			<td>Librería de FreeWheel AdManager 6.28.0</td>
+		</tr>
+		<tr>
+			<td>Plugin IMA 6.8.0</td>
+			<td>Google IMA 3.11.2</td>
+		</tr>
+		<tr>
+			<td style="background-color:#dbdbdb;">Complemento OnCeux 6.8.0<br/> <span style="color:#da861a;">(obsoleto)</span></td>
+			<td style="background-color:#dbdbdb;">onceux-android-library 2.1.17</td>
+		</tr>
+		<tr>
+			<td>Complemento SSAI 6.8.0</td>
+			<td>Ninguno</td>
+		</tr>
+		<tr>
+			<td>Complemento VMAP 6.8.0</td>
+			<td>Ninguno</td>
+		</tr>
+		<tr>
+			<td style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Analytics</td>
+			<td>Complemento Omniture 6.8.0</td>
+			<td>AdobeVideoLibrary 4.11.0<br/> <br/> VideoHeartbeat 2.0.0</td>
+		</tr>
+		<tr>
+			<td style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Chromecast</td>
+			<td>Complemento Cast 6.8.0</td>
+			<td>Extensión de lanzamiento ExoPlayer 2.7.0</td>
+		</tr>
+	</tbody>
+</table>
+
+<h3>SDK v6.7.0</h3>
+
+<h4>5 abr 2019</h4>
+
+<p>El marco soportado utiliza ExoPlayer 2 v2.7.0</p>
+
+<p>La tabla siguiente contiene los complementos de Brightcove y las versiones del complemento asociado a la versión anterior del SDK nativo de Brightcove:</p>
+<!-- add table here -->
+
+<table class="bcls-table">
+	<thead class="bcls-table__head">
+		<tr>
+			<th style="border-bottom:1px solid #707070;">Categoría</th>
+			<th style="border-bottom:1px solid #707070;width: 20%;">Complemento de Brightcove</th>
+			<th style="border-bottom:1px solid #707070;">Complemento de socio o proveedor admitido</th>
+		</tr>
+	</thead>
+	<tbody class="bcls-table__body">
+		<tr>
+			<td rowspan="5" style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Publicidad</td>
+			<td>Plugin FreeWheel 6.7.0</td>
+			<td>Librería de FreeWheel AdManager 6.23.0</td>
+		</tr>
+		<tr>
+			<td>Plugin IMA 6.7.0</td>
+			<td>Google IMA 3-3.9.0</td>
+		</tr>
+		<tr>
+			<td style="background-color:#dbdbdb;">Complemento OnCeux 6.7.0<br/> <span style="color:#da861a;">(obsoleto)</span></td>
+			<td style="background-color:#dbdbdb;">onceux-android-library 2.1.17</td>
+		</tr>
+		<tr>
+			<td>Plugin SSAI 6.7.0</td>
+			<td>Ninguno</td>
+		</tr>
+		<tr>
+			<td>Complemento VMAP 6.7.0</td>
+			<td>Ninguno</td>
+		</tr>
+		<tr>
+			<td style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Analytics</td>
+			<td>Complemento Omniture 6.7.0</td>
+			<td>AdobeVideoLibrary 4.11.0<br/> <br/> VideoHeartbeat 2.0.0</td>
+		</tr>
+		<tr>
+			<td style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Chromecast</td>
+			<td>Complemento Cast 6.7.0</td>
+			<td>Extensión de lanzamiento ExoPlayer 2.7.0</td>
+		</tr>
+	</tbody>
+</table>
+
+<h3>SDK v6.6.0</h3>
+
+<h4>29 Mar 2019</h4>
+
+<p>El marco soportado utiliza ExoPlayer 2 v2.7.0</p>
+
+<p>La tabla siguiente contiene los complementos de Brightcove y las versiones del complemento asociado a la versión anterior del SDK nativo de Brightcove:</p>
+<!-- add table here -->
+
+<table class="bcls-table">
+	<thead class="bcls-table__head">
+		<tr>
+			<th style="border-bottom:1px solid #707070;">Categoría</th>
+			<th style="border-bottom:1px solid #707070;width: 20%;">Complemento de Brightcove</th>
+			<th style="border-bottom:1px solid #707070;">Complemento de socio o proveedor admitido</th>
+		</tr>
+	</thead>
+	<tbody class="bcls-table__body">
+		<tr>
+			<td rowspan="4" style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Publicidad</td>
+			<td>Complemento FreeWheel v6.6.0</td>
+			<td>Librería de FreeWheel AdManager v6.23.0</td>
+		</tr>
+		<tr>
+			<td>Plugin IMA v6.6.0</td>
+			<td>Google IMA v3-3.9.0</td>
+		</tr>
+		<tr>
+			<td>Plugin OnCeux v6.6.0</td>
+			<td>onceux-android-library 2.1.17</td>
+		</tr>
+		<tr>
+			<td>Complemento VMAP v6.6.0</td>
+			<td>Ninguno</td>
+		</tr>
+		<tr>
+			<td style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Analytics</td>
+			<td>Complemento Omniture v6.6.0</td>
+			<td>AdobeVideoLibrary 4.11.0<br/> <br/> VideoHeartbeat 2.0.0</td>
+		</tr>
+		<tr>
+			<td style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Chromecast</td>
+			<td>Plugin de lanzamiento v6.6.0</td>
+			<td>Extensión de lanzamiento ExoPlayer v2.7.0</td>
+		</tr>
+	</tbody>
+</table>
+
+<h3>SDK v6.5.1</h3>
+
+<h4>12 Feb 2019</h4>
+
+<p>El marco soportado utiliza ExoPlayer 2 v2.7.0</p>
+
+<p>La tabla siguiente contiene los complementos de Brightcove y las versiones del complemento asociado a la versión anterior del SDK nativo de Brightcove:</p>
+<!-- add table here -->
+
+<table class="bcls-table">
+	<thead class="bcls-table__head">
+		<tr>
+			<th style="border-bottom:1px solid #707070;">Categoría</th>
+			<th style="border-bottom:1px solid #707070;width: 20%;">Complemento de Brightcove</th>
+			<th style="border-bottom:1px solid #707070;">Complemento de socio o proveedor admitido</th>
+		</tr>
+	</thead>
+	<tbody class="bcls-table__body">
+		<tr>
+			<td rowspan="4" style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Publicidad</td>
+			<td>Plugin FreeWheel v6.5.1</td>
+			<td>Librería de FreeWheel AdManager v6.23.0</td>
+		</tr>
+		<tr>
+			<td>Plugin IMA v6.5.1</td>
+			<td>Google IMA v3-3.9.0</td>
+		</tr>
+		<tr>
+			<td>Plugin OnCeux v6.5.1</td>
+			<td>onceux-android-library 2.1.17</td>
+		</tr>
+		<tr>
+			<td>Complemento VMAP v6.5.1</td>
+			<td>Ninguno</td>
+		</tr>
+		<tr>
+			<td style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Analytics</td>
+			<td>Complemento Omniture v6.5.1</td>
+			<td>AdobeVideoLibrary 4.11.0<br/> <br/> VideoHeartbeat 2.0.0</td>
+		</tr>
+		<tr>
+			<td style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Chromecast</td>
+			<td>Plugin de lanzamiento v6.5.1</td>
+			<td>Extensión de lanzamiento ExoPlayer v2.7.0</td>
+		</tr>
+	</tbody>
+</table>
+
+<h3>SDK v6.5.0</h3>
+
+<h4>6 dic 2018</h4>
+
+<p>El marco soportado utiliza ExoPlayer 2 v2.7.0</p>
+
+<p>La tabla siguiente contiene los complementos de Brightcove y las versiones del complemento asociado a la versión anterior del SDK nativo de Brightcove:</p>
+<!-- add table here -->
+
+<table class="bcls-table">
+	<thead class="bcls-table__head">
+		<tr>
+			<th style="border-bottom:1px solid #707070;">Categoría</th>
+			<th style="border-bottom:1px solid #707070;width: 20%;">Complemento de Brightcove</th>
+			<th style="border-bottom:1px solid #707070;">Complemento de socio o proveedor admitido</th>
+		</tr>
+	</thead>
+	<tbody class="bcls-table__body">
+		<tr>
+			<td rowspan="4" style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Publicidad</td>
+			<td>Complemento FreeWheel v6.5.0</td>
+			<td>Librería de FreeWheel AdManager v6.23.0</td>
+		</tr>
+		<tr>
+			<td>Plugin IMA v6.5.0</td>
+			<td>Google IMA v3-3.9.0</td>
+		</tr>
+		<tr>
+			<td>Plugin OnCeux v6.5.0</td>
+			<td>onceux-android-library 2.1.17</td>
+		</tr>
+		<tr>
+			<td>Complemento VMAP v6.5.0</td>
+			<td>Ninguno</td>
+		</tr>
+		<tr>
+			<td style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Analytics</td>
+			<td>Complemento Omniture v6.5.0</td>
+			<td>AdobeVideoLibrary 4.11.0<br/> <br/> VideoHeartbeat 2.0.0</td>
+		</tr>
+		<tr>
+			<td style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Chromecast</td>
+			<td>Plugin de lanzamiento v6.5.0</td>
+			<td>Extensión de lanzamiento ExoPlayer v2.7.0</td>
+		</tr>
+	</tbody>
+</table>
+
+<h3>SDK v6.4.0</h3>
+
+<h4>17 Oct 2018</h4>
+
+<p>El marco soportado utiliza ExoPlayer 2 v2.7.0</p>
+
+<p>La tabla siguiente contiene los complementos de Brightcove y las versiones del complemento asociado a la versión anterior del SDK nativo de Brightcove:</p>
+<!-- add table here -->
+
+<table class="bcls-table">
+	<thead class="bcls-table__head">
+		<tr>
+			<th style="border-bottom:1px solid #707070;">Categoría</th>
+			<th style="border-bottom:1px solid #707070;width: 20%;">Complemento de Brightcove</th>
+			<th style="border-bottom:1px solid #707070;">Complemento de socio o proveedor admitido</th>
+		</tr>
+	</thead>
+	<tbody class="bcls-table__body">
+		<tr>
+			<td rowspan="4" style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Publicidad</td>
+			<td>Complemento FreeWheel v6.4.0</td>
+			<td>Librería de FreeWheel AdManager v6.23.0</td>
+		</tr>
+		<tr>
+			<td>Plugin IMA v6.4.0</td>
+			<td>Google IMA v3-3.9.0</td>
+		</tr>
+		<tr>
+			<td>Plugin OnCeux v6.4.0</td>
+			<td>onceux-android-library 2.1.17</td>
+		</tr>
+		<tr>
+			<td>Complemento VMAP v6.4.0</td>
+			<td>Ninguno</td>
+		</tr>
+		<tr>
+			<td style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Analytics</td>
+			<td>Complemento Omniture v6.4.0</td>
+			<td>AdobeVideoLibrary 4.11.0<br/> <br/> VideoHeartbeat 2.0.0</td>
+		</tr>
+		<tr>
+			<td style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Chromecast</td>
+			<td>Plugin de lanzamiento v6.4.0</td>
+			<td>Extensión de lanzamiento ExoPlayer v2.7.0</td>
+		</tr>
+	</tbody>
+</table>
+
+<h3>SDK v6.3.2</h3>
+
+<h4>24 Sep 2018</h4>
+
+<p>El marco soportado utiliza ExoPlayer 2 v2.7.0</p>
+
+<p>La tabla siguiente contiene los complementos de Brightcove y las versiones del complemento asociado a la versión anterior del SDK nativo de Brightcove:</p>
+<!-- add table here -->
+
+<table class="bcls-table">
+	<thead class="bcls-table__head">
+		<tr>
+			<th style="border-bottom:1px solid #707070;">Categoría</th>
+			<th style="border-bottom:1px solid #707070;width: 20%;">Complemento de Brightcove</th>
+			<th style="border-bottom:1px solid #707070;">Complemento de socio o proveedor admitido</th>
+		</tr>
+	</thead>
+	<tbody class="bcls-table__body">
+		<tr>
+			<td rowspan="4" style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Publicidad</td>
+			<td>Complemento FreeWheel v6.3.2</td>
+			<td>Librería de FreeWheel AdManager v6.23.0</td>
+		</tr>
+		<tr>
+			<td>Plugin IMA v6.3.2</td>
+			<td>Google IMA v3-3.9.0</td>
+		</tr>
+		<tr>
+			<td>Plugin OnCeux v6.3.2</td>
+			<td>onceux-android-library 2.1.17</td>
+		</tr>
+		<tr>
+			<td>Complemento VMAP v6.3.2</td>
+			<td>Ninguno</td>
+		</tr>
+		<tr>
+			<td style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Analytics</td>
+			<td>Complemento Omniture v6.3.2</td>
+			<td>AdobeVideoLibrary 4.11.0<br/> <br/> VideoHeartbeat 2.0.0</td>
+		</tr>
+		<tr>
+			<td style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Chromecast</td>
+			<td>Complemento de lanzamiento v6.3.2</td>
+			<td>Extensión de lanzamiento ExoPlayer v2.7.0</td>
+		</tr>
+	</tbody>
+</table>
+
+<h3>SDK v6.3.1</h3>
+
+<h4>09 Ago 2018</h4>
+
+<p>El marco soportado utiliza ExoPlayer 2 v2.7.0</p>
+
+<p>La tabla siguiente contiene los complementos de Brightcove y las versiones del complemento asociado a la versión anterior del SDK nativo de Brightcove:</p>
+<!-- add table here -->
+
+<table class="bcls-table">
+	<thead class="bcls-table__head">
+		<tr>
+			<th style="border-bottom:1px solid #707070;">Categoría</th>
+			<th style="border-bottom:1px solid #707070;width: 20%;">Complemento de Brightcove</th>
+			<th style="border-bottom:1px solid #707070;">Complemento de socio o proveedor admitido</th>
+		</tr>
+	</thead>
+	<tbody class="bcls-table__body">
+		<tr>
+			<td rowspan="4" style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Publicidad</td>
+			<td>Complemento FreeWheel v6.3.1</td>
+			<td>Librería de FreeWheel AdManager v6.23.0</td>
+		</tr>
+		<tr>
+			<td>Complemento IMA v6.3.1</td>
+			<td>Google IMA v3-3.9.0</td>
+		</tr>
+		<tr>
+			<td>Complemento OnCeux v6.3.1</td>
+			<td>onceux-android-library 2.1.17</td>
+		</tr>
+		<tr>
+			<td>Complemento VMAP v6.3.1</td>
+			<td>Ninguno</td>
+		</tr>
+		<tr>
+			<td style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Analytics</td>
+			<td>Complemento Omniture v6.3.1</td>
+			<td>AdobeVideoLibrary 4.11.0<br/> <br/> VideoHeartbeat 2.0.0</td>
+		</tr>
+		<tr>
+			<td style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Chromecast</td>
+			<td>Plugin de lanzamiento v6.3.1</td>
+			<td>Extensión de lanzamiento ExoPlayer v2.7.0</td>
+		</tr>
+	</tbody>
+</table>
+
+<h3>SDK v6.3.0</h3>
+
+<h4>27 Julio 2018</h4>
+
+<p>El marco soportado utiliza ExoPlayer 2 v2.7.0</p>
+
+<p>La tabla siguiente contiene los complementos de Brightcove y las versiones del complemento asociado a la versión anterior del SDK nativo de Brightcove:</p>
+<!-- add table here -->
+
+<table class="bcls-table">
+	<thead class="bcls-table__head">
+		<tr>
+			<th style="border-bottom:1px solid #707070;">Categoría</th>
+			<th style="border-bottom:1px solid #707070;width: 20%;">Complemento de Brightcove</th>
+			<th style="border-bottom:1px solid #707070;">Complemento de socio o proveedor admitido</th>
+		</tr>
+	</thead>
+	<tbody class="bcls-table__body">
+		<tr>
+			<td rowspan="4" style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Publicidad</td>
+			<td>Plugin FreeWheel v6.3.0 <sup><a href="#n1"> [1]</a></sup></td>
+			<td>Librería de FreeWheel AdManager v6.23.0</td>
+		</tr>
+		<tr>
+			<td>Plugin IMA v6.3.0</td>
+			<td>Google IMA v3-3.9.0</td>
+		</tr>
+		<tr>
+			<td>Plugin OnCeux v6.3.0</td>
+			<td>onceux-android-library 2.1.17</td>
+		</tr>
+		<tr>
+			<td>Complemento VMAP v6.3.0 <sup><a href="#n3"> [3]</a></sup></td>
+			<td>Ninguno</td>
+		</tr>
+		<tr>
+			<td style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Analytics</td>
+			<td>Complemento Omniture v6.3.0 <sup><a href="#n4"> [4]</a></sup></td>
+			<td>AdobeVideoLibrary 4.11.0<br/> <br/> VideoHeartbeat 2.0.0</td>
+		</tr>
+		<tr>
+			<td style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Chromecast</td>
+			<td>Plugin de lanzamiento v6.3.0</td>
+			<td>Extensión de lanzamiento ExoPlayer v2.7.0</td>
+		</tr>
+	</tbody>
+</table>
+
+<h3>SDK v6.2.3</h3>
+
+<h4>16 Julio 2018</h4>
+
+<p>El marco soportado utiliza ExoPlayer 2 v2.7.0</p>
+
+<p>La tabla siguiente contiene los complementos de Brightcove y las versiones del complemento asociado a la versión anterior del SDK nativo de Brightcove:</p>
+<!-- add table here -->
+
+<table class="bcls-table">
+	<thead class="bcls-table__head">
+		<tr>
+			<th style="border-bottom:1px solid #707070;">Categoría</th>
+			<th style="border-bottom:1px solid #707070;width: 20%;">Complemento de Brightcove</th>
+			<th style="border-bottom:1px solid #707070;">Complemento de socio o proveedor admitido</th>
+		</tr>
+	</thead>
+	<tbody class="bcls-table__body">
+		<tr>
+			<td rowspan="4" style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Publicidad</td>
+			<td>Plugin FreeWheel v6.2.3 <sup><a href="#n1"> [1]</a></sup></td>
+			<td>FreeWheel AdManager librería v6.17.0</td>
+		</tr>
+		<tr>
+			<td>Plugin IMA v6.2.3</td>
+			<td>Google IMA v3-3.7.4</td>
+		</tr>
+		<tr>
+			<td>Complemento OnCeux v6.2.3</td>
+			<td>onceux-android-library 2.1.17</td>
+		</tr>
+		<tr>
+			<td>Complemento VMAP v6.2.3 <sup><a href="#n3"> [3]</a></sup></td>
+			<td>Ninguno</td>
+		</tr>
+		<tr>
+			<td style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Analytics</td>
+			<td>Complemento Omniture v6.2.3 <sup><a href="#n4"> [4]</a></sup></td>
+			<td>AdobeVideoLibrary 4.11.0<br/> <br/> VideoHeartbeat 2.0.0</td>
+		</tr>
+	</tbody>
+</table>
+
+<h3>SDK v6.2.2</h3>
+
+<h4>9 de julio de 2018</h4>
+
+<p>El marco soportado utiliza ExoPlayer 2 v2.7.0</p>
+
+<p>La tabla siguiente contiene los complementos de Brightcove y las versiones del complemento asociado a la versión anterior del SDK nativo de Brightcove:</p>
+<!-- add table here -->
+
+<table class="bcls-table">
+	<thead class="bcls-table__head">
+		<tr>
+			<th style="border-bottom:1px solid #707070;">Categoría</th>
+			<th style="border-bottom:1px solid #707070;width: 20%;">Complemento de Brightcove</th>
+			<th style="border-bottom:1px solid #707070;">Complemento de socio o proveedor admitido</th>
+		</tr>
+	</thead>
+	<tbody class="bcls-table__body">
+		<tr>
+			<td rowspan="4" style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Publicidad</td>
+			<td>Plugin FreeWheel v6.2.2 <sup><a href="#n1"> [1]</a></sup></td>
+			<td>FreeWheel AdManager librería v6.17.0</td>
+		</tr>
+		<tr>
+			<td>Complemento IMA v6.2.2</td>
+			<td>Google IMA v3-3.7.4</td>
+		</tr>
+		<tr>
+			<td>Plugin OnCeux v6.2.2</td>
+			<td>onceux-android-library 2.1.17</td>
+		</tr>
+		<tr>
+			<td>Complemento VMAP v6.2.2 <sup><a href="#n3"> [3]</a></sup></td>
+			<td>Ninguno</td>
+		</tr>
+		<tr>
+			<td style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Analytics</td>
+			<td>Complemento Omniture v6.2.2 <sup><a href="#n4"> [4]</a></sup></td>
+			<td>AdobeVideoLibrary 4.11.0<br/> <br/> VideoHeartbeat 2.0.0</td>
+		</tr>
+	</tbody>
+</table>
+
+<h3>SDK v6.2.1</h3>
+
+<h4>5 de junio de 2018</h4>
+
+<p>El marco soportado utiliza ExoPlayer 2 v2.7.0</p>
+
+<p>La tabla siguiente contiene los complementos de Brightcove y las versiones del complemento asociado a la versión anterior del SDK nativo de Brightcove:</p>
+<!-- add table here -->
+
+<table class="bcls-table">
+	<thead class="bcls-table__head">
+		<tr>
+			<th style="border-bottom:1px solid #707070;">Categoría</th>
+			<th style="border-bottom:1px solid #707070;width: 20%;">Complemento de Brightcove</th>
+			<th style="border-bottom:1px solid #707070;">Complemento de socio o proveedor admitido</th>
+		</tr>
+	</thead>
+	<tbody class="bcls-table__body">
+		<tr>
+			<td rowspan="4" style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Publicidad</td>
+			<td>Plugin FreeWheel v6.2.1 <sup><a href="#n1"> [1]</a></sup></td>
+			<td>FreeWheel AdManager librería v6.17.0</td>
+		</tr>
+		<tr>
+			<td>Plugin IMA v6.2.1</td>
+			<td>Google IMA v3-3.7.4</td>
+		</tr>
+		<tr>
+			<td>Complemento OnCeux v6.2.1</td>
+			<td>onceux-android-library 2.1.17</td>
+		</tr>
+		<tr>
+			<td>Complemento VMAP v6.2.1 <sup><a href="#n3"> [3]</a></sup></td>
+			<td>Ninguno</td>
+		</tr>
+		<tr>
+			<td style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Analytics</td>
+			<td>Complemento Omniture v6.2.1 <sup><a href="#n4"> [4]</a></sup></td>
+			<td>AdobeVideoLibrary 4.11.0<br/> <br/> VideoHeartbeat 2.0.0</td>
+		</tr>
+	</tbody>
+</table>
+
+<h3>SDK v6.2.0</h3>
+
+<h4>18 de mayo de 2018</h4>
+
+<p>El marco soportado utiliza ExoPlayer 2 v2.7.3</p>
+
+<p>La tabla siguiente contiene los complementos de Brightcove y las versiones del complemento asociado a la versión anterior del SDK nativo de Brightcove:</p>
+<!-- add table here -->
+
+<table class="bcls-table">
+	<thead class="bcls-table__head">
+		<tr>
+			<th style="border-bottom:1px solid #707070;">Categoría</th>
+			<th style="border-bottom:1px solid #707070;width: 20%;">Complemento de Brightcove</th>
+			<th style="border-bottom:1px solid #707070;">Complemento de socio o proveedor admitido</th>
+		</tr>
+	</thead>
+	<tbody class="bcls-table__body">
+		<tr>
+			<td rowspan="4" style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Publicidad</td>
+			<td>Plugin FreeWheel v6.2.0 <sup><a href="#n1"> [1]</a></sup></td>
+			<td>FreeWheel AdManager librería v6.17.0</td>
+		</tr>
+		<tr>
+			<td>Plugin IMA v6.2.0</td>
+			<td>Google IMA v3-3.7.4</td>
+		</tr>
+		<tr>
+			<td>Plugin OnCeux v6.2.0</td>
+			<td>onceux-android-library 2.1.17</td>
+		</tr>
+		<tr>
+			<td>Complemento VMAP v6.2.0 <sup><a href="#n3"> [3]</a></sup></td>
+			<td>Ninguno</td>
+		</tr>
+		<tr>
+			<td style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Analytics</td>
+			<td>Complemento Omniture v6.2.0 <sup><a href="#n4"> [4]</a></sup></td>
+			<td>AdobeVideoLibrary 4.11.0<br/> <br/> VideoHeartbeat 2.0.0</td>
+		</tr>
+	</tbody>
+</table>
+
+<h3>SDK v6.1.2</h3>
+
+<h4>24 abr 2018</h4>
+
+<p>El marco soportado usa ExoPlayer 2 v2.5.3</p>
+
+<p>La tabla siguiente contiene los complementos de Brightcove y las versiones del complemento asociado a la versión anterior del SDK nativo de Brightcove:</p>
+<!-- add table here -->
+
+<table class="bcls-table">
+	<thead class="bcls-table__head">
+		<tr>
+			<th style="border-bottom:1px solid #707070;">Categoría</th>
+			<th style="border-bottom:1px solid #707070;width: 20%;">Complemento de Brightcove</th>
+			<th style="border-bottom:1px solid #707070;">Complemento de socio o proveedor admitido</th>
+		</tr>
+	</thead>
+	<tbody class="bcls-table__body">
+		<tr>
+			<td rowspan="4" style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Publicidad</td>
+			<td>Plugin FreeWheel v6.1.2 <sup><a href="#n1"> [1]</a></sup></td>
+			<td>FreeWheel AdManager librería v6.17.0</td>
+		</tr>
+		<tr>
+			<td>Complemento IMA v6.1.2</td>
+			<td>Google IMA v3-3.7.4</td>
+		</tr>
+		<tr>
+			<td>Complemento OnCeux v6.1.2</td>
+			<td>onceux-android-library 2.1.17</td>
+		</tr>
+		<tr>
+			<td>Complemento VMAP v6.1.2 <sup><a href="#n3"> [3]</a></sup></td>
+			<td>Ninguno</td>
+		</tr>
+		<tr>
+			<td style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Analytics</td>
+			<td>Complemento Omniture v6.1.2 <sup><a href="#n4"> [4]</a></sup></td>
+			<td>AdobeVideoLibrary 4.11.0<br/> <br/> VideoHeartbeat 2.0.0</td>
+		</tr>
+	</tbody>
+</table>
+
+<h3>SDK v6.1.1</h3>
+
+<h4>6 abr 2018</h4>
+
+<p>El marco soportado usa ExoPlayer 2 v2.5.3</p>
+
+<p>La tabla siguiente contiene los complementos de Brightcove y las versiones del complemento asociado a la versión anterior del SDK nativo de Brightcove:</p>
+<!-- add table here -->
+
+<table class="bcls-table">
+	<thead class="bcls-table__head">
+		<tr>
+			<th style="border-bottom:1px solid #707070;">Categoría</th>
+			<th style="border-bottom:1px solid #707070;width: 20%;">Complemento de Brightcove</th>
+			<th style="border-bottom:1px solid #707070;">Complemento de socio o proveedor admitido</th>
+		</tr>
+	</thead>
+	<tbody class="bcls-table__body">
+		<tr>
+			<td rowspan="4" style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Publicidad</td>
+			<td>Complemento FreeWheel v6.1.1 <sup><a href="#n1"> [1]</a></sup></td>
+			<td>FreeWheel AdManager librería v6.17.0</td>
+		</tr>
+		<tr>
+			<td>Plugin IMA v6.1.1</td>
+			<td>Google IMA v3-3.7.4</td>
+		</tr>
+		<tr>
+			<td>Complemento OnCeux v6.1.1</td>
+			<td>onceux-android-library 2.1.17</td>
+		</tr>
+		<tr>
+			<td>Complemento VMAP v6.1.1 <sup><a href="#n3"> [3]</a></sup></td>
+			<td>Ninguno</td>
+		</tr>
+		<tr>
+			<td style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Analytics</td>
+			<td>Complemento Omniture v6.1.1 <sup><a href="#n4"> [4]</a></sup></td>
+			<td>AdobeVideoLibrary 4.11.0<br/> <br/> VideoHeartbeat 2.0.0</td>
+		</tr>
+	</tbody>
+</table>
+
+<h3>SDK v6.1.0</h3>
+
+<h4>29 Mar 2018</h4>
+
+<p>El marco soportado usa ExoPlayer 2 v2.5.3</p>
+
+<p>La tabla siguiente contiene los complementos de Brightcove y las versiones del complemento asociado a la versión anterior del SDK nativo de Brightcove:</p>
+<!-- add table here -->
+
+<table class="bcls-table">
+	<thead class="bcls-table__head">
+		<tr>
+			<th style="border-bottom:1px solid #707070;">Categoría</th>
+			<th style="border-bottom:1px solid #707070;width: 20%;">Complemento de Brightcove</th>
+			<th style="border-bottom:1px solid #707070;">Complemento de socio o proveedor admitido</th>
+		</tr>
+	</thead>
+	<tbody class="bcls-table__body">
+		<tr>
+			<td rowspan="4" style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Publicidad</td>
+			<td>Plugin FreeWheel v6.1.0 <sup><a href="#n1"> [1]</a></sup></td>
+			<td>FreeWheel AdManager librería v6.17.0</td>
+		</tr>
+		<tr>
+			<td>Plugin IMA v6.1.0</td>
+			<td>Google IMA v3-3.7.4</td>
+		</tr>
+		<tr>
+			<td>Plugin OnCeux v6.1.0</td>
+			<td>onceux-android-library 2.1.17</td>
+		</tr>
+		<tr>
+			<td>Complemento VMAP v6.1.0 <sup><a href="#n3"> [3]</a></sup></td>
+			<td>Ninguno</td>
+		</tr>
+		<tr>
+			<td style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Analytics</td>
+			<td>Complemento Omniture v6.1.0 <sup><a href="#n4"> [4]</a></sup></td>
+			<td>AdobeVideoLibrary 4.11.0<br/> <br/> VideoHeartbeat 2.0.0</td>
+		</tr>
+	</tbody>
+</table>
+
+<h3>SDK v6.0.2</h3>
+
+<h4>30 Ene 2018</h4>
+
+<p>El marco soportado usa ExoPlayer 2 v2.5.3</p>
+
+<p>La tabla siguiente contiene los complementos de Brightcove y las versiones del complemento asociado a la versión anterior del SDK nativo de Brightcove:</p>
+<!-- add table here -->
+
+<table class="bcls-table">
+	<thead class="bcls-table__head">
+		<tr>
+			<th style="border-bottom:1px solid #707070;">Categoría</th>
+			<th style="border-bottom:1px solid #707070;width: 20%;">Complemento de Brightcove</th>
+			<th style="border-bottom:1px solid #707070;">Complemento de socio o proveedor admitido</th>
+		</tr>
+	</thead>
+	<tbody class="bcls-table__body">
+		<tr>
+			<td rowspan="4" style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Publicidad</td>
+			<td>Plugin FreeWheel v6.0.2 <sup><a href="#n1"> [1]</a></sup></td>
+			<td>FreeWheel AdManager librería v6.17.0</td>
+		</tr>
+		<tr>
+			<td>Plugin IMA v6.0.2</td>
+			<td>Google IMA v3-3.7.4</td>
+		</tr>
+		<tr>
+			<td>Complemento OnCeux v6.0.2</td>
+			<td>onceux-android-library 2.1.17</td>
+		</tr>
+		<tr>
+			<td>Complemento VMAP v6.0.2 <sup><a href="#n3"> [3]</a></sup></td>
+			<td>Ninguno</td>
+		</tr>
+		<tr>
+			<td style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Analytics</td>
+			<td>Complemento Omniture v6.0.2 <sup><a href="#n4"> [4]</a></sup></td>
+			<td>AdobeVideoLibrary 4.11.0<br/> <br/> VideoHeartbeat 2.0.0</td>
+		</tr>
+	</tbody>
+</table>
+
+<h3>SDK v6.0.1</h3>
+
+<h4>18 dic 2017</h4>
+
+<p>El marco soportado usa ExoPlayer 2 v2.5.3</p>
+
+<p>La tabla siguiente contiene los complementos de Brightcove y las versiones del complemento asociado a la versión anterior del SDK nativo de Brightcove:</p>
+<!-- add table here -->
+
+<table class="bcls-table">
+	<thead class="bcls-table__head">
+		<tr>
+			<th style="border-bottom:1px solid #707070;">Categoría</th>
+			<th style="border-bottom:1px solid #707070;width: 20%;">Complemento de Brightcove</th>
+			<th style="border-bottom:1px solid #707070;">Complemento de socio o proveedor admitido</th>
+		</tr>
+	</thead>
+	<tbody class="bcls-table__body">
+		<tr>
+			<td rowspan="4" style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Publicidad</td>
+			<td>Plugin FreeWheel v6.0.1 <sup><a href="#n1"> [1]</a></sup></td>
+			<td>FreeWheel AdManager librería v6.17.0</td>
+		</tr>
+		<tr>
+			<td>Plugin IMA v6.0.1</td>
+			<td>Google IMA v3-3.7.4</td>
+		</tr>
+		<tr>
+			<td>Complemento OnCeux v6.0.1</td>
+			<td>onceux-android-library 2.1.17</td>
+		</tr>
+		<tr>
+			<td>Complemento VMAP v6.0.1 <sup><a href="#n2"> [2]</a></sup></td>
+			<td>Ninguno</td>
+		</tr>
+		<tr>
+			<td style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Analytics</td>
+			<td>Complemento Omniture v6.0.1 <sup><a href="#n3"> [3]</a></sup></td>
+			<td>AdobeVideoLibrary 4.11.0<br/> <br/> VideoHeartbeat 2.0.0</td>
+		</tr>
+	</tbody>
+</table>
+
+<h3>SDK v5.2.0</h3>
+
+<h4>3 Oct 2017</h4>
+
+<p>El marco soportado utiliza ExoPlayer v1.5.13.</p>
+
+<p>La tabla siguiente contiene los complementos de Brightcove y las versiones del complemento asociado a la versión anterior del SDK nativo de Brightcove:</p>
+<!-- add table here -->
+
+<table class="bcls-table">
+	<thead class="bcls-table__head">
+		<tr>
+			<th style="border-bottom:1px solid #707070;">Categoría</th>
+			<th style="border-bottom:1px solid #707070;width: 20%;">Complemento de Brightcove</th>
+			<th style="border-bottom:1px solid #707070;">Complemento de socio o proveedor admitido</th>
+		</tr>
+	</thead>
+	<tbody class="bcls-table__body">
+		<tr>
+			<td rowspan="4" style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Publicidad</td>
+			<td>Complemento FreeWheel v5.2.0 <sup><a href="#n1"> [1]</a></sup></td>
+			<td>FreeWheel AdManager librería v6.17.0</td>
+		</tr>
+		<tr>
+			<td>Plugin IMA v5.2.0</td>
+			<td>Google IMA v3-3.7.4</td>
+		</tr>
+		<tr>
+			<td>Plugin OnCeux v5.2.0</td>
+			<td>onceux-android-library 2.1.17</td>
+		</tr>
+		<tr>
+			<td>VMAP [2]<sup><a href="#n2"></a></sup></td>
+			<td>Ninguno</td>
+		</tr>
+		<tr>
+			<td style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Analytics</td>
+			<td>Complemento Omniture v5.2.0 <sup><a href="#n3"> [3]</a></sup></td>
+			<td>AdobeVideoLibrary 4.11.0<br/> <br/> VideoHeartbeat 2.0.0</td>
+		</tr>
+		<tr>
+			<td style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">DRM</td>
+			<td>Widevine Modular [4]<sup><a href="#n4"></a></sup></td>
+			<td>Ninguno. El marco de Android es compatible con Widevine Modular cuando se utiliza la vista de vídeo ExoPlayer.</td>
+		</tr>
+	</tbody>
+</table>
+
+<h3>SDK v5.1.0</h3>
+
+<h4>18 sep 2017</h4>
+
+<p>El marco soportado utiliza ExoPlayer v1.5.13.</p>
+
+<p>La tabla siguiente contiene los complementos de Brightcove y las versiones del complemento asociado a la versión anterior del SDK nativo de Brightcove:</p>
+<!-- add table here -->
+
+<table class="bcls-table">
+	<thead class="bcls-table__head">
+		<tr>
+			<th style="border-bottom:1px solid #707070;">Categoría</th>
+			<th style="border-bottom:1px solid #707070;width: 20%;">Complemento de Brightcove</th>
+			<th style="border-bottom:1px solid #707070;">Complemento de socio o proveedor admitido</th>
+		</tr>
+	</thead>
+	<tbody class="bcls-table__body">
+		<tr>
+			<td rowspan="4" style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Publicidad</td>
+			<td>Complemento FreeWheel v5.1.0 <sup><a href="#n1"> [1]</a></sup></td>
+			<td>Librería de FreeWheel AdManager v6.10.0</td>
+		</tr>
+		<tr>
+			<td>Complemento IMA v5.1.0</td>
+			<td>Google IMA v3-3.7.4</td>
+		</tr>
+		<tr>
+			<td>Complemento OnCeux v5.1.0</td>
+			<td>onceux-android-library 2.1.17</td>
+		</tr>
+		<tr>
+			<td>VMAP [2]<sup><a href="#n2"></a></sup></td>
+			<td>Ninguno</td>
+		</tr>
+		<tr>
+			<td style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Analytics</td>
+			<td>Complemento Omniture v5.1.0 <sup><a href="#n3"> [3]</a></sup></td>
+			<td>AdobeVideoLibrary 4.11.0<br/> <br/> VideoHeartbeat 2.0.0</td>
+		</tr>
+		<tr>
+			<td style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">DRM</td>
+			<td>Widevine Modular [4]<sup><a href="#n4"></a></sup></td>
+			<td>Ninguno. El marco de Android es compatible con Widevine Modular cuando se utiliza la vista de vídeo ExoPlayer.</td>
+		</tr>
+	</tbody>
+</table>
+
+<h3>SDK v5.0.7</h3>
+
+<h4>8 Sep 2017</h4>
+
+<p>El marco soportado utiliza ExoPlayer v1.5.13.</p>
+
+<p>La tabla siguiente contiene los complementos de Brightcove y las versiones del complemento asociado a la versión anterior del SDK nativo de Brightcove:</p>
+<!-- add table here -->
+
+<table class="bcls-table">
+	<thead class="bcls-table__head">
+		<tr>
+			<th style="border-bottom:1px solid #707070;">Categoría</th>
+			<th style="border-bottom:1px solid #707070;width: 20%;">Complemento de Brightcove</th>
+			<th style="border-bottom:1px solid #707070;">Complemento de socio o proveedor admitido</th>
+		</tr>
+	</thead>
+	<tbody class="bcls-table__body">
+		<tr>
+			<td rowspan="4" style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Publicidad</td>
+			<td>Complemento FreeWheel v5.0.7 <sup><a href="#n1"> [1]</a></sup></td>
+			<td>Librería de FreeWheel AdManager v6.10.0</td>
+		</tr>
+		<tr>
+			<td>Complemento IMA v5.0.7</td>
+			<td>Google IMA v3-3.7.4</td>
+		</tr>
+		<tr>
+			<td>Complemento OnCeux v5.0.7</td>
+			<td>onceux-android-library 2.1.17</td>
+		</tr>
+		<tr>
+			<td>VMAP [2]<sup><a href="#n2"></a></sup></td>
+			<td>Ninguno</td>
+		</tr>
+		<tr>
+			<td style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Analytics</td>
+			<td>Complemento Omniture v5.0.7 <sup><a href="#n3"> [3]</a></sup></td>
+			<td>AdobeVideoLibrary 4.11.0<br/> <br/> VideoHeartbeat 2.0.0</td>
+		</tr>
+		<tr>
+			<td style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">DRM</td>
+			<td>Widevine Modular [4]<sup><a href="#n4"></a></sup></td>
+			<td>Ninguno. El marco de Android es compatible con Widevine Modular cuando se utiliza la vista de vídeo ExoPlayer.</td>
+		</tr>
+	</tbody>
+</table>
+
+<h3>SDK v5.0.6</h3>
+
+<h4>29 Ago 2017</h4>
+
+<p>El marco soportado utiliza ExoPlayer v1.5.13.</p>
+
+<p>La tabla siguiente contiene los complementos de Brightcove y las versiones del complemento asociado a la versión anterior del SDK nativo de Brightcove:</p>
+<!-- add table here -->
+
+<table class="bcls-table">
+	<thead class="bcls-table__head">
+		<tr>
+			<th style="border-bottom:1px solid #707070;">Categoría</th>
+			<th style="border-bottom:1px solid #707070;width: 20%;">Complemento de Brightcove</th>
+			<th style="border-bottom:1px solid #707070;">Complemento de socio o proveedor admitido</th>
+		</tr>
+	</thead>
+	<tbody class="bcls-table__body">
+		<tr>
+			<td rowspan="4" style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Publicidad</td>
+			<td>Complemento FreeWheel v5.0.6 <sup><a href="#n1"> [1]</a></sup></td>
+			<td>Librería de FreeWheel AdManager v6.10.0</td>
+		</tr>
+		<tr>
+			<td>Complemento IMA v5.0.6</td>
+			<td>Google IMA v3-3.7.4</td>
+		</tr>
+		<tr>
+			<td>Complemento OnCeux v5.0.6</td>
+			<td>onceux-android-library 2.1.17</td>
+		</tr>
+		<tr>
+			<td>VMAP [2]<sup><a href="#n2"></a></sup></td>
+			<td>Ninguno</td>
+		</tr>
+		<tr>
+			<td style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Analytics</td>
+			<td>Complemento Omniture v5.0.6 <sup><a href="#n3"> [3]</a></sup></td>
+			<td>AdobeVideoLibrary 4.11.0<br/> <br/> VideoHeartbeat 2.0.0</td>
+		</tr>
+		<tr>
+			<td style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">DRM</td>
+			<td>Widevine Modular [4]<sup><a href="#n4"></a></sup></td>
+			<td>Ninguno. El marco de Android es compatible con Widevine Modular cuando se utiliza la vista de vídeo ExoPlayer.</td>
+		</tr>
+	</tbody>
+</table>
+
+<h3>SDK v5.0.5</h3>
+
+<h4>15 Ago 2017</h4>
+
+<p>El marco soportado utiliza ExoPlayer v1.5.13.</p>
+
+<p>La tabla siguiente contiene los complementos de Brightcove y las versiones del complemento asociado a la versión anterior del SDK nativo de Brightcove:</p>
+<!-- add table here -->
+
+<table class="bcls-table">
+	<thead class="bcls-table__head">
+		<tr>
+			<th style="border-bottom:1px solid #707070;">Categoría</th>
+			<th style="border-bottom:1px solid #707070;width: 20%;">Complemento de Brightcove</th>
+			<th style="border-bottom:1px solid #707070;">Complemento de socio o proveedor admitido</th>
+		</tr>
+	</thead>
+	<tbody class="bcls-table__body">
+		<tr>
+			<td rowspan="4" style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Publicidad</td>
+			<td>Complemento FreeWheel v5.0.5 <sup><a href="#n1"> [1]</a></sup></td>
+			<td>Librería de FreeWheel AdManager v6.10.0</td>
+		</tr>
+		<tr>
+			<td>Complemento IMA v5.0.5</td>
+			<td>Google IMA v3-3.7.4</td>
+		</tr>
+		<tr>
+			<td>Complemento OnCeux v5.0.5</td>
+			<td>onceux-android-library 2.1.17</td>
+		</tr>
+		<tr>
+			<td>VMAP [2]<sup><a href="#n2"></a></sup></td>
+			<td>Ninguno</td>
+		</tr>
+		<tr>
+			<td style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Analytics</td>
+			<td>Complemento Omniture v5.0.5 <sup><a href="#n3"> [3]</a></sup></td>
+			<td>AdobeVideoLibrary 4.11.0<br/> <br/> VideoHeartbeat 2.0.0</td>
+		</tr>
+		<tr>
+			<td rowspan="2" style="background-color:#dbdbdb;font-weight: bold;">DRM</td>
+			<td>Widevine Modular [4]<sup><a href="#n4"></a></sup></td>
+			<td>Ninguno. El marco de Android es compatible con Widevine Modular cuando se utiliza la vista de vídeo ExoPlayer.</td>
+		</tr>
+		<tr>
+			<td style="background-color:#ffcccc;">Plugin Widevine Classic v4.9.2 (obsoleto) [4] [5]<sup><a href="#n4"></a></sup><sup><a href="#n5"></a></sup></td>
+			<td style="background-color:#ffcccc;">paquete<a href="https://developer.android.com/reference/android/drm/package-summary.html">android.drm</a> </td>
+		</tr>
+	</tbody>
+</table>
+
+<h3>SDK v5.0.4</h3>
+
+<h4>01 Ago 2017</h4>
+
+<p>El marco soportado utiliza ExoPlayer v1.5.13.</p>
+
+<p>La tabla siguiente contiene los complementos de Brightcove y las versiones del complemento asociado a la versión anterior del SDK nativo de Brightcove:</p>
+<!-- add table here -->
+
+<table class="bcls-table">
+	<thead class="bcls-table__head">
+		<tr>
+			<th style="border-bottom:1px solid #707070;">Categoría</th>
+			<th style="border-bottom:1px solid #707070;width: 20%;">Complemento de Brightcove</th>
+			<th style="border-bottom:1px solid #707070;">Complemento de socio o proveedor admitido</th>
+		</tr>
+	</thead>
+	<tbody class="bcls-table__body">
+		<tr>
+			<td rowspan="4" style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Publicidad</td>
+			<td>Complemento FreeWheel v5.0.4 <sup><a href="#n1"> [1]</a></sup></td>
+			<td>Librería de FreeWheel AdManager v6.10.0</td>
+		</tr>
+		<tr>
+			<td>Complemento IMA v5.0.4</td>
+			<td>Google IMA v3-3.1.3</td>
+		</tr>
+		<tr>
+			<td>Complemento OnCeux v5.0.4</td>
+			<td>onceux-android-library 2.1.17</td>
+		</tr>
+		<tr>
+			<td>VMAP [2]<sup><a href="#n2"></a></sup></td>
+			<td>Ninguno</td>
+		</tr>
+		<tr>
+			<td style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Analytics</td>
+			<td>Complemento Omniture v5.0.4 <sup><a href="#n3"> [3]</a></sup></td>
+			<td>AdobeVideoLibrary 4.11.0<br/> <br/> VideoHeartbeat 2.0.0</td>
+		</tr>
+		<tr>
+			<td rowspan="2" style="background-color:#dbdbdb;font-weight: bold;">DRM</td>
+			<td>Widevine Modular [4]<sup><a href="#n4"></a></sup></td>
+			<td>Ninguno. El marco de Android es compatible con Widevine Modular cuando se utiliza la vista de vídeo ExoPlayer.</td>
+		</tr>
+		<tr>
+			<td style="background-color:#ffcccc;">Plugin Widevine Classic v4.9.2 (obsoleto) [4] [5]<sup><a href="#n4"></a></sup><sup><a href="#n5"></a></sup></td>
+			<td style="background-color:#ffcccc;">paquete<a href="https://developer.android.com/reference/android/drm/package-summary.html">android.drm</a> </td>
+		</tr>
+	</tbody>
+</table>
+
+<h3>SDK v5.0.3</h3>
+
+<h4>14 Julio 2017</h4>
+
+<p>El marco soportado utiliza ExoPlayer v1.5.13.</p>
+
+<p>La tabla siguiente contiene los complementos de Brightcove y las versiones del complemento asociado a la versión anterior del SDK nativo de Brightcove:</p>
+<!-- add table here -->
+
+<table class="bcls-table">
+	<thead class="bcls-table__head">
+		<tr>
+			<th style="border-bottom:1px solid #707070;">Categoría</th>
+			<th style="border-bottom:1px solid #707070;width: 20%;">Complemento de Brightcove</th>
+			<th style="border-bottom:1px solid #707070;">Complemento de socio o proveedor admitido</th>
+		</tr>
+	</thead>
+	<tbody class="bcls-table__body">
+		<tr>
+			<td rowspan="4" style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Publicidad</td>
+			<td>Complemento FreeWheel v5.0.3 <sup><a href="#n1"> [1]</a></sup></td>
+			<td>Librería de FreeWheel AdManager v6.10.0</td>
+		</tr>
+		<tr>
+			<td>Complemento IMA v5.0.3</td>
+			<td>Google IMA v3-3.1.3</td>
+		</tr>
+		<tr>
+			<td>Complemento OnCeux v5.0.3</td>
+			<td>onceux-android-library 2.1.17</td>
+		</tr>
+		<tr>
+			<td>VMAP [2]<sup><a href="#n2"></a></sup></td>
+			<td>Ninguno</td>
+		</tr>
+		<tr>
+			<td style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Analytics</td>
+			<td>Complemento Omniture v5.0.3 <sup><a href="#n3"> [3]</a></sup></td>
+			<td>AdobeVideoLibrary 4.11.0<br/> <br/> VideoHeartbeat 2.0.0</td>
+		</tr>
+		<tr>
+			<td style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Chromecast</td>
+			<td>Complemento de Google Cast v5.0.3</td>
+			<td>CastCompanionLibrary- android:2.5.1</td>
+		</tr>
+		<tr>
+			<td rowspan="2" style="background-color:#dbdbdb;font-weight: bold;">DRM</td>
+			<td>Widevine Modular [4]<sup><a href="#n4"></a></sup></td>
+			<td>Ninguno. El marco de Android es compatible con Widevine Modular cuando se utiliza la vista de vídeo ExoPlayer.</td>
+		</tr>
+		<tr>
+			<td style="background-color:#ffcccc;">Plugin Widevine Classic v4.9.2 (obsoleto) [4] [5]<sup><a href="#n4"></a></sup><sup><a href="#n5"></a></sup></td>
+			<td style="background-color:#ffcccc;">paquete<a href="https://developer.android.com/reference/android/drm/package-summary.html">android.drm</a> </td>
+		</tr>
+	</tbody>
+</table>
+
+<h3>SDK v4.13.7</h3>
+
+<h4>12 de julio de 2017</h4>
+
+<p>El marco soportado utiliza ExoPlayer v1.5.13.</p>
+
+<p>La tabla siguiente contiene los complementos de Brightcove y las versiones del complemento asociado a la versión anterior del SDK nativo de Brightcove:</p>
+<!-- add table here -->
+
+<table class="bcls-table">
+	<thead class="bcls-table__head">
+		<tr>
+			<th style="border-bottom:1px solid #707070;">Categoría</th>
+			<th style="border-bottom:1px solid #707070;width: 20%;">Complemento de Brightcove</th>
+			<th style="border-bottom:1px solid #707070;">Complemento de socio o proveedor admitido</th>
+		</tr>
+	</thead>
+	<tbody class="bcls-table__body">
+		<tr>
+			<td rowspan="4" style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Publicidad</td>
+			<td>Complemento FreeWheel v4.13.7 <sup><a href="#n1"> [1]</a></sup></td>
+			<td>Librería de FreeWheel AdManager v6.10.0</td>
+		</tr>
+		<tr>
+			<td>Complemento IMA v4.13.7</td>
+			<td>Google IMA v3-3.1.3</td>
+		</tr>
+		<tr>
+			<td>Plugin OnCeux v4.13.7</td>
+			<td>onceux-android-library 2.1.17</td>
+		</tr>
+		<tr>
+			<td>VMAP [2]<sup><a href="#n2"></a></sup></td>
+			<td>Ninguno</td>
+		</tr>
+		<tr>
+			<td style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Analytics</td>
+			<td>Complemento Omniture v4.13.7 <sup><a href="#n3"> [3]</a></sup></td>
+			<td>AdobeVideoLibrary 4.11.0<br/> <br/> VideoHeartbeat 2.0.0</td>
+		</tr>
+		<tr>
+			<td style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Chromecast</td>
+			<td>Complemento de Google Cast v4.13.7</td>
+			<td>CastCompanionLibrary- android:2.5.1</td>
+		</tr>
+		<tr>
+			<td rowspan="2" style="background-color:#dbdbdb;font-weight: bold;">DRM</td>
+			<td>Widevine Modular [4]<sup><a href="#n4"></a></sup></td>
+			<td>Ninguno. El marco de Android es compatible con Widevine Modular cuando se utiliza la vista de vídeo ExoPlayer.</td>
+		</tr>
+		<tr>
+			<td style="background-color:#ffcccc;">Plugin Widevine Classic v4.9.2 (obsoleto) [4] [5]<sup><a href="#n4"></a></sup><sup><a href="#n5"></a></sup></td>
+			<td style="background-color:#ffcccc;">paquete<a href="https://developer.android.com/reference/android/drm/package-summary.html">android.drm</a> </td>
+		</tr>
+	</tbody>
+</table>
+
+<h3>SDK v4.13.6</h3>
+
+<h4>1 Mayo 2017</h4>
+
+<p>El marco soportado utiliza ExoPlayer v1.5.13.</p>
+
+<p>La tabla siguiente contiene los complementos de Brightcove y las versiones del complemento asociado a la versión anterior del SDK nativo de Brightcove:</p>
+<!-- add table here -->
+
+<table class="bcls-table">
+	<thead class="bcls-table__head">
+		<tr>
+			<th style="border-bottom:1px solid #707070;">Categoría</th>
+			<th style="border-bottom:1px solid #707070;width: 20%;">Complemento de Brightcove</th>
+			<th style="border-bottom:1px solid #707070;">Complemento de socio o proveedor admitido</th>
+		</tr>
+	</thead>
+	<tbody class="bcls-table__body">
+		<tr>
+			<td rowspan="4" style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Publicidad</td>
+			<td>Plugin FreeWheel v4.13.6 <sup><a href="#n1"> [1]</a></sup></td>
+			<td>Librería de FreeWheel AdManager v6.10.0</td>
+		</tr>
+		<tr>
+			<td>Plugin IMA v4.13.6</td>
+			<td>Google IMA v3-3.1.3</td>
+		</tr>
+		<tr>
+			<td>Plugin OnCeux v4.13.6</td>
+			<td>onceux-android-library 2.1.17</td>
+		</tr>
+		<tr>
+			<td>VMAP [2]<sup><a href="#n2"></a></sup></td>
+			<td>Ninguno</td>
+		</tr>
+		<tr>
+			<td style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Analytics</td>
+			<td>Complemento Omniture v4.13.6 <sup><a href="#n3"> [3]</a></sup></td>
+			<td>AdobeVideoLibrary 4.11.0<br/> <br/> VideoHeartbeat 2.0.0</td>
+		</tr>
+		<tr>
+			<td style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Chromecast</td>
+			<td>Complemento de Google Cast v4.13.6</td>
+			<td>CastCompanionLibrary- android:2.5.1</td>
+		</tr>
+		<tr>
+			<td rowspan="2" style="background-color:#dbdbdb;font-weight: bold;">DRM</td>
+			<td>Widevine Modular [4]<sup><a href="#n4"></a></sup></td>
+			<td>Ninguno. El marco de Android es compatible con Widevine Modular cuando se utiliza la vista de vídeo ExoPlayer.</td>
+		</tr>
+		<tr>
+			<td style="background-color:#ffcccc;">Plugin Widevine Classic v4.9.2 (obsoleto) [4] [5]<sup><a href="#n4"></a></sup><sup><a href="#n5"></a></sup></td>
+			<td style="background-color:#ffcccc;">paquete<a href="https://developer.android.com/reference/android/drm/package-summary.html">android.drm</a> </td>
+		</tr>
+	</tbody>
+</table>
+
+<h3>SDK v4.13.5</h3>
+
+<h4>28 abr 2017</h4>
+
+<p>El marco soportado utiliza ExoPlayer v1.5.13.</p>
+
+<p>La tabla siguiente contiene los complementos de Brightcove y las versiones del complemento asociado a la versión anterior del SDK nativo de Brightcove:</p>
+<!-- add table here -->
+
+<table class="bcls-table">
+	<thead class="bcls-table__head">
+		<tr>
+			<th style="border-bottom:1px solid #707070;">Categoría</th>
+			<th style="border-bottom:1px solid #707070;width: 20%;">Complemento de Brightcove</th>
+			<th style="border-bottom:1px solid #707070;">Complemento de socio o proveedor admitido</th>
+		</tr>
+	</thead>
+	<tbody class="bcls-table__body">
+		<tr>
+			<td rowspan="4" style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Publicidad</td>
+			<td>Complemento FreeWheel v4.13.5 <sup><a href="#n1"> [1]</a></sup></td>
+			<td>Librería de FreeWheel AdManager v6.10.0</td>
+		</tr>
+		<tr>
+			<td>Plugin IMA v4.13.5</td>
+			<td>Google IMA v3-3.1.3</td>
+		</tr>
+		<tr>
+			<td>Plugin OnCeux v4.13.5</td>
+			<td>onceux-android-library 2.1.17</td>
+		</tr>
+		<tr>
+			<td>VMAP [2]<sup><a href="#n2"></a></sup></td>
+			<td>Ninguno</td>
+		</tr>
+		<tr>
+			<td style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Analytics</td>
+			<td>Complemento Omniture v4.13.5 <sup><a href="#n3"> [3]</a></sup></td>
+			<td>AdobeVideoLibrary 4.11.0<br/> <br/> VideoHeartbeat 2.0.0</td>
+		</tr>
+		<tr>
+			<td style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Chromecast</td>
+			<td>Complemento de Google Cast v4.13.5</td>
+			<td>CastCompanionLibrary- android:2.5.1</td>
+		</tr>
+		<tr>
+			<td rowspan="2" style="background-color:#dbdbdb;font-weight: bold;">DRM</td>
+			<td>Widevine Modular [4]<sup><a href="#n4"></a></sup></td>
+			<td>Ninguno. El marco de Android es compatible con Widevine Modular cuando se utiliza la vista de vídeo ExoPlayer.</td>
+		</tr>
+		<tr>
+			<td style="background-color:#ffcccc;">Plugin Widevine Classic v4.9.2 (obsoleto) [4] [5]<sup><a href="#n4"></a></sup><sup><a href="#n5"></a></sup></td>
+			<td style="background-color:#ffcccc;">paquete<a href="https://developer.android.com/reference/android/drm/package-summary.html">android.drm</a> </td>
+		</tr>
+	</tbody>
+</table>
+
+<h3>SDK v4.13.4</h3>
+
+<h4>14 abr 2017</h4>
+
+<p>El marco soportado utiliza ExoPlayer v1.5.13. Tenga en cuenta que la versión 4.13.3 es idéntica a la 4.13.4.</p>
+
+<p>La tabla siguiente contiene los complementos de Brightcove y las versiones del complemento asociado a la versión anterior del SDK nativo de Brightcove:</p>
+<!-- add table here -->
+
+<table class="bcls-table">
+	<thead class="bcls-table__head">
+		<tr>
+			<th style="border-bottom:1px solid #707070;">Categoría</th>
+			<th style="border-bottom:1px solid #707070;width: 20%;">Complemento de Brightcove</th>
+			<th style="border-bottom:1px solid #707070;">Complemento de socio o proveedor admitido</th>
+		</tr>
+	</thead>
+	<tbody class="bcls-table__body">
+		<tr>
+			<td rowspan="4" style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Publicidad</td>
+			<td>Complemento FreeWheel v4.13.4 <sup><a href="#n1"> [1]</a></sup></td>
+			<td>Librería de FreeWheel AdManager v6.10.0</td>
+		</tr>
+		<tr>
+			<td>Plugin IMA v4.13.4</td>
+			<td>Google IMA v3-3.1.3</td>
+		</tr>
+		<tr>
+			<td>Plugin OnCeux v4.13.4</td>
+			<td>onceux-android-library 2.1.17</td>
+		</tr>
+		<tr>
+			<td>VMAP [2]<sup><a href="#n2"></a></sup></td>
+			<td>Ninguno</td>
+		</tr>
+		<tr>
+			<td style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Analytics</td>
+			<td>Complemento Omniture v4.13.4 <sup><a href="#n3"> [3]</a></sup></td>
+			<td>AdobeVideoLibrary 4.11.0<br/> <br/> VideoHeartbeat 2.0.0</td>
+		</tr>
+		<tr>
+			<td style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Chromecast</td>
+			<td>Complemento de Google Cast v4.13.4</td>
+			<td>CastCompanionLibrary- android:2.5.1</td>
+		</tr>
+		<tr>
+			<td rowspan="2" style="background-color:#dbdbdb;font-weight: bold;">DRM</td>
+			<td>Widevine Modular [4]<sup><a href="#n4"></a></sup></td>
+			<td>Ninguno. El marco de Android es compatible con Widevine Modular cuando se utiliza la vista de vídeo ExoPlayer.</td>
+		</tr>
+		<tr>
+			<td style="background-color:#ffcccc;">Plugin Widevine Classic v4.9.2 (obsoleto) [4] [5]<sup><a href="#n4"></a></sup><sup><a href="#n5"></a></sup></td>
+			<td style="background-color:#ffcccc;">paquete<a href="https://developer.android.com/reference/android/drm/package-summary.html">android.drm</a> </td>
+		</tr>
+	</tbody>
+</table>
+
+<h3>SDK v4.13.2</h3>
+
+<h4>17 Mar 2017</h4>
+
+<p>El marco soportado utiliza ExoPlayer v1.5.13.</p>
+
+<p>La tabla siguiente contiene los complementos de Brightcove y las versiones del complemento asociado a la versión anterior del SDK nativo de Brightcove:</p>
+<!-- add table here -->
+
+<table class="bcls-table">
+	<thead class="bcls-table__head">
+		<tr>
+			<th style="border-bottom:1px solid #707070;">Categoría</th>
+			<th style="border-bottom:1px solid #707070;width: 20%;">Complemento de Brightcove</th>
+			<th style="border-bottom:1px solid #707070;">Complemento de socio o proveedor admitido</th>
+		</tr>
+	</thead>
+	<tbody class="bcls-table__body">
+		<tr>
+			<td rowspan="4" style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Publicidad</td>
+			<td>Complemento FreeWheel v4.13.2 <sup><a href="#n1"> [1]</a></sup></td>
+			<td>Librería de FreeWheel AdManager v6.10.0</td>
+		</tr>
+		<tr>
+			<td>Plugin IMA v4.13.2</td>
+			<td>Google IMA v3-3.1.3</td>
+		</tr>
+		<tr>
+			<td>Plugin OnCeux v4.13.2</td>
+			<td>onceux-android-library 2.1.17</td>
+		</tr>
+		<tr>
+			<td>VMAP [2]<sup><a href="#n2"></a></sup></td>
+			<td>Ninguno</td>
+		</tr>
+		<tr>
+			<td style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Analytics</td>
+			<td>Complemento Omniture v4.13.2 <sup><a href="#n3"> [3]</a></sup></td>
+			<td>AdobeVideoLibrary 4.11.0<br/> <br/> VideoHeartbeat 2.0.0</td>
+		</tr>
+		<tr>
+			<td style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Chromecast</td>
+			<td>Complemento de Google Cast v4.13.2</td>
+			<td>CastCompanionLibrary- android:2.5.1</td>
+		</tr>
+		<tr>
+			<td rowspan="2" style="background-color:#dbdbdb;font-weight: bold;">DRM</td>
+			<td>Widevine Modular [4]<sup><a href="#n4"></a></sup></td>
+			<td>Ninguno. El marco de Android es compatible con Widevine Modular cuando se utiliza la vista de vídeo ExoPlayer.</td>
+		</tr>
+		<tr>
+			<td style="background-color:#ffcccc;">Plugin Widevine Classic v4.9.2 (obsoleto) [4] [5]<sup><a href="#n4"></a></sup><sup><a href="#n5"></a></sup></td>
+			<td style="background-color:#ffcccc;">paquete<a href="https://developer.android.com/reference/android/drm/package-summary.html">android.drm</a> </td>
+		</tr>
+	</tbody>
+</table>
+
+<h3>SDK v4.13.1</h3>
+
+<h4>16 Feb 2017</h4>
+
+<p>El marco soportado utiliza ExoPlayer v1.5.13.</p>
+
+<p>La tabla siguiente contiene los complementos de Brightcove y las versiones del complemento asociado a la versión anterior del SDK nativo de Brightcove:</p>
+<!-- add table here -->
+
+<table class="bcls-table">
+	<thead class="bcls-table__head">
+		<tr>
+			<th style="border-bottom:1px solid #707070;">Categoría</th>
+			<th style="border-bottom:1px solid #707070;width: 20%;">Complemento de Brightcove</th>
+			<th style="border-bottom:1px solid #707070;">Complemento de socio o proveedor admitido</th>
+		</tr>
+	</thead>
+	<tbody class="bcls-table__body">
+		<tr>
+			<td rowspan="4" style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Publicidad</td>
+			<td>Plugin FreeWheel v4.13.1 <sup><a href="#n1"> [1]</a></sup></td>
+			<td>Librería de FreeWheel AdManager v6.10.0</td>
+		</tr>
+		<tr>
+			<td>Plugin IMA v4.13.1</td>
+			<td>Google IMA v3-3.1.3</td>
+		</tr>
+		<tr>
+			<td>Plugin OnCeux v4.13.1</td>
+			<td>onceux-android-library 2.1.17</td>
+		</tr>
+		<tr>
+			<td>VMAP [2]<sup><a href="#n2"></a></sup></td>
+			<td>Ninguno</td>
+		</tr>
+		<tr>
+			<td style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Analytics</td>
+			<td>Complemento Omniture v4.13.1 <sup><a href="#n3"> [3]</a></sup></td>
+			<td>AdobeVideoLibrary 4.11.0<br/> <br/> VideoHeartbeat 2.0.0</td>
+		</tr>
+		<tr>
+			<td style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Chromecast</td>
+			<td>Plugin de Google Cast v4.13.1</td>
+			<td>CastCompanionLibrary- android:2.5.1</td>
+		</tr>
+		<tr>
+			<td rowspan="2" style="background-color:#dbdbdb;font-weight: bold;">DRM</td>
+			<td>Widevine Modular [4]<sup><a href="#n4"></a></sup></td>
+			<td>Ninguno. El marco de Android es compatible con Widevine Modular cuando se utiliza la vista de vídeo ExoPlayer.</td>
+		</tr>
+		<tr>
+			<td style="background-color:#ffcccc;">Plugin Widevine Classic v4.9.2 (obsoleto) [4] [5]<sup><a href="#n4"></a></sup><sup><a href="#n5"></a></sup></td>
+			<td style="background-color:#ffcccc;">paquete<a href="https://developer.android.com/reference/android/drm/package-summary.html">android.drm</a> </td>
+		</tr>
+	</tbody>
+</table>
+
+<h3>SDK v4.13</h3>
+
+<h4>25 ene 2017</h4>
+
+<p>El marco soportado utiliza ExoPlayer v1.5.13.</p>
+
+<p>La tabla siguiente contiene los complementos de Brightcove y las versiones del complemento asociado a la versión anterior del SDK nativo de Brightcove:</p>
+<!-- add table here -->
+
+<table class="bcls-table">
+	<thead class="bcls-table__head">
+		<tr>
+			<th style="border-bottom:1px solid #707070;">Categoría</th>
+			<th style="border-bottom:1px solid #707070;width: 20%;">Complemento de Brightcove</th>
+			<th style="border-bottom:1px solid #707070;">Complemento de socio o proveedor admitido</th>
+		</tr>
+	</thead>
+	<tbody class="bcls-table__body">
+		<tr>
+			<td rowspan="4" style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Publicidad</td>
+			<td>Complemento FreeWheel v4.13.0 <sup><a href="#n1"> [1]</a></sup></td>
+			<td>Librería de FreeWheel AdManager v6.10.0</td>
+		</tr>
+		<tr>
+			<td>Plugin IMA v4.13.0</td>
+			<td>Google IMA v3-3.1.3</td>
+		</tr>
+		<tr>
+			<td>Plugin OnCeux v4.13.0</td>
+			<td>onceux-android-library 2.1.17</td>
+		</tr>
+		<tr>
+			<td>VMAP [2]<sup><a href="#n2"></a></sup></td>
+			<td>Ninguno</td>
+		</tr>
+		<tr>
+			<td style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Analytics</td>
+			<td>Complemento Omniture v4.13.0 <sup><a href="#n3"> [3]</a></sup></td>
+			<td>AdobeVideoLibrary 4.11.0<br/> <br/> VideoHeartbeat 2.0.0</td>
+		</tr>
+		<tr>
+			<td style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Chromecast</td>
+			<td>Complemento de Google Cast v4.13.0</td>
+			<td>CastCompanionLibrary- android:2.5.1</td>
+		</tr>
+		<tr>
+			<td rowspan="2" style="background-color:#dbdbdb;font-weight: bold;">DRM</td>
+			<td>Widevine Modular [4]<sup><a href="#n4"></a></sup></td>
+			<td>Ninguno. El marco de Android es compatible con Widevine Modular cuando se utiliza la vista de vídeo ExoPlayer.</td>
+		</tr>
+		<tr>
+			<td style="background-color:#ffcccc;">Plugin Widevine Classic v4.9.2 (obsoleto) [4] [5]<sup><a href="#n4"></a></sup><sup><a href="#n5"></a></sup></td>
+			<td style="background-color:#ffcccc;">paquete<a href="https://developer.android.com/reference/android/drm/package-summary.html">android.drm</a> </td>
+		</tr>
+	</tbody>
+</table>
+
+<h3>SDK v4.12.2</h3>
+
+<h4>20 Ene 2017</h4>
+
+<p>El marco soportado utiliza ExoPlayer v1.5.13.</p>
+
+<p>La tabla siguiente contiene los complementos de Brightcove y las versiones del complemento asociado a la versión anterior del SDK nativo de Brightcove:</p>
+<!-- add table here -->
+
+<table class="bcls-table">
+	<thead class="bcls-table__head">
+		<tr>
+			<th style="border-bottom:1px solid #707070;">Categoría</th>
+			<th style="border-bottom:1px solid #707070;width: 20%;">Complemento de Brightcove</th>
+			<th style="border-bottom:1px solid #707070;">Complemento de socio o proveedor admitido</th>
+		</tr>
+	</thead>
+	<tbody class="bcls-table__body">
+		<tr>
+			<td rowspan="4" style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Publicidad</td>
+			<td>Complemento FreeWheel v4.12.2 <sup><a href="#n1"> [1]</a></sup></td>
+			<td>Librería de FreeWheel AdManager v6.10.0</td>
+		</tr>
+		<tr>
+			<td>Plugin IMA v4.12.2</td>
+			<td>Google IMA v3-3.1.3</td>
+		</tr>
+		<tr>
+			<td>Plugin OnCeux v4.12.2</td>
+			<td>onceux-android-library 2.1.17</td>
+		</tr>
+		<tr>
+			<td>VMAP [2]<sup><a href="#n2"></a></sup></td>
+			<td>Ninguno</td>
+		</tr>
+		<tr>
+			<td style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Analytics</td>
+			<td>Complemento Omniture v4.12.2 <sup><a href="#n3"> [3]</a></sup></td>
+			<td>AdobeVideoLibrary 4.11.0<br/> <br/> VideoHeartbeat 2.0.0</td>
+		</tr>
+		<tr>
+			<td style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Chromecast</td>
+			<td>Complemento de Google Cast v4.12.2</td>
+			<td>CastCompanionLibrary- android:2.5.1</td>
+		</tr>
+		<tr>
+			<td rowspan="2" style="background-color:#dbdbdb;font-weight: bold;">DRM</td>
+			<td>Widevine Modular [4]<sup><a href="#n4"></a></sup></td>
+			<td>Ninguno. El marco de Android es compatible con Widevine Modular cuando se utiliza la vista de vídeo ExoPlayer.</td>
+		</tr>
+		<tr>
+			<td style="background-color:#ffcccc;">Plugin Widevine Classic v4.9.2 (obsoleto) [4] [5]<sup><a href="#n4"></a></sup><sup><a href="#n5"></a></sup></td>
+			<td style="background-color:#ffcccc;">paquete<a href="https://developer.android.com/reference/android/drm/package-summary.html">android.drm</a> </td>
+		</tr>
+	</tbody>
+</table>
+
+<h3>SDK v4.12.1</h3>
+
+<h4>13 ene 2017</h4>
+
+<p>El marco soportado utiliza ExoPlayer v1.5.11.</p>
+
+<p>La tabla siguiente contiene los complementos de Brightcove y las versiones del complemento asociado a la versión anterior del SDK nativo de Brightcove:</p>
+<!-- add table here -->
+
+<table class="bcls-table">
+	<thead class="bcls-table__head">
+		<tr>
+			<th style="border-bottom:1px solid #707070;">Categoría</th>
+			<th style="border-bottom:1px solid #707070;width: 20%;">Complemento de Brightcove</th>
+			<th style="border-bottom:1px solid #707070;">Complemento de socio o proveedor admitido</th>
+		</tr>
+	</thead>
+	<tbody class="bcls-table__body">
+		<tr>
+			<td rowspan="4" style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Publicidad</td>
+			<td>Complemento FreeWheel v4.12.1 <sup><a href="#n1"> [1]</a></sup></td>
+			<td>Librería de FreeWheel AdManager v6.10.0</td>
+		</tr>
+		<tr>
+			<td>Plugin IMA v4.12.1</td>
+			<td>Google IMA v3-3.1.3</td>
+		</tr>
+		<tr>
+			<td>Plugin OnCeux v4.12.1</td>
+			<td>onceux-android-library 2.1.17</td>
+		</tr>
+		<tr>
+			<td>VMAP [2]<sup><a href="#n2"></a></sup></td>
+			<td>Ninguno</td>
+		</tr>
+		<tr>
+			<td style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Analytics</td>
+			<td>Complemento Omniture v4.12.1 <sup><a href="#n3"> [3]</a></sup></td>
+			<td>AdobeVideoLibrary 4.11.0<br/> <br/> VideoHeartbeat 2.0.0</td>
+		</tr>
+		<tr>
+			<td style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Chromecast</td>
+			<td>Complemento de Google Cast v4.12.1</td>
+			<td>CastCompanionLibrary- android:2.5.1</td>
+		</tr>
+		<tr>
+			<td rowspan="2" style="background-color:#dbdbdb;font-weight: bold;">DRM</td>
+			<td>Widevine Modular [4]<sup><a href="#n4"></a></sup></td>
+			<td>Ninguno. El marco de Android es compatible con Widevine Modular cuando se utiliza la vista de vídeo ExoPlayer.</td>
+		</tr>
+		<tr>
+			<td style="background-color:#ffcccc;">Plugin Widevine Classic v4.9.2 (obsoleto) [4] [5]<sup><a href="#n4"></a></sup><sup><a href="#n5"></a></sup></td>
+			<td style="background-color:#ffcccc;">paquete<a href="https://developer.android.com/reference/android/drm/package-summary.html">android.drm</a> </td>
+		</tr>
+	</tbody>
+</table>
+
+<h3>SDK v4.12.0</h3>
+
+<h4>5 Ene 2017</h4>
+
+<p>La tabla siguiente contiene los complementos de Brightcove y las versiones del complemento asociado a la versión anterior del SDK nativo de Brightcove:</p>
+<!-- add table here -->
+
+<table class="bcls-table">
+	<thead class="bcls-table__head">
+		<tr>
+			<th style="border-bottom:1px solid #707070;">Categoría</th>
+			<th style="border-bottom:1px solid #707070;width: 20%;">Complemento de Brightcove</th>
+			<th style="border-bottom:1px solid #707070;">Complemento de socio o proveedor admitido</th>
+		</tr>
+	</thead>
+	<tbody class="bcls-table__body">
+		<tr>
+			<td rowspan="4" style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Publicidad</td>
+			<td>Complemento FreeWheel v4.12.0 <sup><a href="#n1"> [1]</a></sup></td>
+			<td>Librería de FreeWheel AdManager v6.10.0</td>
+		</tr>
+		<tr>
+			<td>Complemento IMA v4.12.0</td>
+			<td>Google IMA v3-3.1.3</td>
+		</tr>
+		<tr>
+			<td>Plugin OnCeux v4.12.0</td>
+			<td>onceux-android-library 2.1.17</td>
+		</tr>
+		<tr>
+			<td>VMAP [2]<sup><a href="#n2"></a></sup></td>
+			<td>Ninguno</td>
+		</tr>
+		<tr>
+			<td style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Analytics</td>
+			<td>Complemento Omniture v4.12.0 <sup><a href="#n3"> [3]</a></sup></td>
+			<td>AdobeVideoLibrary 4.11.0<br/> <br/> VideoHeartbeat 2.0.0</td>
+		</tr>
+		<tr>
+			<td style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Chromecast</td>
+			<td>Complemento de Google Cast v4.12.0</td>
+			<td>CastCompanionLibrary- android:2.5.1</td>
+		</tr>
+		<tr>
+			<td rowspan="2" style="background-color:#dbdbdb;font-weight: bold;">DRM</td>
+			<td>Widevine Modular [4]<sup><a href="#n4"></a></sup></td>
+			<td>Ninguno. El marco de Android es compatible con Widevine Modular cuando se utiliza la vista de vídeo ExoPlayer.</td>
+		</tr>
+		<tr>
+			<td style="background-color:#ffcccc;">Plugin Widevine Classic v4.9.2 (obsoleto) [4] [5]<sup><a href="#n4"></a></sup><sup><a href="#n5"></a></sup></td>
+			<td style="background-color:#ffcccc;">paquete<a href="https://developer.android.com/reference/android/drm/package-summary.html">android.drm</a> </td>
+		</tr>
+	</tbody>
+</table>
+
+<h3>SDK v4.11.1</h3>
+
+<h4>22 Nov 2016</h4>
+
+<p>La tabla siguiente contiene los complementos de Brightcove y las versiones del complemento asociado a la versión anterior del SDK nativo de Brightcove:</p>
+<!-- add table here -->
+
+<table class="bcls-table">
+	<thead class="bcls-table__head">
+		<tr>
+			<th style="border-bottom:1px solid #707070;">Categoría</th>
+			<th style="border-bottom:1px solid #707070;width: 20%;">Complemento de Brightcove</th>
+			<th style="border-bottom:1px solid #707070;">Complemento de socio o proveedor admitido</th>
+		</tr>
+	</thead>
+	<tbody class="bcls-table__body">
+		<tr>
+			<td rowspan="4" style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Publicidad</td>
+			<td>Plugin FreeWheel v4.11.1 <sup><a href="#n1"> [1]</a></sup></td>
+			<td>Librería de FreeWheel AdManager v6.10.0</td>
+		</tr>
+		<tr>
+			<td>Complemento IMA v4.11.1</td>
+			<td>Google IMA v3-3.1.3</td>
+		</tr>
+		<tr>
+			<td>Plugin OnCeux v4.11.1</td>
+			<td>onceux-android-library 2.1.17</td>
+		</tr>
+		<tr>
+			<td>VMAP [2]<sup><a href="#n2"></a></sup></td>
+			<td>Ninguno</td>
+		</tr>
+		<tr>
+			<td style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Analytics</td>
+			<td>Complemento Omniture v4.11.1 <sup><a href="#n3"> [3]</a></sup></td>
+			<td>AdobeVideoLibrary 4.11.0<br/> <br/> VideoHeartbeat 2.0.0</td>
+		</tr>
+		<tr>
+			<td style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Chromecast</td>
+			<td>Complemento de Google Cast v4.11.1</td>
+			<td>CastCompanionLibrary- android:2.5.1</td>
+		</tr>
+		<tr>
+			<td rowspan="2" style="background-color:#dbdbdb;font-weight: bold;">DRM</td>
+			<td>Widevine Modular [4]<sup><a href="#n4"></a></sup></td>
+			<td>Ninguno. El marco de Android es compatible con Widevine Modular cuando se utiliza la vista de vídeo ExoPlayer.</td>
+		</tr>
+		<tr>
+			<td style="background-color:#ffcccc;">Plugin Widevine Classic v4.9.2 (obsoleto) [4] [5]<sup><a href="#n4"></a></sup><sup><a href="#n5"></a></sup></td>
+			<td style="background-color:#ffcccc;">paquete<a href="https://developer.android.com/reference/android/drm/package-summary.html">android.drm</a> </td>
+		</tr>
+	</tbody>
+</table>
+
+<h3>SDK v4.11.0</h3>
+
+<h4>01 Nov 2016</h4>
+
+<p>La tabla siguiente contiene los complementos de Brightcove y las versiones del complemento asociado a la versión anterior del SDK nativo de Brightcove:</p>
+
+<table class="bcls-table">
+	<thead class="bcls-table__head">
+		<tr>
+			<th style="border-bottom:1px solid #707070;">Categoría</th>
+			<th style="border-bottom:1px solid #707070;width: 20%;">Complemento de Brightcove</th>
+			<th style="border-bottom:1px solid #707070;">Complemento de socio o proveedor admitido</th>
+		</tr>
+	</thead>
+	<tbody class="bcls-table__body">
+		<tr>
+			<td rowspan="4" style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Publicidad</td>
+			<td>Plugin FreeWheel v4.11.0 <sup><a href="#n1"> [1]</a></sup></td>
+			<td>Librería de FreeWheel AdManager v6.10.0</td>
+		</tr>
+		<tr>
+			<td>Plugin IMA v4.11.0</td>
+			<td>Google IMA v3-3.1.3</td>
+		</tr>
+		<tr>
+			<td>Complemento OnCeux v4.11.0</td>
+			<td>onceux-android-library 2.1.17</td>
+		</tr>
+		<tr>
+			<td>VMAP</td>
+			<td>Ninguno</td>
+		</tr>
+		<tr>
+			<td style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Analytics</td>
+			<td>Complemento Omniture v4.11.0 <sup><a href="#n2"> [2]</a></sup></td>
+			<td>AdobeVideoLibrary 4.11.0<br/> <br/> VideoHeartbeat 2.0.0</td>
+		</tr>
+		<tr>
+			<td style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Chromecast</td>
+			<td>Complemento de Google Cast v4.11.0</td>
+			<td>CastCompanionLibrary- android:2.5.1</td>
+		</tr>
+		<tr>
+			<td rowspan="2" style="background-color:#dbdbdb;font-weight: bold;">DRM</td>
+			<td>Widevine Modular <sup><a href="#n3"> [3]</a></sup></td>
+			<td>Ninguno. El marco de Android es compatible con Widevine Modular cuando se utiliza la vista de vídeo ExoPlayer.</td>
+		</tr>
+		<tr>
+			<td style="background-color:#ffcccc;">Plugin Widevine Classic v4.9.2 (obsoleto) <sup><a href="#n3"> [3]</a></sup> <sup><a href="#n4"> [4]</a></sup></td>
+			<td style="background-color:#ffcccc;">paquete<a href="https://developer.android.com/reference/android/drm/package-summary.html">android.drm</a> </td>
+		</tr>
+	</tbody>
+</table>
+
+<h3>SDK v4.10.0</h3>
+
+<h4>05 Oct 2016</h4>
+
+<p>Compatible con ExoPlayer v1.5.9</p>
+
+<p>La tabla siguiente contiene los complementos de Brightcove y las versiones del complemento asociado a la versión anterior del SDK nativo de Brightcove:</p>
+<!-- add table here -->
+
+<table class="bcls-table">
+	<thead class="bcls-table__head">
+		<tr>
+			<th style="border-bottom:1px solid #707070;">Categoría</th>
+			<th style="border-bottom:1px solid #707070;width: 20%;">Complemento de Brightcove</th>
+			<th style="border-bottom:1px solid #707070;">Complemento de socio o proveedor admitido</th>
+		</tr>
+	</thead>
+	<tbody class="bcls-table__body">
+		<tr>
+			<td rowspan="4" style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Publicidad</td>
+			<td>Complemento FreeWheel v4.10.0</td>
+			<td>Librería de FreeWheel AdManager v6.10.0</td>
+		</tr>
+		<tr>
+			<td>Plugin IMA v4.10.0</td>
+			<td>Google IMA v3-3.1.3</td>
+		</tr>
+		<tr>
+			<td>Plugin OnCeux v4.10.0</td>
+			<td>onceux-android-library 2.1.17</td>
+		</tr>
+		<tr>
+			<td>VMAP</td>
+			<td>Ninguno</td>
+		</tr>
+		<tr>
+			<td style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Analytics</td>
+			<td>Complemento Omniture v4.10.0 &nbsp;<sup><a href="#n1"> [1]</a></sup></td>
+			<td>AdobeVideoLibrary 4.11.0<br/> <br/> VideoHeartbeat 2.0.0</td>
+		</tr>
+		<tr>
+			<td style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Chromecast</td>
+			<td>Complemento de Google Cast v4.10.0</td>
+			<td>CastCompanionLibrary- android:2.5.1</td>
+		</tr>
+		<tr>
+			<td rowspan="2" style="background-color:#dbdbdb;font-weight: bold;">DRM</td>
+			<td>Widevine Modular [2]&nbsp;<sup><a href="#n2"></a></sup></td>
+			<td>Ninguno. El marco de Android es compatible con Widevine Modular cuando se utiliza la vista de vídeo ExoPlayer.</td>
+		</tr>
+		<tr>
+			<td style="background-color:#ffcccc;">Plugin Widevine Classic v4.9.2 (obsoleto) [2] [3]&nbsp;<sup><a href="#n2"></a></sup><sup><a href="#n3"></a></sup></td>
+			<td style="background-color:#ffcccc;">paquete<a href="https://developer.android.com/reference/android/drm/package-summary.html">android.drm</a> </td>
+		</tr>
+	</tbody>
+</table>
+
+<h3>SDK v4.9.2</h3>
+
+<h4>20 sep 2016</h4>
+
+<p>La tabla siguiente contiene los complementos de Brightcove y las versiones del complemento asociado a la versión anterior del SDK nativo de Brightcove:</p>
+<!-- add table here -->
+
+<table class="bcls-table">
+	<thead class="bcls-table__head">
+		<tr>
+			<th style="border-bottom:1px solid #707070;">Categoría</th>
+			<th style="border-bottom:1px solid #707070;width: 20%;">Complemento de Brightcove</th>
+			<th style="border-bottom:1px solid #707070;">Complemento de socio o proveedor admitido</th>
+		</tr>
+	</thead>
+	<tbody class="bcls-table__body">
+		<tr>
+			<td rowspan="4" style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Publicidad</td>
+			<td>Complemento FreeWheel v4.9.2</td>
+			<td>FreeWheel SDK v6.5</td>
+		</tr>
+		<tr>
+			<td>Complemento IMA v4.9.2</td>
+			<td>Google IMA v3-3.1.3</td>
+		</tr>
+		<tr>
+			<td>Complemento OnCeux v4.9.2</td>
+			<td>onceux-android-library 2.1.17</td>
+		</tr>
+		<tr>
+			<td>VMAP</td>
+			<td>Ninguno</td>
+		</tr>
+		<tr>
+			<td style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Analytics</td>
+			<td>Complemento Omniture v4.9.2 &nbsp;<sup><a href="#n1"> [1]</a></sup></td>
+			<td>AdobeVideoLibrary 4.11.0<br/> <br/> VideoHeartbeat 2.0.0</td>
+		</tr>
+		<tr>
+			<td style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Chromecast</td>
+			<td>Complemento de Google Cast v4.9.2</td>
+			<td>CastCompanionLibrary- android:2.5.1</td>
+		</tr>
+		<tr>
+			<td rowspan="2" style="background-color:#dbdbdb;font-weight: bold;">DRM</td>
+			<td>Widevine Modular [2]&nbsp;<sup><a href="#n2"></a></sup></td>
+			<td>Ninguno. El marco de Android es compatible con Widevine Modular cuando se utiliza la vista de vídeo ExoPlayer.</td>
+		</tr>
+		<tr>
+			<td style="background-color:#dbdbdb;">Plugin Widevine Classic v4.9.2 (obsoleto) [2] [3]&nbsp;<sup><a href="#n2"></a></sup><sup><a href="#n3"></a></sup></td>
+			<td style="background-color:#dbdbdb;">paquete<a href="https://developer.android.com/reference/android/drm/package-summary.html">android.drm</a> </td>
+		</tr>
+	</tbody>
+</table>
+
+<h3>SDK v4.9.1</h3>
+
+<h4>26 ago 2016</h4>
+
+<p>La tabla siguiente contiene los complementos de Brightcove y las versiones del complemento asociado a una versión anterior del SDK nativo de Brightcove:</p>
+<!-- <table class="bcls-table">
+  <thead class="bcls-table__head">
+  <tr>
+  <th style="border-bottom:1px solid #707070;"></th>
+  <th style="border-bottom:1px solid #707070;">Package <br/>(Github Repo)</th>
+  <th style="border-bottom:1px solid #707070;">Reference Documentation</th>
+  <th style="border-bottom:1px solid #707070;">Notes</th>
+  <th style="border-bottom:1px solid #707070;">Supported Framework</th>
+  <th style="border-bottom:1px solid #707070;">Samples</th>
+  </tr>
+  </thead>
+  <tbody class="bcls-table__body">
+  <tr>
+  <td style="background-color:#dbdbdb;font-weight: bold;"> SDK </td>
+  <td>
+  <a href="//files.brightcove.com/android-native-player-public-4.9.1.zip">Native SDK for Android v4.9.1</a>
+  </td>
+  <td>
+  <a href="/en/player/mobile-sdks/brightcove-player-sdk-for-android/reference/current/javadoc/index.html">SDK Reference</a>
+  </td>
+  <td>
+  <a href="/en/player/mobile-sdks/brightcove-player-sdk-for-android/reference/current/release-notes.txt">Release Notes</a>
+  </td>
+  <td>
+  <a href="https://github.com/brightcove/ExoPlayer">ExoPlayer v1.5.9</a>
+  </td>
+  <td>
+  <a href="https://github.com/BrightcoveOS/android-player-samples/tree/master/brightcove-exoplayer">Sample Applications</a>
+  </td>
+  </tr>
+  </tbody>
+  </table> -->
+
+<table class="bcls-table">
+	<thead class="bcls-table__head">
+		<tr>
+			<th style="border-bottom:1px solid #707070;">Categoría</th>
+			<th style="border-bottom:1px solid #707070;width: 20%;">Complemento de Brightcove</th>
+			<th style="border-bottom:1px solid #707070;">Complemento de socio o proveedor admitido</th>
+		</tr>
+	</thead>
+	<tbody class="bcls-table__body">
+		<tr>
+			<td rowspan="4" style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Publicidad</td>
+			<td>Complemento FreeWheel v4.9.1</td>
+			<td>FreeWheel SDK v6.5</td>
+		</tr>
+		<tr>
+			<td>Plugin IMA v4.9.1</td>
+			<td>Google IMA v3-3.1.3</td>
+		</tr>
+		<tr>
+			<td>Plugin OnCeux v4.9.1</td>
+			<td>onceux-android-library 2.1.17</td>
+		</tr>
+		<tr>
+			<td>VMAP</td>
+			<td>Ninguno</td>
+		</tr>
+		<tr>
+			<td style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">Analytics</td>
+			<td>Complemento Omniture v4.9.1 &nbsp;<sup><a href="#n1"> [1]</a></sup></td>
+			<td>AdobeVideoLibrary 4.11.0<br/> <br/> VideoHeartbeat 2.0.0</td>
+		</tr>
+		<tr>
+			<td style="background-color:#dbdbdb;font-weight: bold;">Chromecast</td>
+			<td>Complemento de Google Cast v4.9.1</td>
+			<td>CastCompanionLibrary- android:2.5.1</td>
+		</tr>
+		<tr>
+			<td rowspan="2" style="background-color:#dbdbdb;font-weight: bold;border-bottom:1px solid #707070;">DRM</td>
+			<td>Widevine Modular [2]&nbsp;<sup><a href="#n2"></a></sup></td>
+			<td>Ninguno. El marco de Android es compatible con Widevine Modular cuando se utiliza la vista de vídeo ExoPlayer.</td>
+		</tr>
+		<tr>
+			<td>Plugin Widevine Classic v4.9.1 &nbsp;<sup><a href="#n2"> [2]</a></sup></td>
+			<td>paquete<a href="https://developer.android.com/reference/android/drm/package-summary.html">android.drm</a> </td>
+		</tr>
+	</tbody>
+</table>
+
+<p>&nbsp;</p>
+</section>
+</article>
+<!-- end drupal content -->
+
+<!-- complete bootstrap layout -->
+    </div>
+    <div class="col-sm-2 right-side-bar">
+      
+      <nav class="right-side-nav" id="right_side_nav">
+        <h6 class="toc">Contenido de la página</h6>
+        <ul id="in_page_nav" class="list-none"></ul>
+      </nav>
+      
+    </div>
+  </div>
+</div>
+
+<hr>
+<footer class="bcls-footer" role="contentinfo">  <div class="row">
+    <div class="region region-footer-top-center col-md-12">
+      <nav role="navigation" aria-labelledby="block-brightcovesupport-menu" id="block-brightcovesupport" class="footer-menu">
+
+        <h2>Asistencia técnica de Brightcove</h2>
+
+        <ul class="menu">
+          <li>
+            Estado del sistema<a href="https://status.brightcove.com"></a>
+          </li>
+          <li>
+            <a href="https://supportportal.brightcove.com/s/login/?">Contactar soporte</a>
+          </li>
+          <li>
+            <a href="https://support.brightcove.com/">Documentación</a>
+          </li>
+        </ul>
+
+      </nav>
+      <nav role="navigation" aria-labelledby="block-training-menu" id="block-training" class="footer-menu">
+
+        <h2>Formación</h2>
+
+        <ul class="menu">
+          <li>
+            Cursos en línea<a href="https://studio.support.brightcove.com/training/online-training-courses.html"></a>
+          </li>
+          <li>
+            Inscríbete a un curso<a href="https://studio.support.brightcove.com/training/register-training.html"></a>
+          </li>
+          <li>
+            <a href="https://university.brightcove.com/">Universidad de Brightcove</a>
+          </li>
+        </ul>
+
+      </nav>
+      <nav role="navigation" aria-labelledby="block-brightcove-menu" class="footer-menu">
+
+        <h2>Brightcove</h2>
+
+        <ul class="menu">
+          <li>
+            <a href="https://www.brightcove.com">BrightCove.com</a>
+          </li>
+          <li>
+            <a href="https://supportportal.brightcove.com/s/login/?">Contáctanos</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <div class="row">
+    <div class="region region-footer-bottom-center col-md-12">
+      <div class="bcls-copyright footer-menu">
+        <table>
+          <tr>
+            <td>
+              <div id="bc_copyright" class="field field--name-field-copyright-year field--type-string field--label-hidden field--item" style="float: left;"> Brightcove Inc. All rights reserved.</div>
+            </td>
+            <td>Privacidad | Términos y Condiciones<a href="https://www.brightcove.com/en/legal/privacy"></a><a href="https://www.brightcove.com/en/terms-and-conditions"></a></td>
+            <td>
+              <div class="gf-links-cols footer-menu">
+                <div class="gf-social"><a href="https://www.linkedin.com/company/16439" title="LinkedIn" newtab="newtab" class="gf-social-linkedin"><i class="fab fa-linkedin-in" style="font-size: 1.5rem;"></i></a><a href="https://twitter.com/brightcove" title="Twitter" newtab="newtab" class="gf-social-twitter"><i class="fab fa-twitter" style="font-size: 1.5rem;"></i></a><a href="https://www.facebook.com/Brightcove" title="Facebook" newtab="newtab" class="gf-social-facebook"><i class="fab fa-facebook-f" style="font-size: 1.5rem;"></i></a>
+                </div>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+      
+  var searchBox = sajari.init({
+    mode: "search-box",
+    project: "1588255093746585379", // Set this to your project.
+    collection: "brightcove-documenation", // Set this to your collection.
+    instantPipeline: "autocomplete", // Pipeline used as you type
+    inputPlaceholder: "Search", // Input element placeholder
+    maxSuggestions: 5, // Maximum number of suggestions to show
+    attachSearchBox: document.getElementById("nav-search-box") // DOM element to attach to
+  });
+  
+    searchBox("sub", "pipeline.search-sent", function (_, query) {
+      window.location = "/search.html?q=" + encodeURIComponent(query.q);
+    });
+  
+
+</script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="https://support.brightcove.com/site-assets/js/site/https-fix.js"></script>
+  <script src="https://support.brightcove.com/site-assets/js/site/setDate.js"></script>
+  
+  <script src="https://support.brightcove.com/site-assets/js/site/prism.js"></script>
+  
+  <script src="https://support.brightcove.com/site-assets/js/site/site.js"></script>
+  <script src="https://support.brightcove.com/site-assets/js/site/tabs.js"></script>
+  <script src="https://support.brightcove.com/site-assets/js/site/toc.js"></script>
+  <script src="/assets/js/sites_nav.js"></script>
+  <script src="https://support.brightcove.com/site-assets/js/site/bcls-utils.js"></script>
+  <script src="https://support.brightcove.com/site-assets/js/site/local-link-fix.js"></script>
+  <script src="/assets/js/feedback.js"></script>
+  
+  <script src="/assets/js/sajari-search-foot.js"></script>
+  
+  <!-- <script src="/assets/js/sajari-index.js"></script> -->
+  <style>
+    a.sj-paginator__page-number.sj-paginator__page-number--current.css-so0ov7 {
+      background-color: lightblue;
+    }
+    div.sj-tabs__tab {
+      margin-top: 3rem;
+      margin-left: .3rem;
+      border-top-left-radius: .4rem;
+      border-top-right-radius: .4rem;
+      background-color:#e8e8e8;
+    }
+
+    div.sj-tabs__tab.sj-tabs__tab--selected {
+      border-bottom-color: crimson;
+      background-color: #f8f8f8;
+    }
+
+    p.sj-results__result__description.css-p9jvyt {
+      font-size: 1rem;
+    }
+
+    .sj-result__text.css-31l7gp h3 {
+      color: navy;
+      font-size: 1.4rem;
+    }
+    </style>
+
+</body>
+
+</html>
