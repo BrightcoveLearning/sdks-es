@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Referencia de la clase BCOVPUILayoutView</title>
+
+	<link rel="stylesheet" href="../css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container" class="hide-in-xcode">
+			
+			<h1 id="library-title"> <a href="../index.html">Reproductor nativo de Brightcove para iOS </a> </h1>
+
+			<p id="developer-home">
+				Brightcove<a href="../index.html"></a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="../index.html">Índice</a></li>
+<li><a href="../hierarchy.html">Jerarquía</a></li>
+
+					<li id="on-this-page" role="navigation">
+						<label>
+							En esta página
+
+							<div class="chevron">
+								<div class="chevy chevron-left"></div>
+								<div class="chevy chevron-right"></div>
+							</div>
+
+							<select id="jump-to">
+	<option value="top">Salta a…</option>
+	
+	<option value="overview">Descripción general</option>
+	
+
+	
+	
+	<option value="tasks">Tareas</option>
+	
+	
+
+	
+	
+	<optgroup label="Properties">
+		
+		<option value="//api/name/elasticity">elasticidad</option>
+		
+		<option value="//api/name/minimumWidth">Mínimo Ancho</option>
+		
+		<option value="//api/name/removed">remoto</option>
+		
+	</optgroup>
+	
+
+	
+
+	
+	
+</select>
+						</label>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+
+	<article>
+		<div id="overview_contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">Referencia de la clase BCOVPUILayoutView</h1>
+
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<th>Hereda de</th>
+	<td>UIView</td>
+</tr><tr>
+	<th>Declarado en</th>
+	<td>BCOVPUILayoutView.h</td>
+</tr>
+						</tbody></table></div>
+					
+
+                    
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Descripción general</h2>
+						<p>Los objetos de vista BCOVPUILayoutView se utilizan para diseñar controles en un <a href="../Classes/BCOVPUIBasicControlView.html">BCOVPUIBasicControlView</a>. Las vistas de diseño se crean normalmente con BCOVPUIBasicControlView&rsquo;s + layoutViewWithControlFromTag: width: elasticity: method y contienen un elemento estándar de la interfaz de usuario del reproductor, como un botón de reproducción, una etiqueta de código de tiempo o un control deslizante de progreso. También puede crear vistas de diseño vacías en las que agregar sus propias subvistas. Las propiedades de la vista de diseño determinan exactamente cómo se colocan las vistas entre sí en diseños de ancho variable.</p>
+					</div>
+					
+					
+
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						
+
+						
+						
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/minimumWidth" title="minimumWidth"></a>
+	<h3 class="method-title"><code><a href="#//api/name/minimumWidth">&nbsp;&nbsp;Mínimo Ancho</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>El ancho más pequeño que se establecerá para la vista cuando se cambie el tamaño para el diseño. Si <a href="#//api/name/elasticity">elasticidad</a> se establece en cero, este será el ancho exacto de la vista.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) mínimo flotante</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discusión</h4>
+				<p>El ancho más pequeño que se establecerá para la vista cuando se cambie el tamaño para el diseño. Si <a href="#//api/name/elasticity">elasticidad</a> se establece en cero, este será el ancho exacto de la vista.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declarado en</h4>
+				<p>BCOVPUILayoutView.h<code class="declared-in-ref"></code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/elasticity" title="elasticity"></a>
+	<h3 class="method-title"><code><a href="#//api/name/elasticity">&nbsp;&nbsp;elasticidad</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>La elasticidad determina cuánto se redimensiona cada vista para llenar el ancho disponible de la interfaz de usuario del reproductor&rsquo;s barra de control relativa a todas las demás vistas. Si hay dos vistas de diseño en una barra de control, y una tiene una elasticidad de 1.0 y la otra tiene una elasticidad de 2.0, esta última crecerá el doble cuando se cambie el tamaño de la vista. Cada fila de un diseño de control normalmente debe contener al menos una vista de diseño con una elasticidad mayor que cero. Una vista con una elasticidad de cero permanecerá en su ancho mínimo.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite) elasticidad flotante</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discusión</h4>
+				<p>La elasticidad determina cuánto se redimensiona cada vista para llenar el ancho disponible de la interfaz de usuario del reproductor&rsquo;s barra de control relativa a todas las demás vistas. Si hay dos vistas de diseño en una barra de control, y una tiene una elasticidad de 1.0 y la otra tiene una elasticidad de 2.0, esta última crecerá el doble cuando se cambie el tamaño de la vista. Cada fila de un diseño de control normalmente debe contener al menos una vista de diseño con una elasticidad mayor que cero. Una vista con una elasticidad de cero permanecerá en su ancho mínimo.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declarado en</h4>
+				<p>BCOVPUILayoutView.h<code class="declared-in-ref"></code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/removed" title="removed"></a>
+	<h3 class="method-title"><code><a href="#//api/name/removed">&nbsp;&nbsp;remoto</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>los &ldquo;remoto&rdquo; La propiedad se puede establecer en SÍ o NO para ocultar o mostrar rápidamente una vista de diseño en particular. Esto es más eficiente que establecer un nuevo <a href="../Classes/BCOVPUIControlLayout.html">BCOVPUIControlLayout</a> con una vista eliminada o agregada. Call -setNeedsLayout en el <a href="../Classes/BCOVPUIBasicControlView.html">BCOVPUIBasicControlView</a> después de configurar esta propiedad para mostrar el nuevo diseño.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readwrite, getter = isRemoved) BOOL eliminado</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discusión</h4>
+				<p>los &ldquo;remoto&rdquo; La propiedad se puede establecer en SÍ o NO para ocultar o mostrar rápidamente una vista de diseño en particular. Esto es más eficiente que establecer un nuevo <a href="../Classes/BCOVPUIControlLayout.html">BCOVPUIControlLayout</a> con una vista eliminada o agregada. Call -setNeedsLayout en el <a href="../Classes/BCOVPUIBasicControlView.html">BCOVPUIBasicControlView</a> después de configurar esta propiedad para mostrar el nuevo diseño.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declarado en</h4>
+				<p>BCOVPUILayoutView.h<code class="declared-in-ref"></code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+					</div>
+					
+					
+
+                    
+				</main>
+
+				<footer>
+					<div class="footer-copyright">
+						
+						<p class="copyright">Derechos de autor &copy; 2021 Brightcove. Reservados todos los derechos. Actualizado: 2021-07-08</p>
+						
+						
+						<p class="generator">Generado por <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (compilación 1334)</a>.</p>
+						
+					</div>
+				</footer>
+			</div>
+		</div>
+	</article>
+
+	<script src="../js/script.js"></script>
+</body>
+</html>

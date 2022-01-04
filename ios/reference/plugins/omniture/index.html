@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Referencia de Brightcove Native Player para iOS</title>
+
+	<link rel="stylesheet" href="css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container" class="hide-in-xcode">
+			
+			<h1 id="library-title"> <a href="index.html">Reproductor nativo de Brightcove para iOS </a> </h1>
+
+			<p id="developer-home">
+				Brightcove<a href="index.html"></a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="hierarchy.html">Jerarquía</a></li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+
+	<article>
+		<div id="overview-contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">Referencia de Brightcove Native Player para iOS</h1>
+
+					
+					<div class="section section-overview index-overview">
+						
+						
+						<h1>Complemento de Omniture (Adobe Marketing Cloud - Adobe Analytics) para Brightcove Player SDK para iOS, versión 6.9.0.1697</h1> <h1>Requisitos</h1>
+
+<ul>
+<li>Xcode 11.0+</li>
+<li>ARCO</li>
+</ul>
+
+
+<h1>Plataformas compatibles</h1>
+
+<p>iOS 11.0 y superior.</p>
+
+<h1>Instalación</h1>
+
+<p>El complemento Omniture es un marco de biblioteca estático que admite Adobe Marketing Cloud v4.14.1 y Adobe Video Heartbeat v2.0.1. Bibliotecas de Marketing Cloud y Video Heartbeat <strong>no son</strong> incluido con este SDK y debe agregarse manualmente a su proyecto. Las instrucciones para descargar las bibliotecas se proporcionan a continuación.</p>
+
+<h2>CocoaPods</h2>
+
+<p>Puedes usar <a href="http://cocoapods.org">CocoaPods</a> versión 1.0 o superior para agregar el complemento Omniture a su proyecto. Puedes encontrar lo último <code>Brightcove-Player-Omniture</code> podspec <a href="https://github.com/brightcove/BrightcoveSpecs/tree/master/Brightcove-Player-Omniture">aquí</a>. Para usar esta especificación, agregue lo siguiente en la parte superior de su Podfile: <code>fuente '</code>https://github.com/brightcove/BCOVSpecs.git '<code></code>.</p>
+
+<p>Ejemplo de marco estático:</p>
+
+<p>`` fuente bash &lsquo;<a href="https://github.com/brightcove/BrightcoveSpecs.git" title="">https://github.com/brightcove/BrightcoveSpecs.git '</a></p>
+
+<p>objetivo &lsquo;MyOmniturePlayer&rsquo; hacer vaina &lsquo;Brightcove-Player-Omniture&rsquo; final</p>
+
+<p>Al actualizar su instalación,&rsquo;Es una buena idea actualizar la copia local de su repositorio BrightcoveSpecs para que tenga las últimas podspecs localmente, al igual que actualizaría su repositorio principal de CococaPods.</p>
+
+<p>Normalmente, si usa <code>actualización de la vaina</code> en Terminal esto sucederá automáticamente, o alternativamente puede actualizar explícitamente con <code>actualización del repositorio de pod</code>.</p>
+
+<h2>Manual</h2>
+
+<p>Para agregar el complemento Omniture para Brightcove Player SDK a su proyecto manualmente:</p>
+
+<ol>
+<li>Instale la última versión del <a href="https://github.com/brightcove/brightcove-player-sdk-ios#ManualInstallation">SDK de Brightcove Player</a>.</li>
+<li>Descargue la última versión comprimida del complemento desde el <a href="https://github.com/brightcove/brightcove-player-sdk-ios-omniture/releases">página de lanzamiento</a>.</li>
+<li>Añade el <code>BrightcoveAMC.framework</code> proyecto. Puede hacer esto haciendo clic con el botón derecho en la carpeta Frameworks y elegir &ldquo;Agregar archivos a&rdquo; opción y seleccione la <code>BrightcoveAMC.framework</code> de la ruta donde se almacena.</li>
+<li>Sobre el &ldquo;Configuración de compilación&rdquo; pestaña del destino de su aplicación, asegúrese de que el &ldquo;Rutas de búsqueda del marco&rdquo; incluir la ruta al marco. Esto debería haberse hecho automáticamente a menos que el marco esté almacenado en un directorio raíz diferente al de su proyecto.</li>
+<li>Sobre el &ldquo;Fases de construcción&rdquo; pestaña del destino de su aplicación, agregue lo siguiente a la &ldquo;Vincular binarios con bibliotecas&rdquo; fase:
+
+<ul>
+<li>BrightcoveAMC.framework<code></code></li>
+</ul>
+</li>
+<li>Sobre el &ldquo;Configuración de compilación&rdquo; pestaña del destino de su aplicación:
+
+<ul>
+<li>Asegurarse de que <code>-ObjC</code> ha sido agregado a la &ldquo;Otras banderas del vinculador&rdquo; entorno de construcción.</li>
+</ul>
+</li>
+<li>Descargue Adobe Marketing Cloud siguiendo Adobe&rsquo;s <a href="https://docs.adobe.com/content/help/en/mobile-services/ios/overview.html">instrucciones</a> y añadir <code>AdobeMobileLibrary.a</code> a su proyecto.</li>
+<li>Descargue Adobe Video Heartbeat siguiendo Adobe&rsquo;s <a href="https://marketing-stage.adobe.com/resources/help/en_US/sc/appmeasurement/hbvideo/ios_2.0/">instrucciones</a> y añadir <code>VideoHeartbeat.a</code> a su proyecto.</li>
+<li>Agregue las carpetas de encabezado de Marketing Cloud y Video Heartbeat a la configuración de Ruta de búsqueda de encabezado de su proyecto.</li>
+</ol>
+
+
+<h1>Inicio rápido</h1>
+
+<p>BrightcoveAMC es un puente entre el <a href="https://github.com/brightcove/brightcove-player-sdk-ios">SDK de Brightcove Player para iOS</a> y seguimiento de video de Adobe, que incluye <a href="https://marketing-stage.adobe.com/resources/help/en_US/sc/appmeasurement/hbvideo/ios_2.0/">Adobe Video Heartbeat v2</a> y <a href="https://github.com/Adobe-Marketing-Cloud/mobile-services">Adobe Media Tracking v4</a>. BrightcoveAMC realiza un seguimiento de los comportamientos de video básicos: video listo, video completado, reproducción de video y pausa de video.</p>
+
+<h1>Implementación del cliente</h1>
+
+<p>Para configurar Adobe Video Heartbeat, los clientes del complemento Omniture deben implementar instancias de BCOVAMCVideoHeartbeatConfigurationPolicy. Para configurar Adobe Media Tracking, se requiere una instancia de BCOVAMCMediaSettingPolicy. Estas <a href="https://en.wikipedia.org/wiki/Strategy_pattern">politicas</a> permiten la personalización de objetos ADBMediaHeartbeatConfig o ADBMediaSettings para cada sesión de reproducción.</p>
+
+<h2>Video Heartbeat v2</h2>
+
+<p>Este ejemplo usa el seguimiento de latidos de video.</p>
+
+<pre><code>[1] // Crea el objeto de política de configuración de VHB. BCOVAMCVideoHeartbeatConfigurationPolicy videoHeartbeatConfigurationPolicy = ^ ADBMediaHeartbeatConfig * (id &lt;BCOVPlaybackSession&gt; sesión) { ADBMediaHeartbeatConfig *configData = [[ADBMediaHeartbeatConfig alloc] init]; configData.trackingServer = &lt;adobe-assigned_tracking_server&gt;"; configData.channel = &lt;cutomize_sample_channel&gt;; configData.appVersion = &lt;app_version&gt;; configData.ovp = &lt;online_video_platform&gt;; configData.playerName = &lt;player_name&gt;; configData.ssl = &lt;YES | NO&gt;; // Set debugLogging to true to activate debug tracing. Remove it in production. configData.debugLogging = YES; return configData; } ; [2] // Cree el objeto de política de análisis AMC de Brightcove desde el objeto de política de configuración de VHB. BCOVAMCAnalyticsPolicy * heartbeatPolicy = [[BCOVAMCAnalyticsPolicy alloc] initWithHeartbeatConfigurationPolicy: videoHeartbeatConfigPolicy]; BCOVAMCSessionConsumer * sessionConsumer = [BCOVAMCSessionConsumer heartbeatAnalyticsConsumerWithPolicy: heartbeatPolicy delegate: self]; BCOVPlayerSDKManager * manager = [BCOVPlayerSDKManager sharedManager]; id &lt;BCOVPlaybackController&gt; controlador = [administrador createPlaybackController]; controller.delegate = self; [self.view addSubview: controller.view]; [3] // Agregue el consumidor de sesión Brightcove AMC al controlador de reproducción. [controlador addSessionConsumer: sessionConsumer]; [4] // Encuentra y reproduce un video. NSString * policyKey = &lt;your-policy-key&gt;; NSString * accountId = &lt;your-ccount-id&gt;; NSString * videoID = &lt;your-video-id&gt;; BCOVPlaybackService * service = [[BCOVPlaybackService alloc] initWithAccountId: accountId policyKey: policyKey]; [service findVideoWithVideoID: videoID parameters: nil completado: ^ (BCOVVideo * video, NSDictionary * jsonResponse, NSError * error) { [controller setVideos:@[ video ]]; [controller play]; }]; </code></pre>
+
+<ol>
+<li>Cree el bloque de política de configuración de latido de video que se llamará al inicio de cada sesión de reproducción. La política permite la personalización de los datos de configuración en función de la sesión actual.</li>
+<li>Utilice el bloque de política de configuración para crear e inicializar una instancia de BCOVAMCAnalyticsPolicy con <code> [initWithHeartbeatConfigurationPolicy:]</code>. El objeto BCOVAMCAnalyticsPolicy se utiliza para crear BCOVAMCSessionConsumer.</li>
+<li>Una vez creado el controlador de reproducción, llame al método de agregar consumidor de sesión, <code> [addSessionConsumer:]</code> , para agregar el consumidor de sesión AMC.</li>
+</ol>
+
+
+<h2>Nube de marketing</h2>
+
+<p>Este ejemplo usa seguimiento de medios.</p>
+
+<pre><code>[1] BCOVAMCMediaSettingPolicy mediaSettingPolicy = ^ ADBMediaSettings * (id &lt;BCOVPlaybackSession&gt; sesión) { ADBMediaSettings *settings = [ADBMobile mediaCreateSettingsWithName:&lt;cutomize_setting_name&gt; [2] length:0 playerName:&lt;cutomize_player_name&gt; playerID:&lt;cutomize_player_ID&gt;]; [3] settings.milestones = @"25,50,75"; // a customization. return settings; } ; [4] BBCOVAMCAnalyticsPolicy * mediaPolicy = [[BCOVAMCAnalyticsPolicy alloc] initWithMediaSettingsPolicy: mediaSettingPolicy]; BCOVAMCSessionConsumer * sessionConsumer = [BCOVAMCSessionConsumer mediaAnalyticsConsumerWithPolicy: mediaPolicy delegate: self]; BCOVPlayerSDKManager * manager = [BCOVPlayerSDKManager sharedManager]; id &lt;BCOVPlaybackController&gt; controlador = [administrador createPlaybackController]; controller.delegate = self; [self.view addSubview: controller.view]; [5] [controlador addSessionConsumer: sessionConsumer]; NSString * policyKey = &lt;your-policy-key&gt;; NSString * accountId = &lt;your-ccount-id&gt;; NSString * videoID = &lt;your-video-id&gt;; BCOVPlaybackService * service = [[BCOVPlaybackService alloc] initWithAccountId: accountId policyKey: policyKey]; [service findVideoWithVideoID: videoID parameters: nil completado: ^ (BCOVVideo * video, NSDictionary * jsonResponse, NSError * error) { [controller setVideos:@[ video ]]; [controller play]; }]; </code></pre>
+
+<ol>
+<li>Cree el bloque de políticas de configuración de medios que se llamará al inicio de cada sesión de reproducción. La política permite la personalización de la configuración de medios en función de la sesión actual.</li>
+<li>Al crear la instancia de ADBMediaSettings con un método de clase de ADBMobile <code>+ [mediaCreateSettingsWithName: length: playerName: playerID:]</code> , puedes configurar <strong>duración del video</strong> para <strong>0</strong>. El complemento de Omniture lo actualizará más tarde.</li>
+<li>Agregue configuraciones opcionales como hitos.</li>
+<li>Utilice el bloque de políticas de configuración de medios para crear e inicializar una instancia de BCOVAMCAnalyticsPolicy con <code> [initWithMediaSettingsPolicy:]</code>. El objeto de política se utiliza para crear un consumidor de sesión AMC para el seguimiento de medios de Adobe como <code>+ [mediaAnalyticsConsumerWithPolicy: delegate:]</code>.</li>
+<li>Una vez creado el controlador de reproducción, llame al método de agregar consumidor de sesión, <code> [addSessionConsumer:]</code> , para agregar el consumidor de sesión AMC.</li>
+</ol>
+
+
+Adobe-Marketing-Cloud.git<h1></h1>
+
+<p>Para obtener las bibliotecas de Adobe Marketing Cloud, ejecute lo siguiente:</p>
+
+<pre><code>git clone -b v4.14.1-iOS --single-branch https://github.com/Adobe-Marketing-Cloud/mobile-services.git git clone -b ios-v2.0.1 --single-branch https: / /github.com/Adobe-Marketing-Cloud/video-heartbeat-v2.git </code></pre>
+
+<h1>Apoyo</h1>
+
+<p>Si tiene preguntas, necesita ayuda o desea enviar comentarios, utilice el <a href="https://supportportal.brightcove.com/s/login/">Portal de soporte</a> o comuníquese con su administrador de cuentas. Para recibir una notificación de las nuevas versiones del software SDK, suscríbase a los SDK de Brightcove Native Player <a href="https://groups.google.com/g/brightcove-native-player-sdks">Grupo de Google</a>.</p>
+						
+						
+					</div>
+					
+
+					<div class="index-container">
+						
+
+						
+						<div class="index-column">
+							<h2 class="index-title">Referencias de clase</h2>
+							<ul>
+								
+								<li>BCOVAMCAnalyticsPolicy<a href="Classes/BCOVAMCAnalyticsPolicy.html"></a></li>
+								
+								<li><a href="Classes/BCOVAMCSessionConsumer.html">BCOVAMC Sesión Consumidor</a></li>
+								
+							</ul>
+						</div>
+						
+
+						
+						<div class="index-column">
+							
+							<h2 class="index-title">Referencias de protocolo</h2>
+							<ul>
+								
+								<li><a href="Protocols/BCOVAMCSessionConsumerHeartbeatDelegate.html">BCOVAMC Sesión Consumidor Latido del corazón Delegado</a></li>
+								
+								<li><a href="Protocols/BCOVAMCSessionConsumerMeidaDelegate.html">BCOVAMC Sesión Consumidor Meida Delegado</a></li>
+								
+							</ul>
+							
+
+							
+
+							
+						</div>
+						
+					</div>
+
+					<footer>
+						<div class="footer-copyright">
+							
+							<p class="copyright">Derechos de autor &copy; 2021 Brightcove. Reservados todos los derechos. Actualizado: 2021-07-08</p>
+							
+							
+							<p class="generator">Generado por <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (compilación 1334)</a>.</p>
+							
+						</div>
+					</footer>
+				</main>
+			</div>
+		</div>
+	</article>
+
+	<script src="js/script.js"></script>
+</body>
+</html>

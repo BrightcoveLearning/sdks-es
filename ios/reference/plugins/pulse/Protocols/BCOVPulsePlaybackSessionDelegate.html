@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Referencia de protocolo BCOVPulsePlaybackSessionDelegate</title>
+
+	<link rel="stylesheet" href="../css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container" class="hide-in-xcode">
+			
+			<h1 id="library-title"> <a href="../index.html">Reproductor nativo de Brightcove para iOS </a> </h1>
+
+			<p id="developer-home">
+				Brightcove<a href="../index.html"></a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="../index.html">Índice</a></li>
+<li><a href="../hierarchy.html">Jerarquía</a></li>
+
+					<li id="on-this-page" role="navigation">
+						<label>
+							En esta página
+
+							<div class="chevron">
+								<div class="chevy chevron-left"></div>
+								<div class="chevy chevron-right"></div>
+							</div>
+
+							<select id="jump-to">
+	<option value="top">Salta a…</option>
+	
+	<option value="overview">Descripción general</option>
+	
+
+	
+	
+	<option value="tasks">Tareas</option>
+	
+	
+
+	
+	
+
+	
+
+	
+	<optgroup label="Instance Methods">
+		
+		<option value="//api/name/createSessionForVideo:withPulseHost:contentMetadata:requestSettings:">- createSessionForVideo: withPulseHost: contentMetadata: requestSettings:</option>
+		
+	</optgroup>
+	
+	
+</select>
+						</label>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+
+	<article>
+		<div id="overview_contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">Referencia de protocolo BCOVPulsePlaybackSessionDelegate</h1>
+
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<th>De acuerdo a</th>
+	<td>NSObject</td>
+</tr><tr>
+	<th>Declarado en</th>
+	<td>BCOVPulseComponent.h</td>
+</tr>
+						</tbody></table></div>
+					
+
+                    
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Descripción general</h2>
+						<p>Un protocolo delegado para los usuarios del complemento publicitario Brightcove Pulse. Este delegado le permite anular los metadatos del contenido y solicitar la configuración de forma dinámica.</p>
+					</div>
+					
+					
+
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						
+
+						
+						
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/createSessionForVideo:withPulseHost:contentMetadata:requestSettings:" title="createSessionForVideo:withPulseHost:contentMetadata:requestSettings:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/createSessionForVideo:withPulseHost:contentMetadata:requestSettings:">&ndash;&nbsp;createSessionForVideo: withPulseHost: contentMetadata: requestSettings:</a></code> <span class="task-item-suffix">método requerido</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Llamado inmediatamente antes de las llamadas del complemento Pulse <code>[OOPulse startSessionWithDelegate:]</code> para permitir que el usuario modifique primero el objeto de solicitud de anuncios, por ejemplo, para cambiar la propiedad de la categoría.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (id &lt;OOPulseSession&gt;) createSessionForVideo: (BCOVVideo *)<em>video</em> withPulseHost: (NSString *)<em>pulseHost</em> contentMetadata: (OOContentMetadata *)<em>contentMetadata</em> requestSettings: (OORequestSettings *)<em>requestSettings</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parámetros</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>video</code></th>
+						<td><p>El contenido de video actual.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name">pulseHost<code></code></th>
+						<td><p>El nombre de host de Pulse.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name">contentMetadata<code></code></th>
+						<td><p>Los metadatos de contenido.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name">requestSettings<code></code></th>
+						<td><p>La configuración de la solicitud.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Valor devuelto</h4>
+				<p>La sesión publicitaria de Pulse recién creada.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discusión</h4>
+				<p>Llamado inmediatamente antes de las llamadas del complemento Pulse <code>[OOPulse startSessionWithDelegate:]</code> para permitir que el usuario modifique primero el objeto de solicitud de anuncios, por ejemplo, para cambiar la propiedad de la categoría.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declarado en</h4>
+				<p>BCOVPulseComponent.h<code class="declared-in-ref"></code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+					</div>
+					
+					
+
+                    
+				</main>
+
+				<footer>
+					<div class="footer-copyright">
+						
+						<p class="copyright">Derechos de autor &copy; 2021 Brightcove. Reservados todos los derechos. Actualizado: 2021-07-08</p>
+						
+						
+						<p class="generator">Generado por <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (compilación 1334)</a>.</p>
+						
+					</div>
+				</footer>
+			</div>
+		</div>
+	</article>
+
+	<script src="../js/script.js"></script>
+</body>
+</html>

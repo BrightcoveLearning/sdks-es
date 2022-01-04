@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Referencia del protocolo BCOVPlaybackSession</title>
+
+	<link rel="stylesheet" href="../css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container" class="hide-in-xcode">
+			
+			<h1 id="library-title"> <a href="../index.html">Reproductor nativo de Brightcove para iOS </a> </h1>
+
+			<p id="developer-home">
+				Brightcove<a href="../index.html"></a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="../index.html">Índice</a></li>
+<li><a href="../hierarchy.html">Jerarquía</a></li>
+
+					<li id="on-this-page" role="navigation">
+						<label>
+							En esta página
+
+							<div class="chevron">
+								<div class="chevy chevron-left"></div>
+								<div class="chevy chevron-right"></div>
+							</div>
+
+							<select id="jump-to">
+	<option value="top">Salta a…</option>
+	
+	<option value="overview">Descripción general</option>
+	
+
+	
+	
+	<option value="tasks">Tareas</option>
+	
+	
+
+	
+	
+	<optgroup label="Properties">
+		
+		<option value="//api/name/audibleMediaSelectionGroup">audibleMediaSelectionGroup</option>
+		
+		<option value="//api/name/legibleMediaSelectionGroup">legibleMediaSelectionGroup</option>
+		
+		<option value="//api/name/player">jugador</option>
+		
+		<option value="//api/name/playerLayer">playerLayer</option>
+		
+		<option value="//api/name/providerExtension">proveedorExtensión</option>
+		
+		<option value="//api/name/selectedAudibleMediaOption">selectedAudibleMediaOption</option>
+		
+		<option value="//api/name/selectedLegibleMediaOption">selectedLegibleMediaOption</option>
+		
+		<option value="//api/name/source">fuente</option>
+		
+		<option value="//api/name/video">video</option>
+		
+	</optgroup>
+	
+
+	
+
+	
+	<optgroup label="Instance Methods">
+		
+		<option value="//api/name/displayNameFromAudibleMediaSelectionOption:">- displayNameFromAudibleMediaSelectionOption:</option>
+		
+		<option value="//api/name/displayNameFromLegibleMediaSelectionOption:">- displayNameFromLegibleMediaSelectionOption:</option>
+		
+		<option value="//api/name/selectAudibleMediaOptionAutomatically">- selectAudibleMediaOptionAutomatically</option>
+		
+		<option value="//api/name/selectLegibleMediaOptionAutomatically">- selectLegibleMediaOptionAutomatically</option>
+		
+		<option value="//api/name/terminate">- Terminar</option>
+		
+	</optgroup>
+	
+	
+</select>
+						</label>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+
+	<article>
+		<div id="overview_contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">Referencia del protocolo BCOVPlaybackSession</h1>
+
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<th>De acuerdo a</th>
+	<td>NSObject</td>
+</tr><tr>
+	<th>Declarado en</th>
+	<td>BCOVPlaybackSession.h</td>
+</tr>
+						</tbody></table></div>
+					
+
+                    
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Descripción general</h2>
+						<p>Una sesión de reproducción representa la reproducción de un solo <a href="#//api/name/video">video</a>. La sesión proporciona un único punto de acceso para todo lo relacionado con la experiencia de reproducción de ese video: el <a href="#//api/name/video">video</a> y <a href="#//api/name/source">fuente</a> seleccionado para la reproducción, el <a href="#//api/name/player">jugador</a> dentro de los cuales ocurre la reproducción, y eventos que ocurren durante la sesión de reproducción. Las sesiones de reproducción nunca se reutilizan para varios videos (incluso en colas separadas del mismo <a href="#//api/name/video">video</a>).</p>
+					</div>
+					
+					
+
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						
+
+						
+						
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/video" title="video"></a>
+	<h3 class="method-title"><code><a href="#//api/name/video">&nbsp;&nbsp;video</a></code> <span class="task-item-suffix">método requerido</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>El video cuya reproducción representa esta sesión.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (no atómico, solo lectura, copia) BCOVVideo * video</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discusión</h4>
+				<p>El video cuya reproducción representa esta sesión.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declarado en</h4>
+				<p>BCOVPlaybackSession.h<code class="declared-in-ref"></code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/source" title="source"></a>
+	<h3 class="method-title"><code><a href="#//api/name/source">&nbsp;&nbsp;fuente</a></code> <span class="task-item-suffix">método requerido</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>La fuente en <code>uno mismo.</code>video<code></code> esta sesión se utiliza para cargar contenido.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (no atómico, solo lectura, copia) BCOVSource * fuente</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discusión</h4>
+				<p>La fuente en <code>uno mismo.</code>video<code></code> esta sesión se utiliza para cargar contenido.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declarado en</h4>
+				<p>BCOVPlaybackSession.h<code class="declared-in-ref"></code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/player" title="player"></a>
+	<h3 class="method-title"><code><a href="#//api/name/player">&nbsp;&nbsp;jugador</a></code> <span class="task-item-suffix">método requerido</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>El jugador que usa esta sesión para presentar contenido.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (no atómico, solo lectura, fuerte) AVPlayer * player</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discusión</h4>
+				<p>El jugador que usa esta sesión para presentar contenido.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declarado en</h4>
+				<p>BCOVPlaybackSession.h<code class="declared-in-ref"></code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/playerLayer" title="playerLayer"></a>
+	<h3 class="method-title"><code><a href="#//api/name/playerLayer">&nbsp;&nbsp;playerLayer</a></code> <span class="task-item-suffix">método requerido</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>La capa que alberga lo visible <a href="#//api/name/video">video</a> producción.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (no atómico, de solo lectura, fuerte) AVPlayerLayer * playerLayer</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discusión</h4>
+				<p>La capa que alberga lo visible <a href="#//api/name/video">video</a> producción.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declarado en</h4>
+				<p>BCOVPlaybackSession.h<code class="declared-in-ref"></code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/audibleMediaSelectionGroup" title="audibleMediaSelectionGroup"></a>
+	<h3 class="method-title"><code><a href="#//api/name/audibleMediaSelectionGroup">&nbsp;&nbsp;audibleMediaSelectionGroup</a></code> <span class="task-item-suffix">método requerido</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>El AVMediaSelectionGroup de opciones de selección de medios audibles del AVAsset del AVPlayerItem del AVPlayer de la BCOVPlaybackSession actual.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (no atómico, solo lectura) AVMediaSelectionGroup * audibleMediaSelectionGroup</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discusión</h4>
+				<p>El AVMediaSelectionGroup de opciones de selección de medios audibles del AVAsset del AVPlayerItem del AVPlayer de la BCOVPlaybackSession actual.</p>
+
+<p>AVMediaSelectionGroup no está clasificado y puede contener opciones que no se pueden reproducir. Utilice el método + jugableMediaSelectionOptionsFromArray: class de AVMediaSeledtionGroup para devolver la lista de opciones de medios reproducibles. AVMediaSelectionGroup proporciona métodos de filtrado para, por ejemplo, ordenar la lista de opciones según las preferencias de idioma del usuario.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declarado en</h4>
+				<p>BCOVPlaybackSession.h<code class="declared-in-ref"></code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/selectedAudibleMediaOption" title="selectedAudibleMediaOption"></a>
+	<h3 class="method-title"><code><a href="#//api/name/selectedAudibleMediaOption">&nbsp;&nbsp;selectedAudibleMediaOption</a></code> <span class="task-item-suffix">método requerido</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>La opción de medios audibles seleccionada. Al establecer esta propiedad, si selectedAudibleMediaOption no es miembro del AVMediaSelectionGroup del AVPlayer de BCOVPlaybackSession actual, no se producirá ningún cambio en el estado de presentación.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (no atómico, lectura y escritura) AVMediaSelectionOption * selectedAudibleMediaOption</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discusión</h4>
+				<p>La opción de medios audibles seleccionada. Al establecer esta propiedad, si selectedAudibleMediaOption no es miembro del AVMediaSelectionGroup del AVPlayer de BCOVPlaybackSession actual, no se producirá ningún cambio en el estado de presentación.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declarado en</h4>
+				<p>BCOVPlaybackSession.h<code class="declared-in-ref"></code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/legibleMediaSelectionGroup" title="legibleMediaSelectionGroup"></a>
+	<h3 class="method-title"><code><a href="#//api/name/legibleMediaSelectionGroup">&nbsp;&nbsp;legibleMediaSelectionGroup</a></code> <span class="task-item-suffix">método requerido</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>El AVMediaSelectionGroup de opciones de selección de medios legibles del AVAsset del AVPlayerItem del AVPlayer de la BCOVPlaybackSession actual.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (no atómico, solo lectura) AVMediaSelectionGroup * legibleMediaSelectionGroup</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discusión</h4>
+				<p>El AVMediaSelectionGroup de opciones de selección de medios legibles del AVAsset del AVPlayerItem del AVPlayer de la BCOVPlaybackSession actual.</p>
+
+<p>AVMediaSelectionGroup no está clasificado y puede contener opciones que no se pueden reproducir. Utilice el método + jugableMediaSelectionOptionsFromArray: class de AVMediaSelectionGroup para devolver la lista de opciones de medios reproducibles. AVMediaSelectionOption proporciona métodos de filtrado para, por ejemplo, excluir subtítulos forzados de las opciones legibles que son adecuadas para ofrecer en una IU de selección.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declarado en</h4>
+				<p>BCOVPlaybackSession.h<code class="declared-in-ref"></code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/selectedLegibleMediaOption" title="selectedLegibleMediaOption"></a>
+	<h3 class="method-title"><code><a href="#//api/name/selectedLegibleMediaOption">&nbsp;&nbsp;selectedLegibleMediaOption</a></code> <span class="task-item-suffix">método requerido</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>La opción de medio legible seleccionada. Al establecer esta propiedad, si selectedLegibleMediaOption no es miembro del AVMediaSelectionGroup del AVPlayer de BCOVPlaybackSession actual, no se producirá ningún cambio en el estado de presentación. Si selectedLegibleMediaOption se establece en nil y la propiedad letsEmptySelecton de AVMediaSelectionGroup de la BCOVPlaybackSession actual&rsquo;s AVPlayer es SÍ, se deseleccionarán todas las opciones de selección de medios del grupo.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (no atómico, lectura y escritura) AVMediaSelectionOption * selectedLegibleMediaOption</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discusión</h4>
+				<p>La opción de medio legible seleccionada. Al establecer esta propiedad, si selectedLegibleMediaOption no es miembro del AVMediaSelectionGroup del AVPlayer de BCOVPlaybackSession actual, no se producirá ningún cambio en el estado de presentación. Si selectedLegibleMediaOption se establece en nil y la propiedad letsEmptySelecton de AVMediaSelectionGroup de la BCOVPlaybackSession actual&rsquo;s AVPlayer es SÍ, se deseleccionarán todas las opciones de selección de medios del grupo.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declarado en</h4>
+				<p>BCOVPlaybackSession.h<code class="declared-in-ref"></code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/providerExtension" title="providerExtension"></a>
+	<h3 class="method-title"><code><a href="#//api/name/providerExtension">&nbsp;&nbsp;proveedorExtensión</a></code> <span class="task-item-suffix">método requerido</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>La extensión del proveedor de sesiones para esta sesión. El valor predeterminado es nulo.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (no atómico, de solo lectura, fuerte) BCOVSessionProviderExtension * providerExtension</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discusión</h4>
+				<p>La extensión del proveedor de sesiones para esta sesión. El valor predeterminado es nulo.</p>
+
+<p>Si un <a href="../Protocols/BCOVPlaybackSessionProvider.html">BCOVPlaybackSessionProvider</a> se utiliza que necesita exponer la funcionalidad específica del complemento, esta propiedad devolverá un <a href="../Classes/BCOVSessionProviderExtension.html">BCOVSessionProviderExtension</a>.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declarado en</h4>
+				<p>BCOVPlaybackSession.h<code class="declared-in-ref"></code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/selectAudibleMediaOptionAutomatically" title="selectAudibleMediaOptionAutomatically"></a>
+	<h3 class="method-title"><code><a href="#//api/name/selectAudibleMediaOptionAutomatically">&ndash;&nbsp;selectAudibleMediaOptionAutomatically</a></code> <span class="task-item-suffix">método requerido</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Selecciona la opción de medios audibles en el grupo de selección de medios audibles que mejor coincide con el AVPlayerItem actual&rsquo;s criterios de selección automática.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (anular) selectAudibleMediaOptionAutomatically</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discusión</h4>
+				<p>Selecciona la opción de medios audibles en el grupo de selección de medios audibles que mejor coincide con el AVPlayerItem actual&rsquo;s criterios de selección automática.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declarado en</h4>
+				<p>BCOVPlaybackSession.h<code class="declared-in-ref"></code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/selectLegibleMediaOptionAutomatically" title="selectLegibleMediaOptionAutomatically"></a>
+	<h3 class="method-title"><code><a href="#//api/name/selectLegibleMediaOptionAutomatically">&ndash;&nbsp;selectLegibleMediaOptionAutomatically</a></code> <span class="task-item-suffix">método requerido</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Selecciona la opción de medios legibles en el grupo de selección de medios legibles que mejor coincide con el AVPlayerItem actual&rsquo;s criterios de selección automática.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void) selectLegibleMediaOptionAutomatically</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discusión</h4>
+				<p>Selecciona la opción de medios legibles en el grupo de selección de medios legibles que mejor coincide con el AVPlayerItem actual&rsquo;s criterios de selección automática.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declarado en</h4>
+				<p>BCOVPlaybackSession.h<code class="declared-in-ref"></code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/displayNameFromAudibleMediaSelectionOption:" title="displayNameFromAudibleMediaSelectionOption:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/displayNameFromAudibleMediaSelectionOption:">&ndash;&nbsp;displayNameFromAudibleMediaSelectionOption:</a></code> <span class="task-item-suffix">método requerido</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Devuelve una cadena de visualización descriptiva para la opción de selección audible. La cadena de nombre para mostrar es el stringValue de la opción adjunta a la opción locale si la locale difiere de stringValue.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSString *) displayNameFromAudibleMediaSelectionOption: (AVMediaSelectionOption *)<em>opción</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parámetros</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>opción</code></th>
+						<td><p>Una opción de selección de medios de audio específica de AVMediaSelectionGroup</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discusión</h4>
+				<p>Devuelve una cadena de visualización descriptiva para la opción de selección audible. La cadena de nombre para mostrar es el stringValue de la opción adjunta a la opción locale si la locale difiere de stringValue.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declarado en</h4>
+				<p>BCOVPlaybackSession.h<code class="declared-in-ref"></code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/displayNameFromLegibleMediaSelectionOption:" title="displayNameFromLegibleMediaSelectionOption:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/displayNameFromLegibleMediaSelectionOption:">&ndash;&nbsp;displayNameFromLegibleMediaSelectionOption:</a></code> <span class="task-item-suffix">método requerido</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Devuelve una cadena de visualización descriptiva para la opción de selección legible. La cadena de nombre para mostrar es el stringValue de la opción adjunta a la opción locale si la locale difiere de stringValue. Los nombres de opciones legibles se añaden además con &ldquo;SDH&rdquo; cuando las características de accesibilidad están presentes.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSString *) displayNameFromLegibleMediaSelectionOption: (AVMediaSelectionOption *)<em>opción</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parámetros</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>opción</code></th>
+						<td><p>Una opción de selección de medios legibles específica de AVMediaSelectionGroup</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discusión</h4>
+				<p>Devuelve una cadena de visualización descriptiva para la opción de selección legible. La cadena de nombre para mostrar es el stringValue de la opción adjunta a la opción locale si la locale difiere de stringValue. Los nombres de opciones legibles se añaden además con &ldquo;SDH&rdquo; cuando las características de accesibilidad están presentes.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declarado en</h4>
+				<p>BCOVPlaybackSession.h<code class="declared-in-ref"></code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/terminate" title="terminate"></a>
+	<h3 class="method-title"><code><a href="#//api/name/terminate">&ndash;&nbsp;Terminar</a></code> <span class="task-item-suffix">método requerido</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Termina esta sesión de reproducción, lo que indica que está listo para retirar una nueva sesión. Una sesión de reproducción terminada debe descartarse de inmediato.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (nulo) terminar</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discusión</h4>
+				<p>Termina esta sesión de reproducción, lo que indica que está listo para retirar una nueva sesión. Una sesión de reproducción terminada debe descartarse de inmediato.</p>
+
+<p>En una configuración típica usando un <a href="../Protocols/BCOVPlaybackController.html">BCOVPlaybackController</a> , no es necesario llamar a este método directamente. Los métodos del controlador son el mecanismo preferido para avanzar a la siguiente sesión de reproducción. Sin embargo, las configuraciones del proveedor de sesiones de reproducción que no utilizan un <a href="../Protocols/BCOVPlaybackController.html">BCOVPlaybackController</a> Es posible que deba invocar este método para avanzar en la cola.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declarado en</h4>
+				<p>BCOVPlaybackSession.h<code class="declared-in-ref"></code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+					</div>
+					
+					
+
+                    
+				</main>
+
+				<footer>
+					<div class="footer-copyright">
+						
+						<p class="copyright">Derechos de autor &copy; 2021 Brightcove. Reservados todos los derechos. Actualizado: 2021-07-08</p>
+						
+						
+						<p class="generator">Generado por <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (compilación 1334)</a>.</p>
+						
+					</div>
+				</footer>
+			</div>
+		</div>
+	</article>
+
+	<script src="../js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,1036 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Referencia de protocolo BCOVTVPlayerViewDelegate</title>
+
+	<link rel="stylesheet" href="../css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container" class="hide-in-xcode">
+			
+			<h1 id="library-title"> <a href="../index.html">Reproductor nativo de Brightcove para iOS </a> </h1>
+
+			<p id="developer-home">
+				Brightcove<a href="../index.html"></a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="../index.html">Índice</a></li>
+<li><a href="../hierarchy.html">Jerarquía</a></li>
+
+					<li id="on-this-page" role="navigation">
+						<label>
+							En esta página
+
+							<div class="chevron">
+								<div class="chevy chevron-left"></div>
+								<div class="chevy chevron-right"></div>
+							</div>
+
+							<select id="jump-to">
+	<option value="top">Salta a…</option>
+	
+	<option value="overview">Descripción general</option>
+	
+
+	
+	
+	<option value="tasks">Tareas</option>
+	
+	
+
+	
+	
+
+	
+
+	
+	<optgroup label="Instance Methods">
+		
+		<option value="//api/name/liveIndicatorViewForIsPlaying:atLiveEdge:">- liveIndicatorViewForIsPlaying: atLiveEdge:</option>
+		
+		<option value="//api/name/playerDidBeginFastForward">- playerDidBeginFastForward</option>
+		
+		<option value="//api/name/playerDidBeginFastRewind">- playerDidBeginFastRewind</option>
+		
+		<option value="//api/name/playerDidEndFastForward">- playerDidEndFastForward</option>
+		
+		<option value="//api/name/playerDidEndFastRewind">- playerDidEndFastRewind</option>
+		
+		<option value="//api/name/playerView:controlsFadingViewDidFadeIn:">- playerView: controlesFadingViewDidFadeIn:</option>
+		
+		<option value="//api/name/playerView:controlsFadingViewDidFadeOut:">- playerView: controlesFadingViewDidFadeOut:</option>
+		
+		<option value="//api/name/playerView:controlsFadingViewWillFadeIn:">- playerView: controlesFadingViewWillFadeIn:</option>
+		
+		<option value="//api/name/playerView:controlsFadingViewWillFadeOut:">- playerView: controlesFadingViewWillFadeOut:</option>
+		
+		<option value="//api/name/playerViewShouldDisplayThumbnailPreviewWithSize:">- playerViewShouldDisplayThumbnailPreviewWithSize:</option>
+		
+		<option value="//api/name/playerViewShouldRequireLinearPlayback:">- playerViewShouldRequireLinearPlayback:</option>
+		
+		<option value="//api/name/progressViewPanGestureStateBegan:">- progressViewPanGestureStateBegan:</option>
+		
+		<option value="//api/name/progressViewPanGestureStateChanged:">- progressViewPanGestureStateChanged:</option>
+		
+		<option value="//api/name/progressViewPanGestureStateEnded:">- progressViewPanGestureStateEnded:</option>
+		
+		<option value="//api/name/willDisplayIconType:withImageView:">- willDisplayIconType: withImageView:</option>
+		
+	</optgroup>
+	
+	
+</select>
+						</label>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+
+	<article>
+		<div id="overview_contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">Referencia de protocolo BCOVTVPlayerViewDelegate</h1>
+
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<th>De acuerdo a</th>
+	<td>NSObject</td>
+</tr><tr>
+	<th>Declarado en</th>
+	<td>BCOVTVPlayerView.h</td>
+</tr>
+						</tbody></table></div>
+					
+
+                    
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Descripción general</h2>
+						<p>Cumplir con este protocolo para recibir información sobre el <a href="../Classes/BCOVTVPlayerView.html">BCOVTVPlayerView</a>.</p>
+					</div>
+					
+					
+
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						
+
+						
+						
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/playerView:controlsFadingViewWillFadeOut:" title="playerView:controlsFadingViewWillFadeOut:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/playerView:controlsFadingViewWillFadeOut:">&ndash;&nbsp;playerView: controlesFadingViewWillFadeOut:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Llamado justo antes de que los controles playerView se desvanezcan.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (nulo) playerView: (BCOVTVPlayerView *)<em>playerView</em> controlesFadingViewWillFadeOut: (UIView *)<em>controlesFadingView</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parámetros</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name">playerView<code></code></th>
+						<td><p>La vista del jugador que administra los controles.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>controlesFadingView</code></th>
+						<td><p>Los controles se desvanecen en la vista que se desvanecerá.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discusión</h4>
+				<p>Llamado justo antes de que los controles playerView se desvanezcan.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declarado en</h4>
+				<p>BCOVTVPlayerView.h<code class="declared-in-ref"></code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/playerView:controlsFadingViewWillFadeIn:" title="playerView:controlsFadingViewWillFadeIn:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/playerView:controlsFadingViewWillFadeIn:">&ndash;&nbsp;playerView: controlsFadingViewWillFadeIn:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Se llama justo antes de que aparezcan los controles de playerView.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (nulo) playerView: (BCOVTVPlayerView *)<em>playerView</em> controlesFadingViewWillFadeIn: (UIView *)<em>controlesFadingView</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parámetros</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name">playerView<code></code></th>
+						<td><p>La vista del jugador que administra los controles.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>controlesFadingView</code></th>
+						<td><p>Los controles se desvanecen en la vista que se desvanecen.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discusión</h4>
+				<p>Se llama justo antes de que aparezcan los controles de playerView.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declarado en</h4>
+				<p>BCOVTVPlayerView.h<code class="declared-in-ref"></code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/playerView:controlsFadingViewDidFadeOut:" title="playerView:controlsFadingViewDidFadeOut:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/playerView:controlsFadingViewDidFadeOut:">&ndash;&nbsp;playerView: controlesFadingViewDidFadeOut:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Se llama cuando los controles playerView se han desvanecido.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (nulo) playerView: (BCOVTVPlayerView *)<em>playerView</em> controlesFadingViewDidFadeOut: (UIView *)<em>controlesFadingView</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parámetros</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name">playerView<code></code></th>
+						<td><p>La vista del jugador que administra los controles.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>controlesFadingView</code></th>
+						<td><p>Los controles se desvanecieron, la vista se desvaneció.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discusión</h4>
+				<p>Se llama cuando los controles playerView se han desvanecido.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declarado en</h4>
+				<p>BCOVTVPlayerView.h<code class="declared-in-ref"></code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/playerView:controlsFadingViewDidFadeIn:" title="playerView:controlsFadingViewDidFadeIn:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/playerView:controlsFadingViewDidFadeIn:">&ndash;&nbsp;playerView: controlsFadingViewDidFadeIn:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Se llama cuando los controles playerView se han desvanecido.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (nulo) playerView: (BCOVTVPlayerView *)<em>playerView</em> controlesFadingViewDidFadeIn: (UIView *)<em>controlesFadingView</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parámetros</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name">playerView<code></code></th>
+						<td><p>La vista del jugador que administra los controles.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>controlesFadingView</code></th>
+						<td><p>Los controles se desvanecieron en la vista que se desvaneció.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discusión</h4>
+				<p>Se llama cuando los controles playerView se han desvanecido.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declarado en</h4>
+				<p>BCOVTVPlayerView.h<code class="declared-in-ref"></code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/playerViewShouldRequireLinearPlayback:" title="playerViewShouldRequireLinearPlayback:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/playerViewShouldRequireLinearPlayback:">&ndash;&nbsp;playerViewShouldRequireLinearPlayback:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Se llama cuando el usuario intenta buscar u omitir contenido de video. Devuelva SÍ para evitar buscar y saltar. Devuelva NO para permitir la búsqueda y el salto. El comportamiento predeterminado es permitir la búsqueda. Análoga a la propiedad requireLinearPlayback de AVPlayerViewController.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BOOL) playerViewShouldRequireLinearPlayback: (BCOVTVPlayerView *)<em>playerView</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discusión</h4>
+				<p>Se llama cuando el usuario intenta buscar u omitir contenido de video. Devuelva SÍ para evitar buscar y saltar. Devuelva NO para permitir la búsqueda y el salto. El comportamiento predeterminado es permitir la búsqueda. Análoga a la propiedad requireLinearPlayback de AVPlayerViewController.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declarado en</h4>
+				<p>BCOVTVPlayerView.h<code class="declared-in-ref"></code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/playerViewShouldDisplayThumbnailPreviewWithSize:" title="playerViewShouldDisplayThumbnailPreviewWithSize:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/playerViewShouldDisplayThumbnailPreviewWithSize:">&ndash;&nbsp;playerViewShouldDisplayThumbnailPreviewWithSize:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Se llama justo antes de configurar la vista previa en miniatura.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (CGSize) playerViewShouldDisplayThumbnailPreviewWithSize: (BCOVTVPlayerView *)<em>playerView</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parámetros</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name">playerView<code></code></th>
+						<td><p>La vista del reproductor que mostrará la vista previa en miniatura.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Valor devuelto</h4>
+				<p>Se debe mostrar el ancho y alto de la miniatura.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discusión</h4>
+				<p>Se llama justo antes de configurar la vista previa en miniatura.</p>
+
+<p>Puede implementar esto para personalizar el tamaño de la vista previa en miniatura.</p>
+
+<p>Si no se implementa este método de delegado, el tamaño de la vista previa en miniatura será 1/5 del tamaño de playerView.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declarado en</h4>
+				<p>BCOVTVPlayerView.h<code class="declared-in-ref"></code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/progressViewPanGestureStateBegan:" title="progressViewPanGestureStateBegan:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/progressViewPanGestureStateBegan:">&ndash;&nbsp;progressViewPanGestureStateBegan:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Se llama cuando comienza un gesto de panorámica de progressView (buscar).</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void) progressViewPanGestureStateBegan: (NSTimeInterval)<em>progressValue</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parámetros</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name">progressValue<code></code></th>
+						<td><p>El valor de progreso representado por el gesto de panorámica, pasado como parámetro porque la propiedad de progreso del <a href="../Classes/BCOVTVProgressView.html">BCOVTVProgressView</a> no se actualiza hasta que se reanuda la reproducción.</p>
+
+<p>Este método se llama en el hilo principal y no debe bloquearse.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discusión</h4>
+				<p>Se llama cuando comienza un gesto de panorámica de progressView (buscar).</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declarado en</h4>
+				<p>BCOVTVPlayerView.h<code class="declared-in-ref"></code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/progressViewPanGestureStateChanged:" title="progressViewPanGestureStateChanged:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/progressViewPanGestureStateChanged:">&ndash;&nbsp;progressViewPanGestureStateChanged:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Se llama cuando un gesto de panorámica de progressView (búsqueda) cambia de estado (posición del cursor de reproducción).</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void) progressViewPanGestureStateChanged: (NSTimeInterval)<em>progressValue</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parámetros</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name">progressValue<code></code></th>
+						<td><p>El valor de progreso representado por el gesto de panorámica, pasado como parámetro porque la propiedad de progreso del <a href="../Classes/BCOVTVProgressView.html">BCOVTVProgressView</a> no se actualiza hasta que se reanuda la reproducción.</p>
+
+<p>Este método se llama en el hilo principal y no debe bloquearse.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discusión</h4>
+				<p>Se llama cuando un gesto de panorámica de progressView (búsqueda) cambia de estado (posición del cursor de reproducción).</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declarado en</h4>
+				<p>BCOVTVPlayerView.h<code class="declared-in-ref"></code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/progressViewPanGestureStateEnded:" title="progressViewPanGestureStateEnded:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/progressViewPanGestureStateEnded:">&ndash;&nbsp;progressViewPanGestureStateEnded:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Se llama cuando finaliza un gesto de panorámica (buscar).</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void) progressViewPanGestureStateEnded: (NSTimeInterval)<em>progressValue</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parámetros</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name">progressValue<code></code></th>
+						<td><p>El valor de progreso representado por el gesto de panorámica, pasado como parámetro porque la propiedad de progreso del <a href="../Classes/BCOVTVProgressView.html">BCOVTVProgressView</a> no se actualiza hasta que se reanuda la reproducción.</p>
+
+<p>Este método se llama en el hilo principal y no debe bloquearse.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discusión</h4>
+				<p>Se llama cuando finaliza un gesto de panorámica (buscar).</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declarado en</h4>
+				<p>BCOVTVPlayerView.h<code class="declared-in-ref"></code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/playerDidBeginFastForward" title="playerDidBeginFastForward"></a>
+	<h3 class="method-title"><code><a href="#//api/name/playerDidBeginFastForward">&ndash;&nbsp;playerDidBeginFastForward</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Se llama cuando comienza el avance rápido en el reproductor.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (vacío) playerDidBeginFastForward</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discusión</h4>
+				<p>Se llama cuando comienza el avance rápido en el reproductor.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declarado en</h4>
+				<p>BCOVTVPlayerView.h<code class="declared-in-ref"></code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/playerDidEndFastForward" title="playerDidEndFastForward"></a>
+	<h3 class="method-title"><code><a href="#//api/name/playerDidEndFastForward">&ndash;&nbsp;playerDidEndFastForward</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Se llama cuando finaliza el avance rápido en el reproductor.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (nulo) playerDidEndFastForward</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discusión</h4>
+				<p>Se llama cuando finaliza el avance rápido en el reproductor.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declarado en</h4>
+				<p>BCOVTVPlayerView.h<code class="declared-in-ref"></code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/playerDidBeginFastRewind" title="playerDidBeginFastRewind"></a>
+	<h3 class="method-title"><code><a href="#//api/name/playerDidBeginFastRewind">&ndash;&nbsp;playerDidBeginFastRewind</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Se llama cuando comienza el rebobinado rápido en el reproductor.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (vacío) playerDidBeginFastRewind</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discusión</h4>
+				<p>Se llama cuando comienza el rebobinado rápido en el reproductor.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declarado en</h4>
+				<p>BCOVTVPlayerView.h<code class="declared-in-ref"></code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/playerDidEndFastRewind" title="playerDidEndFastRewind"></a>
+	<h3 class="method-title"><code><a href="#//api/name/playerDidEndFastRewind">&ndash;&nbsp;playerDidEndFastRewind</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Se llama cuando finaliza el rebobinado rápido en el reproductor.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void) playerDidEndFastRewind</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discusión</h4>
+				<p>Se llama cuando finaliza el rebobinado rápido en el reproductor.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declarado en</h4>
+				<p>BCOVTVPlayerView.h<code class="declared-in-ref"></code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/liveIndicatorViewForIsPlaying:atLiveEdge:" title="liveIndicatorViewForIsPlaying:atLiveEdge:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/liveIndicatorViewForIsPlaying:atLiveEdge:">&ndash;&nbsp;liveIndicatorViewForIsPlaying: atLiveEdge:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Llamado durante la reproducción de video.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (UIView *) liveIndicatorViewForIsPlaying: (BOOL)<em>jugando</em> atLiveEdge: (BOOL)<em>atLiveEdge</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parámetros</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>jugando</code></th>
+						<td><p>Ya sea que el video se esté reproduciendo o no</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name">atLiveEdge<code></code></th>
+						<td><p>Ya sea que el video esté en vivo o no</p>
+
+<p>Este método se llama en el hilo principal y no debe bloquearse.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discusión</h4>
+				<p>Llamado durante la reproducción de video.</p>
+
+<p>Utilice este método de delegado opcional para proporcionar una vista personalizada que indique a los usuarios si un video está en el borde en vivo o no. Si su delegado no implementa este método, un comportamiento predeterminado de mostrar &ldquo;Vivir&rdquo; en la parte superior izquierda de la <a href="../Classes/BCOVTVPlayerView.html">BCOVTVPlayerView</a> se mostrará, con el &ldquo;L&rdquo; teñido de verde si el video está en el borde en vivo.</p>
+
+<p>La vista se agregará como una subvista dentro <a href="../Classes/BCOVTVPlayerView.html">BCOVTVPlayerView</a> y será relativo a él. Un marco con un valor de x, y de 0 se colocará en la parte superior izquierda de la vista como se esperaba. Puede colocar la vista como desee.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declarado en</h4>
+				<p>BCOVTVPlayerView.h<code class="declared-in-ref"></code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/willDisplayIconType:withImageView:" title="willDisplayIconType:withImageView:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/willDisplayIconType:withImageView:">&ndash;&nbsp;willDisplayIconType: withImageView:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Se llama antes de mostrar un icono para determinados comportamientos de la interfaz de usuario.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BOOL) willDisplayIconType: (BCOVTVIconType)<em>iconType</em> withImageView: (UIImageView *)<em>imageView</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parámetros</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name">iconType<code></code></th>
+						<td><p>El tipo de icono que debe mostrarse</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name">imageView<code></code></th>
+						<td><p>La vista de imagen en la que se mostrará el icono</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Valor devuelto</h4>
+				<p>Un booleano que indica si se debe anular el icono predeterminado.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discusión</h4>
+				<p>Se llama antes de mostrar un icono para determinados comportamientos de la interfaz de usuario.</p>
+
+<p>Estos incluyen actualmente iconos para &lsquo;Saltar atrás&rsquo; , &lsquo;saltar hacia adelante&rsquo; , &lsquo;avance rápido&rsquo; y &lsquo;rebobinar&rsquo;.</p>
+
+<p>Puede configurar su propia imagen de icono utilizando este método de delegado. También deberá configurar el marco de la imagen y tener en cuenta que su supervista es de 40x40. Puede colocar el imageView como desee&rsquo;Me gusta el interior de la supervista manteniendo una altura y un ancho máximos de 40. Regreso <code>SÍ</code> si está anulando el ícono, de lo contrario regrese <code>NO</code></p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declarado en</h4>
+				<p>BCOVTVPlayerView.h<code class="declared-in-ref"></code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+					</div>
+					
+					
+
+                    
+				</main>
+
+				<footer>
+					<div class="footer-copyright">
+						
+						<p class="copyright">Derechos de autor &copy; 2021 Brightcove. Reservados todos los derechos. Actualizado: 2021-07-08</p>
+						
+						
+						<p class="generator">Generado por <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (compilación 1334)</a>.</p>
+						
+					</div>
+				</footer>
+			</div>
+		</div>
+	</article>
+
+	<script src="../js/script.js"></script>
+</body>
+</html>

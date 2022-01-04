@@ -1,0 +1,111 @@
+---
+title: Entrega en China con la descripción de los SDK nativos
+description: En este tema, aprenderá a utilizar los SDK nativos de Brightcove para enviar videos a China desde fuera del país.
+parent: Features 
+grandparent: Home
+---
+ <h1>{{ page.title }}</h1>
+<article class="bcls-article">
+  <summary>{{ page.description }}</summary>
+
+<section class="bcls-section">
+<h2 id="Introduction">Introducción</h2>
+
+<p>Brightcove proporciona una solución para enviar video a China desde fuera del país. La solución consta de dos partes:</p>
+<ul>
+  <li>Un servidor proxy alojado en China</li>
+  <li>Una CDN conectada específica de China</li>
+</ul>
+
+<p>El proxy enruta el tráfico que no es de video (solicitudes de API de reproducción, balizas de Analytics y el propio reproductor web) hacia y desde los espectadores en China a la infraestructura de Brightcove ubicada en el exterior.</p>
+<p>El CDN está conectado al proxy y maneja el contenido de video e imagen.</p>
+</section>
+
+<section class="bcls-section">
+<h2 id="Requirements">Requisitos</h2>
+<p>Los siguientes requisitos son necesarios para la entrega en China con los SDK nativos de Brightcove:</p>
+
+<h3>Configuración</h3>
+<ul>
+  <li>
+    Existen requisitos de configuración además de configurar su reproductor
+    <p>Para obtener más detalles, consulte <a href="https://studio.support.brightcove.com/general/china-delivery-overview.html">Descripción general: Entrega de China</a></p>
+  </li>
+</ul>
+<h3>Versión del sistema operativo del dispositivo</h3>
+<ul>
+  <li>
+    <p>Android 6.0 y más reciente</p>
+     <aside class="bcls-aside bcls-aside--warning">Android 8.x puede tener problemas con las licencias de alquiler sin conexión.</aside>
+  </li>
+  <li>
+    iOS 11.0 y más reciente
+  </li>
+</ul>
+
+<h3>Versión de Brightcove SDK</h3>
+<ul>
+  <li>
+    SDK nativo para Android (próximamente)
+  </li>
+  <li>
+    SDK nativo para iOS 6.5.0 y versiones posteriores
+  </li>
+</ul>
+</section>
+
+<section class="bcls-section">
+<h2 id="Android_Implementation">Implementación de Android</h2>
+
+<p>El SDK nativo para Android compatible con China Delivery estará disponible para su lanzamiento preliminar a principios del tercer trimestre de 2021.</p>
+
+<!-- <p>To use China Delivery with the Native SDK for Android, follow these steps:</p>
+<ol class="bcls-tasklist">
+  <li>
+    <p>
+      In the <strong>build.gradle</strong> file, add the following Gradle dependency:
+    </p>
+    <pre><code class="language-java" translate="No">implementation &quot;com.brightcove.player:android-thumbnail-plugin:6.13.0&quot;</code></pre>
+  </li>
+  <li>
+    <p>
+      In the <strong>MainActivity.java</strong> file, create an instance of the <code translate="No">ThumbnailComponent</code>.
+    </p>
+    <pre><code class="language-java" translate="No">ThumbnailComponent thumbnailComponent = new ThumbnailComponent(brightcoveVideoView);</code></pre>
+  </li>
+  <li>
+    <p>
+      Setup the preview media controller.
+    </p>
+    <pre><code class="language-java" translate="No">thumbnailComponent.setupPreviewThumbnailController();</code></pre>
+  </li>
+  <li>
+    For a complete code example, see the <a href="https://github.com/BrightcoveOS/android-player-samples/tree/master/brightcove-exoplayer/ThumbnailScrubberSampleApp/src/main">ThumbnailScrubberSampleApp</a>
+  </li>
+</ol> -->
+
+</section>
+
+<section class="bcls-section">
+<h2 id="iOS_Implementation">Implementación de iOS</h2>
+<p>Para utilizar China Delivery con el SDK nativo para iOS, siga estos pasos</p>
+<ol class="bcls-tasklist-restart">
+  <li>
+    <p>La <a href="/ios/reference/sdk/Classes/BCOVGlobalConfiguration.html#//api/name/chinaProxyDomain">BCOVGlobalConfiguration</a> class le permite establecer configuraciones personalizadas para el SDK nativo para iOS.
+  </li>
+  <li>
+    <p>
+      Dentro de esta clase, establezca el <a href="/ios/reference/sdk/Classes/BCOVGlobalConfiguration.html#//api/name/chinaProxyDomain">chinaProxyDomain</a> propiedad a un nombre de dominio personalizado y totalmente calificado (FQDN) para la API de reproducción, métricas y servicios de recopilación de análisis.</p>
+<pre><code class="language-objectivec" translate="No">@property (nonatomic, nullable) NSString *chinaProxyDomain</code></pre>
+    </p>
+  </li>
+ 
+</ol>
+</section>
+
+<section class="bcls-section">
+  <h2 id="Limitations">Limitaciones</h2>
+  <p>Para obtener detalles sobre las limitaciones de esta función, consulte la <a href="https://studio.support.brightcove.com/general/china-delivery-overview.html#Limitations">Visión general: </a> Documento de entrega de China.</p>
+</section>
+
+</article>

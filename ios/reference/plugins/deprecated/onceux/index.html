@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Referencia de Brightcove Native Player para iOS</title>
+
+	<link rel="stylesheet" href="css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container" class="hide-in-xcode">
+			
+			<h1 id="library-title"> <a href="index.html">Reproductor nativo de Brightcove para iOS </a> </h1>
+
+			<p id="developer-home">
+				Brightcove<a href="index.html"></a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="hierarchy.html">Jerarquía</a></li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+
+	<article>
+		<div id="overview-contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">Referencia de Brightcove Native Player para iOS</h1>
+
+					
+					<div class="section section-overview index-overview">
+						
+						
+						<h1>Complemento Brightcove OnceUX para Brightcove Player SDK para iOS, versión 6.4.3.616</h1>
+
+<h2>Aviso de baja:</h2>
+
+<p>El complemento OnceUX está siendo reemplazado por el complemento SSAI para Brightcove Player SDK para iOS. Todas las funciones de OnceUX están disponibles en SSAI. Referirse a &ldquo;Migración de OnceUX a SSAI&rdquo; sección de este README para obtener detalles sobre cómo actualizar su aplicación.</p>
+
+<h1>Plataformas compatibles</h1>
+
+<p>iOS 10.0 y superior.</p>
+
+<p>tvOS 9.0 y superior.</p>
+
+<h1>Instalación</h1>
+
+<p>Brightcove OnceUX para Brightcove Player SDK proporciona dos paquetes de instalación para iOS, un marco de biblioteca estático y un marco dinámico.</p>
+
+<h2>CocoaPods</h2>
+
+<p>Puedes usar <a href="http://cocoapods.org">CocoaPods</a> para agregar el complemento OnceUX para Brightcove Player SDK a su proyecto. Puedes encontrar lo último <code>Brightcove-Player-OnceUX</code> podspec <a href="https://github.com/brightcove/BrightcoveSpecs/tree/master/Brightcove-Player-OnceUX">aquí</a>.</p>
+
+<p>Ejemplo de marco estático:</p>
+
+<pre><code>fuente 'https://github.com/brightcove/BrightcoveSpecs.git' pod 'Brightcove-player-onceux' </code></pre>
+
+<p>Ejemplo de marco dinámico:</p>
+
+<pre><code>fuente 'https://github.com/brightcove/BrightcoveSpecs.git' pod 'Brightcove-player-onceux/dynamic' </code></pre>
+
+<p>Al actualizar su instalación,&rsquo;Es una buena idea actualizar la copia local de su repositorio BrightcoveSpecs para que tenga las últimas podspecs localmente, al igual que actualizaría su repositorio principal de CococaPods.</p>
+
+<p>Normalmente, si usa <code>actualización de la vaina</code> en Terminal esto sucederá automáticamente, o alternativamente puede actualizar explícitamente con <code>actualización de repositorio de pod Brightcove</code>. (Su repositorio de BrightcoveSpecs puede tener un nombre diferente si lo agregó explícitamente a su lista de repositorios de podspecs).</p>
+
+<h2>Manual</h2>
+
+<p>Para agregar el complemento OUX para Brightcove Player SDK a su proyecto manualmente:</p>
+
+<ol>
+<li>Instale la última versión del <a href="https://github.com/brightcove/brightcove-player-sdk-ios">SDK de Brightcove Player</a>.</li>
+<li>Descargue la última versión en zip del complemento BrightcoveOUX de nuestra <a href="https://github.com/brightcove/brightcove-player-sdk-ios-oux/releases">página de lanzamiento</a>.</li>
+<li>Agregar <code>BrightcoveOUX.framework</code> a su proyecto.</li>
+<li>Sobre el &ldquo;Configuración de compilación&rdquo; pestaña del destino de su aplicación, asegúrese de que el &ldquo;Rutas de búsqueda del marco&rdquo; incluir la ruta al marco. Esto debería haberse hecho automáticamente a menos que el marco esté almacenado en un directorio raíz diferente al de su proyecto.</li>
+<li>(Solo marco dinámico) En el &ldquo;General&rdquo; pestaña del destino de su aplicación, agregue &lsquo;BrightcoveOUX.framework&rsquo; al &ldquo;Binarios integrados&rdquo; sección.</li>
+<li>(Solo marco dinámico) En el &ldquo;Fases de construcción&rdquo; pestaña, agregue un &ldquo;Ejecutar guión&rdquo; fase con el comando <code>bash ${BUILT_PRODUCTS_DIR}PS{FRAMEWORKS_FOLDER_PATH}/BrightcoveOUX.framework/strip-frameworks.sh</code>. Cheque &ldquo;Ejecute el script solo al instalar&rdquo;. Esto eliminará las arquitecturas innecesarias de la compilación, lo cual es importante para el envío de la App Store.</li>
+<li>(Solo marco estático) En el &ldquo;Configuración de compilación&rdquo; pestaña del destino de su aplicación, agregue <code>-ObjC</code> al &ldquo;Otras banderas del vinculador&rdquo; entorno de construcción.</li>
+</ol>
+
+
+<h2>Importaciones</h2>
+
+<p>El complemento OUX para Brightcove Player SDK para iOS se puede importar en código de diferentes formas; <code>@import BrightcoveOUX;</code> , <code>#importar &lt;BrightcoveOUX / BrightcoveOUX.h&gt;</code> o <code>#import &lt;BrightcoveOUX / [clase específica] .h&gt;</code>.</p>
+
+<h1>Inicio rápido</h1>
+
+<p>BrightcoveOUX es un complemento para <a href="https://github.com/brightcove/brightcove-player-sdk-ios">SDK de Brightcove Player para iOS</a> que proporciona soporte para la unión de anuncios del lado del servidor Brightcove OnceUX. Su uso es relativamente sencillo.</p>
+
+<pre><code>[1] BCOVOUXAdComponentDisplayContainer * displayContainer = [[BCOVOUXAdComponentDisplayContainer alloc] initWithCompanionSlots: @ []]; BCOVPlayerSDKManager * manager = [BCOVPlayerSDKManager sharedManager]; [2] id &lt;BCOVPlaybackController&gt; playbackController = [sdkManager createOUXPlaybackControllerWithViewStrategy: nil]; [3] [playbackController addSessionConsumer: displayContainer]; [4] [self.videoContainer addSubview: playbackController.view]; [5] BCOVVideo * video = [BCOVVideo videoWithURL: [NSURL URLWithString: &lt;url-to-once-ux-video&gt;]]; [6] [playbackController setVideos: @ [video]]; [reproducción del controlador de reproducción]; </code></pre>
+
+<p>Para resumir:</p>
+
+<ol>
+<li>Primero crea un <a href="Classes/BCOVOUXAdComponentDisplayContainer.html"><code>BCOVOUXAdComponentDisplayContainer</code></a>. Este objeto ayudará a administrar los espacios complementarios. Pase los espacios complementarios que tiene, si los hay.</li>
+<li>BrightcoveOUX agrega algunos métodos de categoría a <code>BCOVPlaybackManager</code>. El primero de estos es <code>-createOUXPlaybackControllerWithViewStrategy:</code>. Utilice este método para crear su controlador de reproducción. Normalmente pasarás <code>nulo</code> para la estrategia de visualización.</li>
+<li>Para que el <a href="Classes/BCOVOUXAdComponentDisplayContainer.html"><code>BCOVOUXAdComponentDisplayContainer</code></a> para mostrar información de anuncios y completar visualizaciones de anuncios complementarios, debe agregarse como consumidor de sesión.</li>
+<li>Agregar el controlador de reproducción&rsquo;s vista al contenedor de video en su propia jerarquía de vista.</li>
+<li>Crear un <code>BCOVVídeo</code> usando la URL de su video OnceUX.</li>
+<li>Cargue el video en el controlador de reproducción.</li>
+</ol>
+
+
+<p>Si tiene preguntas o necesita ayuda, visite el foro de soporte para los SDK de Brightcove Native Player en <a href="https://groups.google.com/forum/#!forum/brightcove-native-player-sdks">[https://groups.google.com/forum/](https://groups.google.com/forum/)#!forum/brightcove-native-player-sdks</a> .</p>
+
+<h1>Migración de OnceUX a SSAI</h1>
+
+<p>El marco del complemento BrightcoveSSAI está reemplazando a BrightcoveOUX. BrightcoveSSAI es compatible con todas las funciones actuales de BrightcoveOUX, sin embargo, las actualizaciones futuras solo se agregarán a BrightcoveSSAI. Siga estas instrucciones para migrar su aplicación OnceUX a Brightcove SSAI.</p>
+
+<p>1) Si instalas complementos de Brightcove usando CocoaPods, actualiza tu Podfile cambiando <code>Brightcove-player-Onceux</code> a <code>Brightcove-player-SSAI</code>, por ejemplo esto: <code> target ' MyVideoPlayer' do pod 'Brightcove-player-una vez' UX/final dinámico </code> se convierte en esto: <code> objetivo 'MyVideoPlayer' do pod 'Brightcove-player-ssai/dinámico' end </code> Si utilizas marcos estáticos, déjalo <code>apagado/dinámico</code> así: <code>pod 'Brightcove-player-SSAI'</code>. Correr <code>'actualización de pod'</code> cuando esté listo.</p>
+
+<p>Si instala los complementos de Brightcove manualmente, elimine el marco Brightcove-Player-OnceUX de su proyecto Xcode y siga los pasos anteriores para agregar manualmente el marco Brightcove-Player-SSAI.</p>
+
+<p>2) En su código fuente, para todas las declaraciones @import / #import, tipos de datos, nombres de métodos, propiedades, constantes y protocolos que hacen referencia al marco BrightcoveOUX, cambie cada aparición de &ldquo;OUX&rdquo; para &ldquo;SSAI&rdquo;. Una lista parcial está aquí:</p>
+
+<pre><code>"@import BrightcoveOUX;" ahora es "@import BrightcoveSSAI;" "CreateOUXSessionProviderWithUpstreamSessionProvider" es ahora "createSSAISessionProviderWithUpstreamSessionProvider" "createOUXPlaybackControllerWithViewStrategy" es ahora "createSSAIPlaybackControllerWithViewStrategy" "oux_seekToTime" es ahora "ssai_seekToTime" "BCOVOUXAdComponentDisplayContainer" es ahora "BCOVSSAIAdComponentDisplayContainer" "BCOVOUXCompanionSlot" es ahora "BCOVSSAICompanionSlot" </code></pre>
+
+<h1>Obtención de información sobre la reproducción de anuncios</h1>
+
+<p>BrightcoveOUX proporciona información de reproducción de anuncios a través del <code>BCOVPlaybackControllerAdsDelegate</code>. Por ejemplo, si desea ocultar sus controles durante un anuncio, puede implementar <code>[BCOVPlaybackControllerAdsDelegate playbackController: playbackSession: didEnterAdSequence:]</code> para esconderlos.</p>
+
+<p>Para obtener más información sobre cómo utilizar estos métodos delegados, consulte <a href="https://github.com/brightcove/brightcove-player-sdk-ios">SDK de Brightcove Player para iOS</a>.</p>
+
+<h1>Buscando</h1>
+
+<p>El complemento BrightcoveOUX proporciona una función de búsqueda que debe usarse al implementar controles. Esta función de búsqueda se expone en la sesión a través del <code>proveedorExtensión</code> propiedad. Así es como se usa:</p>
+
+<pre><code>CMTime contentTimeToSeekTo = &lt;calculation-from-scrub-bar&gt;; [self.currentSession.providerExtension oux_seekToTime: contentTimeToSeekTo deploymentHandler: ^ (BOOL terminado) { if (finished) { [self.currentSession.player play]; } }]; </code></pre>
+
+<p>los <code>CompletionHandler</code> se ejecutará al completar una búsqueda exitosa. No se ejecutará si una búsqueda ya fue iniciada por una llamada anterior a <code> [BCOVSessionProviderExtension oux_seekToTime: CompletionHandler:]</code> o si se está reproduciendo un anuncio. Para probar si se puede realizar un intento de búsqueda, <code> [BCOVSessionProviderExtension oux_canSeek]</code> propiedad. Para obtener más información sobre estos dos métodos, asegúrese de leer el <a href="[https://github.com/brightcove/brightcove-player-sdk-ios-oux/blob/master/ios/static/BrightcoveOUX.framework/Headers/BCOVOUXComponent.h](https://github.com/brightcove/brightcove-player-sdk-ios-oux/blob/master/ios/static/BrightcoveOUX.framework/Headers/BCOVOUXComponent.h)">headerdoc</a>.</p>
+
+<h1>Búsqueda con anuncios deshabilitados</h1>
+
+<p>BrightcovePlayerSDK proporciona una propiedad BOOL para deshabilitar anuncios durante la búsqueda. El uso previsto por OnceUX es permitir que una aplicación reanude la reproducción de video después de reiniciar sin que el usuario final vea los anuncios que&rsquo;ya he visto.</p>
+
+<p>Se recomienda que se agregue la lógica de inhabilitación de anuncios al <code>kBCOVPlaybackSessionLifecycleEventReady</code> manejador de la <code>-playbackController: playbackSession: didReceiveLifecycleEvent:</code> método de tu <code>BCOVPlaybackController</code> delegar.</p>
+
+<pre><code>- (void) playbackController: (id &lt;BCOVPlaybackController&gt;) controller playbackSession: (id &lt;BCOVPlaybackSession&gt;) sesión didReceiveLifecycleEvent: (BCOVPlaybackSessionLifecycleEvent *) lifecycleEvent { if ([kBCOVPlaybackSessionLifecycleEventReady isEqualToString:lifecycleEvent.eventType]) { // disable ads. _playbackController.adsDisabled = YES; // seek somewhere into the video content. [session.providerExtension oux_seekToTime:resumeTime completionHandler:^(BOOL finished) { // re-enable ads. _playbackController.adsDisabled = NO; // open the shutter. _playbackController.shutterFadeTime = 0.25; _playbackController.shutter = NO; }]; } </code></pre>
+
+<p>Al llamar <code>oux_seekTo: finalización:</code> para reanudar la reproducción en un momento determinado, el primer fotograma del vídeo será visible hasta que se complete la búsqueda. Para una presentación más limpia, cubra temporalmente la vista de video durante la búsqueda configurando BOOL <code>obturador</code> propiedad de BCOVPlabackController para <code>SÍ</code> antes de llamar <code>-setVideos:</code>. Cuando finalice la búsqueda, cierre el obturador configurando el <code>obturador</code> propiedad a <code>NO</code>. los <code>obturadorFadeTime</code> La propiedad define la duración de la animación de atenuación del obturador.</p>
+
+<pre><code>self.playbackController = [sdkManager createOUXPlaybackControllerWithViewStrategy: [sdkManager BCOVOUXdefaultControlsViewStrategy]]; // reanudando la reproducción, así que active el obturador antes de cargar el video. self.playbackController.shutterFadeTime = 0.0; self.playbackController.shutter = SÍ; NSArray * videos = @ [[BCOVVideo videoWithURL: [NSURL URLWithString: onceUxUrl]]]; [self.playbackController setVideos: videos]; </code></pre>
+
+<h1>Controles integrados de la interfaz de usuario del jugador</h1>
+
+<p>BrightcovePlayerSDK proporciona un conjunto integrado de controles de interfaz de usuario que se pueden usar con el complemento OnceUX tanto para la reproducción básica como para los controles de anuncios. Para usar los controles, cree un <code>BCOVPUIPlayerView</code> y asócielo con su controlador de reproducción OnceUX.</p>
+
+<p>Primero, cree una propiedad playerView en su clase.</p>
+
+<pre><code>@property (no atómico) BCOVPUIPlayerView * playerView; </code></pre>
+
+<p>Crea el <code>BCOVPUIPlayerView</code> instancia y guarde una referencia al objeto.</p>
+
+<pre><code> BCOVPUIBasicControlView * controlView = [BCOVPUIBasicControlView basicControlViewWithVODLayout]; self.playerView = [[BCOVPUIPlayerView alloc] initWithPlaybackController: ninguna opción: ninguna controlView: controlView]; // Inserte el playerView en su propia vista de video. [self.videoContainer addSubview: self.playerView]; </code></pre>
+
+<p>usted&rsquo;Necesitará configurar el diseño para la vista del jugador, puede hacerlo con Auto Layout o con el método anterior Springs &amp; Struts.</p>
+
+<p><strong>Resortes y puntales</strong></p>
+
+<p>Configure su marco para que coincida con su vista de contenedor, luego agregue la vista de jugador a la vista de contenedor en su jerarquía de vista. Tenga en cuenta que <code>videoContainer</code> es su propio objeto de vista en su aplicación&rsquo;diseño de s.</p>
+
+<pre><code> self.playerView.frame = self.videoContainer.bounds; self.playerView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth; </code></pre>
+
+<p><strong>Diseño automático</strong></p>
+
+<pre><code>self.playerView.translatesAutoresizingMaskIntoConstraints = NO; [NSLayoutConstraint activeConstraints: @ [[self.playerView.topAnchor constraintEqualToAnchor: self.videoContainer.topAnchor], [self.playerView.rightAnchor constraintEqualToAnchor: self.videoContainer.rightAnchor], [self.playerTochorView.left.Anchor constraint , [self.playerView.bottomAnchor constraintEqualToAnchor: self.videoContainer.bottomAnchor],]]; </code></pre>
+
+<p>Ahora crea el <code>BCOVPlaybackController</code> , asígnelo a su vista de reproductor y luego comience a reproducir videos.</p>
+
+<pre><code>// Inicializar ranuras complementarias BCOVOUXAdComponentDisplayContainer * displayContainer = [[BCOVOUXAdComponentDisplayContainer alloc] initWithCompanionSlots: @ []]; // Crea el controlador de reproducción BCOVPlayerSDKManager * manager = [BCOVPlayerSDKManager sharedManager]; id &lt;BCOVPlaybackController&gt; playbackController = [sdkManager createOUXPlaybackControllerWithViewStrategy: nil]; // Escuche los mensajes de anuncios de display / complementarios [playbackController addSessionConsumer: displayContainer]; // Dígale a la vista del jugador que este es el controlador de reproducción que estamos usando self.playerView.playbackController = playbackController; // Crea y reproduce tu video BCOVVideo * video = [BCOVVideo videoWithURL: [NSURL URLWithString: &lt;url-to-once-ux-video&gt;]]; [playbackController setVideos: @ [video]]; [reproducción del controlador de reproducción]; </code></pre>
+
+<p>Consulte el archivo README en BrightcovePlayerSDK para obtener más detalles sobre cómo usar y personalizar los controles de PlayerUI.</p>
+
+<h1>Acceso a los datos de respuesta de VMAP</h1>
+
+<p>Si desea acceder a los datos de respuesta de VMAP, puede suscribirse al <code>kBCOVOUXVMAPResponseReceivedNotification</code> notificación. Una vez recibida, la notificación&rsquo;El diccionario userInfo contendrá la respuesta VMAP como NSData. Puedes usar el <code>kBCOVOUXVMAPResponseReceivedNotificationDataUserInfoKey</code> constante para acceder a él desde userInfo. Dado que puede tener varios controladores de reproducción y, por lo tanto, varias respuestas VMAP, puede comprobar la notificación&rsquo;s objeto, <code>id playbackController = notification.object</code> para verificar para qué video son los datos VMAP. Además, cuando se suscribe a la notificación, puede configurar un controlador de reproducción como objeto para que solo se reciban notificaciones de datos VMAP con respecto a ese controlador de reproducción. Por ejemplo:</p>
+
+<pre><code>[[NSNotificationCenter defaultCenter] addObserver: self selector: @selector (vmapResponseReceived :) nombre: kBCOVOUXVMAPResponseReceivedNotification objeto: self.playbackController]; </code></pre>
+
+<h1>Problemas conocidos</h1>
+
+<ul>
+<li><p>No puede utilizar BrightcoveOUX con ningún otro complemento de Brightcove, excepto con el complemento BrightcoveFairPlay.</p></li>
+<li><p>Actualmente, el complemento no admite la reproducción de contenido OnceUX y contenido que no sea OnceUX en el mismo controlador de reproducción. Si necesita reproducir ambos, deberá crear un controlador de reproducción independiente para este contenido.</p></li>
+<li><p>Al reproducir contenido de OnceUX, es posible que vea un mensaje en el registro que indica &ldquo;No se encontró ninguna fuente con deliveryMethod de HLS o MP4, recurriendo a la primera fuente.&rdquo;. Este mensaje se puede ignorar y se abordará en una actualización futura.</p></li>
+<li><p>Si la solicitud del documento OnceUX VMAP no se carga, además de recibir un evento de error, es posible que vea un mensaje en el registro que indica &ldquo;No se puede -forwardInvocation: a una sesión de reproducción interna inexistente.&rdquo;. Este mensaje se puede ignorar y se abordará en una actualización futura.</p></li>
+</ul>
+
+						
+						
+					</div>
+					
+
+					<div class="index-container">
+						
+
+						
+						<div class="index-column">
+							<h2 class="index-title">Referencias de clase</h2>
+							<ul>
+								
+								<li>BCOVOUXAdComponentDisplayContainer<a href="Classes/BCOVOUXAdComponentDisplayContainer.html"></a></li>
+								
+								<li>BCOVOUXCompanionSlot<a href="Classes/BCOVOUXCompanionSlot.html"></a></li>
+								
+							</ul>
+						</div>
+						
+
+						
+						<div class="index-column">
+							
+							<h2 class="index-title">Referencias de protocolo</h2>
+							<ul>
+								
+								<li>BCOVOUXAdComponentDelegate<a href="Protocols/BCOVOUXAdComponentDelegate.html"></a></li>
+								
+							</ul>
+							
+
+							
+
+							
+							<h2 class="index-title">Referencias de categoría</h2>
+							<ul>
+								
+								<li><a href="Categories/BCOVPlayerSDKManager+BCOVOUXAdditions.html">BCOVPlayerSDKManager (BCOVOUXAdditions)</a></li>
+								
+								<li><a href="Categories/BCOVSessionProviderExtension+BCOVOUXAdditions.html">BCOVSessionProviderExtension (BCOVOUXAdditions)</a></li>
+								
+							</ul>
+							
+						</div>
+						
+					</div>
+
+					<footer>
+						<div class="footer-copyright">
+							
+							<p class="copyright">Derechos de autor &copy; 2019 Brightcove. Reservados todos los derechos. Actualizado: 2019-04-22</p>
+							
+							
+							<p class="generator">Generado por <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (compilación 1334)</a>.</p>
+							
+						</div>
+					</footer>
+				</main>
+			</div>
+		</div>
+	</article>
+
+	<script src="js/script.js"></script>
+<script src="https://learning-services-media.brightcove.com/doc-assets/js/https-fix.js"></script>
+<script src="https://learning-services-media.brightcove.com/doc-assets/js/support-feedback.js"></script><script src="https://support.brightcove.com/site-assets/js/site/feedback-docs.js"></script>
+</body>
+</html>

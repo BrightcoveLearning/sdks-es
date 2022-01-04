@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Referencia de la clase BCOVCuePointProgressPolicy</title>
+
+	<link rel="stylesheet" href="../css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container" class="hide-in-xcode">
+			
+			<h1 id="library-title"> <a href="../index.html">Reproductor nativo de Brightcove para iOS </a> </h1>
+
+			<p id="developer-home">
+				Brightcove<a href="../index.html"></a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="../index.html">Índice</a></li>
+<li><a href="../hierarchy.html">Jerarquía</a></li>
+
+					<li id="on-this-page" role="navigation">
+						<label>
+							En esta página
+
+							<div class="chevron">
+								<div class="chevy chevron-left"></div>
+								<div class="chevy chevron-right"></div>
+							</div>
+
+							<select id="jump-to">
+	<option value="top">Salta a…</option>
+	
+	<option value="overview">Descripción general</option>
+	
+
+	
+	
+	<option value="tasks">Tareas</option>
+	
+	
+
+	
+	
+	<optgroup label="Properties">
+		
+		<option value="//api/name/ignoringPreviouslyProcessedCuePoints">ignorandoPreviouslyProcessedCuePoints</option>
+		
+	</optgroup>
+	
+
+	
+	<optgroup label="Class Methods">
+		
+		<option value="//api/name/progressPolicyProcessingCuePoints:resumingPlaybackFrom:ignoringPreviouslyProcessedCuePoints:">+ progressPolicyProcessingCuePoints: resumingPlaybackFrom: ignorandoPreviouslyProcessedCuePoints:</option>
+		
+	</optgroup>
+	
+
+	
+	<optgroup label="Instance Methods">
+		
+		<option value="//api/name/applyToEvent:">- applyToEvent:</option>
+		
+	</optgroup>
+	
+	
+</select>
+						</label>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+
+	<article>
+		<div id="overview_contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">Referencia de la clase BCOVCuePointProgressPolicy</h1>
+
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<th>Hereda de</th>
+	<td>NSObject</td>
+</tr><tr>
+	<th>Declarado en</th>
+	<td>BCOVCuePointProgressPolicy.h</td>
+</tr>
+						</tbody></table></div>
+					
+
+                    
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Descripción general</h2>
+						<p>Esta política proporciona a los clientes de BCOVPlayerSDK los medios para especificar el comportamiento del código que actúa en respuesta a eventos de puntos de referencia. La aplicación más común para esto es en la creación de políticas publicitarias: la cabeza lectora llega a un punto de referencia que indica que se debe mostrar un anuncio, y el código del cliente proporciona una instancia de esta política para especificar cómo debe comportarse el reproductor con respecto a:</p>
+
+<ol>
+<li>Qué puntos de referencia deben ser procesados por el código que consulta la política.</li>
+<li>El tiempo (posición del cursor de reproducción) en el que se debe reanudar la reproducción una vez que se hayan procesado los puntos de referencia. Esto se especifica mediante uno de los puntos de referencia que se pasó a la política, o <code>nulo</code> (lo que indica que el contenido debe reanudarse desde su posición actual del cabezal de reproducción).</li>
+</ol>
+
+					</div>
+					
+					
+
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						
+
+						
+						
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/applyToEvent:" title="applyToEvent:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/applyToEvent:">&ndash;&nbsp;applyToEvent:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Devuelve un <a href="../Classes/BCOVCuePointProgressPolicyResult.html">BCOVCuePointProgressPolicyResult</a> que especifica qué puntos de referencia deben ser procesados por el código que consulta esta política, así como la posición en la que se debe reanudar la reproducción una vez que se hayan procesado todos los puntos de referencia.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BCOVCuePointProgressPolicyResult *) applyToEvent: (NSDictionary *)<em>cuePointEvent</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parámetros</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name">cuePointEvent<code></code></th>
+						<td><p>Un diccionario que contiene información de eventos de puntos de referencia, como se especifica en el <a href="../Protocols/BCOVPlaybackController.html">BCOVPlaybackController</a> método de delegado del punto de referencia.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Valor devuelto</h4>
+				<p>Un resultado de política para el evento de punto de referencia especificado.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discusión</h4>
+				<p>Devuelve un <a href="../Classes/BCOVCuePointProgressPolicyResult.html">BCOVCuePointProgressPolicyResult</a> que especifica qué puntos de referencia deben ser procesados por el código que consulta esta política, así como la posición en la que se debe reanudar la reproducción una vez que se hayan procesado todos los puntos de referencia.</p>
+
+<p>El consumidor de la política de progreso del punto de referencia llama a este método. En la mayoría de los casos, ese consumidor es un complemento publicitario de Brightcove Player SDK, no el cliente (aplicación) de Player SDK. Una política de puntos de referencia personalizados debe anular este método si no se puede producir una política utilizando un método de clase de fábrica de conveniencia.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declarado en</h4>
+				<p>BCOVCuePointProgressPolicy.h<code class="declared-in-ref"></code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/ignoringPreviouslyProcessedCuePoints" title="ignoringPreviouslyProcessedCuePoints"></a>
+	<h3 class="method-title"><code><a href="#//api/name/ignoringPreviouslyProcessedCuePoints">&nbsp;&nbsp;ignorandoPreviouslyProcessedCuePoints</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Si la política debe decirle a la persona que llama que ignore los puntos de referencia que ya se le ha indicado que procese.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (no atómico, solo lectura) BOOL ignorandoPreviouslyProcessedCuePoints</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discusión</h4>
+				<p>Si la política debe decirle a la persona que llama que ignore los puntos de referencia que ya se le ha indicado que procese.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declarado en</h4>
+				<p>BCOVCuePointProgressPolicy.h<code class="declared-in-ref"></code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/progressPolicyProcessingCuePoints:resumingPlaybackFrom:ignoringPreviouslyProcessedCuePoints:" title="progressPolicyProcessingCuePoints:resumingPlaybackFrom:ignoringPreviouslyProcessedCuePoints:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/progressPolicyProcessingCuePoints:resumingPlaybackFrom:ignoringPreviouslyProcessedCuePoints:">+&nbsp;progressPolicyProcessingCuePoints: resumingPlaybackFrom: ignorandoPreviouslyProcessedCuePoints:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Método de fábrica de conveniencia que devuelve una política de progreso del punto de referencia configurada de acuerdo con los parámetros especificados.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (tipo de instancia) progressPolicyProcessingCuePoints: (BCOVProgressPolicyCuePointsToProcess)<em>cuePointsToProcess</em> resumingPlaybackFrom: (BCOVProgressPolicyResumePosition)<em>resumePosition</em> ignorandoPreviouslyProcessedCuePoints: (BOOL)<em>ignorePrevious</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parámetros</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name">cuePointsToProcess<code></code></th>
+						<td><p>A <a href="../Constants/BCOVProgressPolicyCuePointsToProcess.html">BCOVProgressPolicyCuePointsToProcess</a> que configura la política devuelta para decirle a la persona que llama qué puntos de referencia deben procesarse, fuera de los puntos de referencia en un evento de punto de referencia determinado.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name">resumePosition<code></code></th>
+						<td><p>A <a href="../Constants/BCOVProgressPolicyResumePosition.html">BCOVProgressPolicyResumePosition</a> que configura la política devuelta para decirle a la persona que llama dónde debe reanudarse la reproducción del contenido, una vez que haya procesado todos los puntos de referencia especificados.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name">ignorePrevious<code></code></th>
+						<td><p>Si la política devuelta debe decirle a la persona que llama que ignore los puntos de referencia que ya se le ha indicado que procese.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Valor devuelto</h4>
+				<p>Una política de progreso del punto de referencia configurada con la configuración especificada.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discusión</h4>
+				<p>Método de fábrica de conveniencia que devuelve una política de progreso del punto de referencia configurada de acuerdo con los parámetros especificados.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declarado en</h4>
+				<p>BCOVCuePointProgressPolicy.h<code class="declared-in-ref"></code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+					</div>
+					
+					
+
+                    
+				</main>
+
+				<footer>
+					<div class="footer-copyright">
+						
+						<p class="copyright">Derechos de autor &copy; 2021 Brightcove. Reservados todos los derechos. Actualizado: 2021-07-08</p>
+						
+						
+						<p class="generator">Generado por <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (compilación 1334)</a>.</p>
+						
+					</div>
+				</footer>
+			</div>
+		</div>
+	</article>
+
+	<script src="../js/script.js"></script>
+</body>
+</html>

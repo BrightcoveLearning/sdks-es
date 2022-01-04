@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Referencia de categoría BCOVSessionProviderExtension (BCOVOUXAdditions)</title>
+
+	<link rel="stylesheet" href="../css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container" class="hide-in-xcode">
+			
+			<h1 id="library-title"> <a href="../index.html">Reproductor nativo de Brightcove para iOS </a> </h1>
+
+			<p id="developer-home">
+				Brightcove<a href="../index.html"></a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="../index.html">Índice</a></li>
+<li><a href="../hierarchy.html">Jerarquía</a></li>
+
+					<li id="on-this-page" role="navigation">
+						<label>
+							En esta página
+
+							<div class="chevron">
+								<div class="chevy chevron-left"></div>
+								<div class="chevy chevron-right"></div>
+							</div>
+
+							<select id="jump-to">
+	<option value="top">Salta a…</option>
+	
+	<option value="overview">Descripción general</option>
+	
+
+	
+	
+	<option value="tasks">Tareas</option>
+	
+	
+
+	
+	
+	<optgroup label="Properties">
+		
+		<option value="//api/name/)">)</option>
+		
+	</optgroup>
+	
+
+	
+
+	
+	<optgroup label="Instance Methods">
+		
+		<option value="//api/name/oux_absoluteTimeAtContentTime:">- oux_absoluteTimeAtContentTime:</option>
+		
+		<option value="//api/name/oux_contentTimeAtAbsoluteTime:">- oux_contentTimeAtAbsoluteTime:</option>
+		
+		<option value="//api/name/oux_seekToTime:completionHandler:">- oux_seekToTime: CompletionHandler:</option>
+		
+	</optgroup>
+	
+	
+</select>
+						</label>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+
+	<article>
+		<div id="overview_contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">Referencia de categoría BCOVSessionProviderExtension (BCOVOUXAdditions)</h1>
+
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<th>Declarado en</th>
+	<td>BCOVOUXComponent.h</td>
+</tr>
+						</tbody></table></div>
+					
+
+                    
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Descripción general</h2>
+						<p>Métodos específicos de OUX para el contexto del complemento.</p>
+					</div>
+					
+					
+
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						
+
+						
+						
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/)" title=")"></a>
+	<h3 class="method-title"><code><a href="#//api/name/)">&nbsp;&nbsp;)</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>El valor de esta propiedad indica si el receptor ignorará <a href="#//api/name/oux_seekToTime:completionHandler:"><code>oux_seekToTime: CompletionHandler:</code></a> o no. El valor es NO cuando hay un anuncio en curso o el receptor todavía está procesando un mensaje anterior de <a href="#//api/name/oux_seekToTime:completionHandler:"><code>oux_seekToTime: CompletionHandler:</code></a> ; de lo contrario, el valor de esta propiedad es SÍ. Ver también <a href="#//api/name/oux_seekToTime:completionHandler:"><code>oux_seekToTime: CompletionHandler:</code></a>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (no atómico, solo lectura) BOOL oux_canSeek __deprecated_msg ("Migrar a BrightcoveSSAI")</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discusión</h4>
+				<p>El valor de esta propiedad indica si el receptor ignorará <a href="#//api/name/oux_seekToTime:completionHandler:"><code>oux_seekToTime: CompletionHandler:</code></a> o no. El valor es NO cuando hay un anuncio en curso o el receptor todavía está procesando un mensaje anterior de <a href="#//api/name/oux_seekToTime:completionHandler:"><code>oux_seekToTime: CompletionHandler:</code></a> ; de lo contrario, el valor de esta propiedad es SÍ. Ver también <a href="#//api/name/oux_seekToTime:completionHandler:"><code>oux_seekToTime: CompletionHandler:</code></a>.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declarado en</h4>
+				<p>BCOVOUXComponent.h<code class="declared-in-ref"></code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/oux_seekToTime:completionHandler:" title="oux_seekToTime:completionHandler:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/oux_seekToTime:completionHandler:">&ndash;&nbsp;oux_seekToTime: CompletionHandler:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Este método implementa el comportamiento de búsqueda predeterminado para el complemento BCOVOUX. Este método debe invocarse en el hilo principal. El receptor ignorará este mensaje cuando haya un anuncio en curso o una llamada anterior a <code>oux_seekToTime: CompletionHandler:</code> todavía se está procesando. Ver también <code>oux_canSeek</code>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (anulado) oux_seekToTime: (CMTime)<em>hora</em> CompletionHandler: (void (^) (BOOL terminado))<em>CompletionHandler</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parámetros</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>hora</code></th>
+						<td><p>El momento lógico para buscar</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>CompletionHandler</code></th>
+						<td><p>El bloque a ejecutar cuando se realiza la búsqueda</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discusión</h4>
+				<p>Este método implementa el comportamiento de búsqueda predeterminado para el complemento BCOVOUX. Este método debe invocarse en el hilo principal. El receptor ignorará este mensaje cuando haya un anuncio en curso o una llamada anterior a <code>oux_seekToTime: CompletionHandler:</code> todavía se está procesando. Ver también <code>oux_canSeek</code>.</p>
+
+<p>Las reglas son las siguientes:</p>
+
+<ul>
+<li>Si busca finalizar el tiempo de contenido lógico, se reproducirán las listas de publicaciones.</li>
+<li>Si busca sobre una secuencia de anuncios, el anuncio se reproducirá y el cabezal de reproducción se reanudará donde la búsqueda había intentado realizar la búsqueda.</li>
+<li>Si busca varias secuencias de anuncios, solo se reproducirá la última secuencia de anuncios.</li>
+<li>Si busca al revés, no se reproducirán anuncios.</li>
+<li>Si busca anuncios que ya se han reproducido, volverán a reproducirse.</li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declarado en</h4>
+				<p>BCOVOUXComponent.h<code class="declared-in-ref"></code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/oux_absoluteTimeAtContentTime:" title="oux_absoluteTimeAtContentTime:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/oux_absoluteTimeAtContentTime:">&ndash;&nbsp;oux_absoluteTimeAtContentTime:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Devuelve el tiempo absoluto que corresponde al tiempo de contenido especificado.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (CMTime) oux_absoluteTimeAtContentTime: (CMTime)<em>contentTime</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parámetros</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name">contentTime<code></code></th>
+						<td><p>Un desplazamiento de tiempo en el contenido del video.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Valor devuelto</h4>
+				<p>El tiempo absoluto que corresponde al tiempo de contenido especificado.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discusión</h4>
+				<p>Devuelve el tiempo absoluto que corresponde al tiempo de contenido especificado.</p>
+
+<p>Este método se utiliza para obtener un tiempo de transmisión absoluto que corresponde a un tiempo relativo al contenido. Por ejemplo, la transmisión puede incluir una secuencia de anuncios de treinta segundos en <code>kCMTimeZero</code> , después de lo cual comienza el contenido. En este caso, un tiempo de contenido de cero correspondería a un tiempo de transmisión absoluto de treinta segundos, y un tiempo de contenido de 2:00 correspondería a un tiempo de transmisión absoluto de 2:30 (suponiendo que no se produzcan otras secuencias de anuncios antes de esa hora). .</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declarado en</h4>
+				<p>BCOVOUXComponent.h<code class="declared-in-ref"></code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/oux_contentTimeAtAbsoluteTime:" title="oux_contentTimeAtAbsoluteTime:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/oux_contentTimeAtAbsoluteTime:">&ndash;&nbsp;oux_contentTimeAtAbsoluteTime:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Devuelve el tiempo del contenido que corresponde al tiempo absoluto especificado.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (CMTime) oux_contentTimeAtAbsoluteTime: (CMTime)<em>tiempo absoluto</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parámetros</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>tiempo absoluto</code></th>
+						<td><p>Un desplazamiento de tiempo en la carga útil del video.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Valor devuelto</h4>
+				<p>El tiempo del contenido que corresponde al tiempo absoluto especificado.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discusión</h4>
+				<p>Devuelve el tiempo del contenido que corresponde al tiempo absoluto especificado.</p>
+
+<p>Este método se utiliza para obtener un tiempo de transmisión de contenido que corresponde a un tiempo relativo a la carga útil. Por ejemplo, la transmisión puede incluir una secuencia de anuncios de treinta segundos a la 1:30, después de la cual comienza el contenido.</p>
+
+<p>En este caso, un tiempo de contenido de cero correspondería a un tiempo de transmisión absoluto de cero, un tiempo de contenido de 2:00 correspondería a un tiempo de transmisión absoluto de 2:30 y un tiempo de contenido de 1:30 correspondería a cualquier tiempo de transmisión absoluto de 1:30 a 2:00.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declarado en</h4>
+				<p>BCOVOUXComponent.h<code class="declared-in-ref"></code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+					</div>
+					
+					
+
+                    
+                    
+          
+				</main>
+
+				<footer>
+					<div class="footer-copyright">
+						
+						<p class="copyright">Derechos de autor &copy; 2019 Brightcove. Reservados todos los derechos. Actualizado: 2019-04-22</p>
+						
+						
+						<p class="generator">Generado por <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (compilación 1334)</a>.</p>
+						
+					</div>
+				</footer>
+			</div>
+		</div>
+	</article>
+
+	<script src="../js/script.js"></script>
+<script src="https://learning-services-media.brightcove.com/doc-assets/js/https-fix.js"></script>
+<script src="https://learning-services-media.brightcove.com/doc-assets/js/support-feedback.js"></script><script src="https://support.brightcove.com/site-assets/js/site/feedback-docs.js"></script>
+</body>
+</html>

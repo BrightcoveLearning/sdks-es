@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Referencia de categoría de BCOVCatalogService (BCOVWidevineAdditions)</title>
+
+	<link rel="stylesheet" href="../css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container" class="hide-in-xcode">
+			
+			<h1 id="library-title"> <a href="../index.html">BCOVWidevine </a> </h1>
+
+			<p id="developer-home">
+				Brightcove<a href="../index.html"></a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="../index.html">Índice</a></li>
+<li><a href="../hierarchy.html">Jerarquía</a></li>
+
+					<li id="on-this-page" role="navigation">
+						<label>
+							En esta página
+
+							<div class="chevron">
+								<div class="chevy chevron-left"></div>
+								<div class="chevy chevron-right"></div>
+							</div>
+
+							<select id="jump-to">
+	<option value="top">Salta a…</option>
+	
+	<option value="overview">Descripción general</option>
+	
+
+	
+	
+	<option value="tasks">Tareas</option>
+	
+	
+
+	
+	
+
+	
+
+	
+	<optgroup label="Instance Methods">
+		
+		<option value="//api/name/widevinePlaylistDictionaryOperationWithPlaylistID:parameters:">- widevinePlaylistDictionaryOperationWithPlaylistID: parámetros:</option>
+		
+		<option value="//api/name/widevinePlaylistDictionaryOperationWithReferenceID:parameters:">- widevinePlaylistDictionaryOperationWithReferenceID: parámetros:</option>
+		
+		<option value="//api/name/widevinePlaylistOperationWithPlaylistID:parameters:">- widevinePlaylistOperationWithPlaylistID: parámetros:</option>
+		
+		<option value="//api/name/widevinePlaylistOperationWithReferenceID:parameters:">- widevinePlaylistOperationWithReferenceID: parámetros:</option>
+		
+		<option value="//api/name/widevineVideoDictionaryOperationWithReferenceID:parameters:">- widevineVideoDictionaryOperationWithReferenceID: parámetros:</option>
+		
+		<option value="//api/name/widevineVideoDictionaryOperationWithVideoID:parameters:">- widevineVideoDictionaryOperationWithVideoID: parámetros:</option>
+		
+		<option value="//api/name/widevineVideoOperationWithReferenceID:parameters:">- widevineVideoOperationWithReferenceID: parámetros:</option>
+		
+		<option value="//api/name/widevineVideoOperationWithVideoID:parameters:">- widevineVideoOperationWithVideoID: parámetros:</option>
+		
+	</optgroup>
+	
+	
+</select>
+						</label>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+
+	<article>
+		<div id="overview_contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">Referencia de categoría de BCOVCatalogService (BCOVWidevineAdditions)</h1>
+
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<th>Declarado en</th>
+	<td>BCOVCatalogService + BCOVWidevineAdditions.h</td>
+</tr>
+						</tbody></table></div>
+					
+
+                    
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Descripción general</h2>
+						<p>Agrega métodos a BCOVCatalogService para recuperar activos de Widevine.</p>
+					</div>
+					
+					
+
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						
+
+						
+						
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/widevinePlaylistOperationWithPlaylistID:parameters:" title="widevinePlaylistOperationWithPlaylistID:parameters:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/widevinePlaylistOperationWithPlaylistID:parameters:">&ndash;&nbsp;widevinePlaylistOperationWithPlaylistID: parámetros:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Devuelve una operación que recupera un Widevine BCOVPlaylist correspondiente a los parámetros especificados. Lanzar esta operación&rsquo;s <code>resultado</code> propiedad a un <code>BCOVPlaylist *</code> si la operación tiene éxito.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BCOVCatalogOperation *) widevinePlaylistOperationWithPlaylistID: (NSString *)<em>playlistID</em> parámetros: (NSDictionary *)<em>parámetros</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parámetros</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name">playlistID<code></code></th>
+						<td><p>El ID de la lista de reproducción de la lista de reproducción que se va a buscar.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>parámetros</code></th>
+						<td><p>Parámetros de consulta NSString adicionales para agregar a las solicitudes de servicio de catálogo. Estos valores anularán los valores predeterminados si entran en conflicto.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Valor devuelto</h4>
+				<p>Una operación que recupera el Widevine BCOVPlaylist especificado.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discusión</h4>
+				<p>Devuelve una operación que recupera un Widevine BCOVPlaylist correspondiente a los parámetros especificados. Lanzar esta operación&rsquo;s <code>resultado</code> propiedad a un <code>BCOVPlaylist *</code> si la operación tiene éxito.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declarado en</h4>
+				<p><code class="declared-in-ref">BCOVCatalogService + BCOVWidevineAdditions.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/widevinePlaylistOperationWithReferenceID:parameters:" title="widevinePlaylistOperationWithReferenceID:parameters:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/widevinePlaylistOperationWithReferenceID:parameters:">&ndash;&nbsp;widevinePlaylistOperationWithReferenceID: parámetros:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Devuelve una operación que recupera un Widevine BCOVPlaylist correspondiente a los parámetros especificados. Lanzar esta operación&rsquo;s <code>resultado</code> propiedad a un <code>BCOVPlaylist *</code> si la operación tiene éxito.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BCOVCatalogOperation *) widevinePlaylistOperationWithReferenceID: (NSString *)<em>Identificación de referencia</em> parámetros: (NSDictionary *)<em>parámetros</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parámetros</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>Identificación de referencia</code></th>
+						<td><p>El ID de referencia de la lista de reproducción de la lista de reproducción que se va a buscar.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>parámetros</code></th>
+						<td><p>Parámetros de consulta NSString adicionales para agregar a las solicitudes de servicio de catálogo. Estos valores anularán los valores predeterminados si entran en conflicto.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Valor devuelto</h4>
+				<p>Una operación que recupera el Widevine BCOVPlaylist especificado.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discusión</h4>
+				<p>Devuelve una operación que recupera un Widevine BCOVPlaylist correspondiente a los parámetros especificados. Lanzar esta operación&rsquo;s <code>resultado</code> propiedad a un <code>BCOVPlaylist *</code> si la operación tiene éxito.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declarado en</h4>
+				<p><code class="declared-in-ref">BCOVCatalogService + BCOVWidevineAdditions.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/widevineVideoOperationWithVideoID:parameters:" title="widevineVideoOperationWithVideoID:parameters:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/widevineVideoOperationWithVideoID:parameters:">&ndash;&nbsp;widevineVideoOperationWithVideoID: parámetros:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Devuelve una operación que recupera un Widevine BCOVVideo correspondiente a los parámetros especificados. Lanzar esta operación&rsquo;s <code>resultado</code> propiedad a un <code>BCOVVideo *</code> si la operación tiene éxito.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BCOVCatalogOperation *) widevineVideoOperationWithVideoID: (NSString *)<em>videoID</em> parámetros: (NSDictionary *)<em>parámetros</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parámetros</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name">videoID<code></code></th>
+						<td><p>La identificación de video del video que se va a buscar.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>parámetros</code></th>
+						<td><p>Parámetros de consulta NSString adicionales para agregar a las solicitudes de servicio de catálogo. Estos valores anularán los valores predeterminados si entran en conflicto.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Valor devuelto</h4>
+				<p>Una operación que recupera el Widevine BCOVVideo especificado.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discusión</h4>
+				<p>Devuelve una operación que recupera un Widevine BCOVVideo correspondiente a los parámetros especificados. Lanzar esta operación&rsquo;s <code>resultado</code> propiedad a un <code>BCOVVideo *</code> si la operación tiene éxito.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declarado en</h4>
+				<p><code class="declared-in-ref">BCOVCatalogService + BCOVWidevineAdditions.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/widevineVideoOperationWithReferenceID:parameters:" title="widevineVideoOperationWithReferenceID:parameters:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/widevineVideoOperationWithReferenceID:parameters:">&ndash;&nbsp;widevineVideoOperationWithReferenceID: parámetros:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Devuelve una operación que recupera un Widevine BCOVVideo correspondiente a los parámetros especificados. Lanzar esta operación&rsquo;s <code>resultado</code> propiedad a un <code>BCOVVideo *</code> si la operación tiene éxito.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BCOVCatalogOperation *) widevineVideoOperationWithReferenceID: (NSString *)<em>Identificación de referencia</em> parámetros: (NSDictionary *)<em>parámetros</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parámetros</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>Identificación de referencia</code></th>
+						<td><p>El ID de referencia de video del video que se va a buscar.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>parámetros</code></th>
+						<td><p>Parámetros de consulta NSString adicionales para agregar a las solicitudes de servicio de catálogo. Estos valores anularán los valores predeterminados si entran en conflicto.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Valor devuelto</h4>
+				<p>Una operación que recupera el Widevine BCOVVideo especificado.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discusión</h4>
+				<p>Devuelve una operación que recupera un Widevine BCOVVideo correspondiente a los parámetros especificados. Lanzar esta operación&rsquo;s <code>resultado</code> propiedad a un <code>BCOVVideo *</code> si la operación tiene éxito.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declarado en</h4>
+				<p><code class="declared-in-ref">BCOVCatalogService + BCOVWidevineAdditions.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/widevinePlaylistDictionaryOperationWithPlaylistID:parameters:" title="widevinePlaylistDictionaryOperationWithPlaylistID:parameters:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/widevinePlaylistDictionaryOperationWithPlaylistID:parameters:">&ndash;&nbsp;widevinePlaylistDictionaryOperationWithPlaylistID: parámetros:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Devuelve una operación que recupera JSON para una lista de reproducción de Widevine correspondiente a los parámetros especificados. Lanzar esta operación&rsquo;s <code>resultado</code> propiedad a un <code>NSDiccionario *</code> si la operación tiene éxito.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BCOVCatalogOperation *) widevinePlaylistDictionaryOperationWithPlaylistID: (NSString *)<em>playlistID</em> parámetros: (NSDictionary *)<em>parámetros</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parámetros</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name">playlistID<code></code></th>
+						<td><p>El ID de la lista de reproducción de la lista de reproducción que se va a buscar.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>parámetros</code></th>
+						<td><p>Parámetros de consulta NSString adicionales para agregar a las solicitudes de servicio de catálogo. Estos valores anularán los valores predeterminados si entran en conflicto.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Valor devuelto</h4>
+				<p>Una operación que recupera la lista de reproducción de Widevine especificada como JSON.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discusión</h4>
+				<p>Devuelve una operación que recupera JSON para una lista de reproducción de Widevine correspondiente a los parámetros especificados. Lanzar esta operación&rsquo;s <code>resultado</code> propiedad a un <code>NSDiccionario *</code> si la operación tiene éxito.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declarado en</h4>
+				<p><code class="declared-in-ref">BCOVCatalogService + BCOVWidevineAdditions.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/widevinePlaylistDictionaryOperationWithReferenceID:parameters:" title="widevinePlaylistDictionaryOperationWithReferenceID:parameters:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/widevinePlaylistDictionaryOperationWithReferenceID:parameters:">&ndash;&nbsp;widevinePlaylistDictionaryOperationWithReferenceID: parámetros:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Devuelve una operación que recupera JSON para una lista de reproducción de Widevine correspondiente a los parámetros especificados. Lanzar esta operación&rsquo;s <code>resultado</code> propiedad a un <code>NSDiccionario *</code> si la operación tiene éxito.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BCOVCatalogOperation *) widevinePlaylistDictionaryOperationWithReferenceID: (NSString *)<em>Identificación de referencia</em> parámetros: (NSDictionary *)<em>parámetros</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parámetros</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>Identificación de referencia</code></th>
+						<td><p>El ID de referencia de la lista de reproducción de la lista de reproducción que se va a buscar.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>parámetros</code></th>
+						<td><p>Parámetros de consulta NSString adicionales para agregar a las solicitudes de servicio de catálogo. Estos valores anularán los valores predeterminados si entran en conflicto.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Valor devuelto</h4>
+				<p>Una operación que recupera la lista de reproducción de Widevine especificada como JSON.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discusión</h4>
+				<p>Devuelve una operación que recupera JSON para una lista de reproducción de Widevine correspondiente a los parámetros especificados. Lanzar esta operación&rsquo;s <code>resultado</code> propiedad a un <code>NSDiccionario *</code> si la operación tiene éxito.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declarado en</h4>
+				<p><code class="declared-in-ref">BCOVCatalogService + BCOVWidevineAdditions.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/widevineVideoDictionaryOperationWithVideoID:parameters:" title="widevineVideoDictionaryOperationWithVideoID:parameters:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/widevineVideoDictionaryOperationWithVideoID:parameters:">&ndash;&nbsp;widevineVideoDictionaryOperationWithVideoID: parámetros:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Devuelve una operación que recupera JSON para un video de Widevine correspondiente a los parámetros especificados. Lanzar esta operación&rsquo;s <code>resultado</code> propiedad a un <code>NSDiccionario *</code> si la operación tiene éxito.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BCOVCatalogOperation *) widevineVideoDictionaryOperationWithVideoID: (NSString *)<em>videoID</em> parámetros: (NSDictionary *)<em>parámetros</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parámetros</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name">videoID<code></code></th>
+						<td><p>La identificación de video del video que se va a buscar.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>parámetros</code></th>
+						<td><p>Parámetros de consulta NSString adicionales para agregar a las solicitudes de servicio de catálogo. Estos valores anularán los valores predeterminados si entran en conflicto.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Valor devuelto</h4>
+				<p>Una operación que recupera el video de Widevine especificado como JSON.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discusión</h4>
+				<p>Devuelve una operación que recupera JSON para un video de Widevine correspondiente a los parámetros especificados. Lanzar esta operación&rsquo;s <code>resultado</code> propiedad a un <code>NSDiccionario *</code> si la operación tiene éxito.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declarado en</h4>
+				<p><code class="declared-in-ref">BCOVCatalogService + BCOVWidevineAdditions.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/widevineVideoDictionaryOperationWithReferenceID:parameters:" title="widevineVideoDictionaryOperationWithReferenceID:parameters:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/widevineVideoDictionaryOperationWithReferenceID:parameters:">&ndash;&nbsp;widevineVideoDictionaryOperationWithReferenceID: parámetros:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Devuelve una operación que recupera JSON para un video de Widevine correspondiente a los parámetros especificados. Lanzar esta operación&rsquo;s <code>resultado</code> propiedad a un <code>NSDiccionario *</code> si la operación tiene éxito.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BCOVCatalogOperation *) widevineVideoDictionaryOperationWithReferenceID: (NSString *)<em>Identificación de referencia</em> parámetros: (NSDictionary *)<em>parámetros</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parámetros</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>Identificación de referencia</code></th>
+						<td><p>El ID de referencia de video del video que se va a buscar.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>parámetros</code></th>
+						<td><p>Parámetros de consulta NSString adicionales para agregar a las solicitudes de servicio de catálogo. Estos valores anularán los valores predeterminados si entran en conflicto.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Valor devuelto</h4>
+				<p>Una operación que recupera el video de Widevine especificado como JSON.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discusión</h4>
+				<p>Devuelve una operación que recupera JSON para un video de Widevine correspondiente a los parámetros especificados. Lanzar esta operación&rsquo;s <code>resultado</code> propiedad a un <code>NSDiccionario *</code> si la operación tiene éxito.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declarado en</h4>
+				<p><code class="declared-in-ref">BCOVCatalogService + BCOVWidevineAdditions.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+					</div>
+					
+					
+
+                    
+                    
+          
+				</main>
+
+				<footer>
+					<div class="footer-copyright">
+						
+						<p class="copyright">Derechos de autor &copy; 2017 Brightcove. Reservados todos los derechos. Actualizado: 2017-01-26</p>
+						
+						
+						<p class="generator">Generado por <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (compilación 1334)</a>.</p>
+						
+					</div>
+				</footer>
+			</div>
+		</div>
+	</article>
+
+	<script src="../js/script.js"></script>
+<script src="https://learning-services-media.brightcove.com/doc-assets/js/https-fix.js"></script>
+<script src="https://learning-services-media.brightcove.com/doc-assets/js/support-feedback.js"></script><script src="https://support.brightcove.com/site-assets/js/site/feedback-docs.js"></script>
+</body>
+</html>

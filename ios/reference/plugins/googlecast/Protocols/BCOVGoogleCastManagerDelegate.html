@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>BCOVGoogleCastManagerDelegate Protocol Reference</title>
+
+	<link rel="stylesheet" href="../css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container" class="hide-in-xcode">
+			
+			<h1 id="library-title"> <a href="../index.html">Reproductor nativo de Brightcove para iOS </a> </h1>
+
+			<p id="developer-home">
+				Brightcove<a href="../index.html"></a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="../index.html">Índice</a></li>
+<li><a href="../hierarchy.html">Jerarquía</a></li>
+
+					<li id="on-this-page" role="navigation">
+						<label>
+							En esta página
+
+							<div class="chevron">
+								<div class="chevy chevron-left"></div>
+								<div class="chevy chevron-right"></div>
+							</div>
+
+							<select id="jump-to">
+	<option value="top">Salta a…</option>
+	
+	<option value="overview">Descripción general</option>
+	
+
+	
+	
+	<option value="tasks">Tareas</option>
+	
+	
+
+	
+	
+	<optgroup label="Properties">
+		
+		<option value="//api/name/playbackController">controlador de reproducción</option>
+		
+	</optgroup>
+	
+
+	
+
+	
+	<optgroup label="Instance Methods">
+		
+		<option value="//api/name/castedVideoFailedToPlay">- castedVideoFailedToPlay</option>
+		
+		<option value="//api/name/currentCastedVideoDidComplete">- currentCastedVideoDidComplete</option>
+		
+		<option value="//api/name/shouldCastVideo:">- shouldCastVideo:</option>
+		
+		<option value="//api/name/suitableSourceNotFound">- adecuadoSourceNotFound</option>
+		
+		<option value="//api/name/switchedToLocalPlayback:withError:">- SwitchedToLocalPlayback: withError:</option>
+		
+		<option value="//api/name/switchedToRemotePlayback">- SwitchedToRemotePlayback</option>
+		
+		<option value="//api/name/useSourceFromSources:">- useSourceFromSources:</option>
+		
+		<option value="//api/name/willBuildMediaInformationBuilder:">- willBuildMediaInformationBuilder:</option>
+		
+		<option value="//api/name/willSendMediaLoadOptions:">- willSendMediaLoadOptions:</option>
+		
+	</optgroup>
+	
+	
+</select>
+						</label>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+
+	<article>
+		<div id="overview_contents" class="container">
+			<div id="content">
+				<main role="main">
+					BCOVGoogleCastManagerDelegate Protocol Reference<h1 class="title"></h1>
+
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<th>De acuerdo a</th>
+	<td>NSObject</td>
+</tr><tr>
+	<th>Declarado en</th>
+	<td>BCOVGoogleCastManager.h</td>
+</tr>
+						</tbody></table></div>
+					
+
+                    
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Descripción general</h2>
+						<p>Cumplir con este protocolo para recibir información sobre el estado de la sesión de Google Cast</p>
+					</div>
+					
+					
+
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						
+
+						
+						
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/playbackController" title="playbackController"></a>
+	<h3 class="method-title"><code><a href="#//api/name/playbackController">&nbsp;&nbsp;controlador de reproducción</a></code> <span class="task-item-suffix">método requerido</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) id &lt;BCOVPlaybackController&gt; _Nullable playbackController</code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/switchedToLocalPlayback:withError:" title="switchedToLocalPlayback:withError:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/switchedToLocalPlayback:withError:">&ndash;&nbsp;SwitchedToLocalPlayback: withError:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Este método se llama cuando finaliza una sesión de transmisión.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void) SwitchedToLocalPlayback: (NSTimeInterval)<em>lastKnownStreamPosition</em> withError: (NSError que acepta valores NULL *)<em>error</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parámetros</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name">lastKnownStreamPosition<code></code></th>
+						<td><p>Un valor NSTimeInterval de la última posición conocida de la secuencia</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>error</code></th>
+						<td><p>Si recibimos un error del SDK de Google Cast, se transmitirá aquí.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discusión</h4>
+				<p>Puede usar esto para mostrar / ocultar elementos de la interfaz de usuario, o activar otros eventos, una vez que finaliza una sesión de transmisión</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declarado en</h4>
+				<p>BCOVGoogleCastManager.h<code class="declared-in-ref"></code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/switchedToRemotePlayback" title="switchedToRemotePlayback"></a>
+	<h3 class="method-title"><code><a href="#//api/name/switchedToRemotePlayback">&ndash;&nbsp;SwitchedToRemotePlayback</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Este método se llama cuando comienza una sesión de transmisión.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (anulado) conmutado a reproducción remota</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discusión</h4>
+				<p>Puede usar esto para mostrar / ocultar elementos de la interfaz de usuario, o activar otros eventos, una vez que comience una sesión de transmisión.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declarado en</h4>
+				<p>BCOVGoogleCastManager.h<code class="declared-in-ref"></code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/currentCastedVideoDidComplete" title="currentCastedVideoDidComplete"></a>
+	<h3 class="method-title"><code><a href="#//api/name/currentCastedVideoDidComplete">&ndash;&nbsp;currentCastedVideoDidComplete</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Este método se llama cuando un video de transmisión ha terminado de reproducirse.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void) currentCastedVideoDidComplete</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discusión</h4>
+				<p>Puede usar esto para mostrar / ocultar elementos de la interfaz de usuario, o activar otros eventos, una vez que un video emitido haya completado la reproducción</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declarado en</h4>
+				<p>BCOVGoogleCastManager.h<code class="declared-in-ref"></code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/castedVideoFailedToPlay" title="castedVideoFailedToPlay"></a>
+	<h3 class="method-title"><code><a href="#//api/name/castedVideoFailedToPlay">&ndash;&nbsp;castedVideoFailedToPlay</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Este método se llama cuando no se reproduce un video emitido.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void) castedVideoFailedToPlay</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discusión</h4>
+				<p>Puede usar esto para mostrar / ocultar elementos de la interfaz de usuario, o activar otros eventos, una vez que un video emitido no se reproduce</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declarado en</h4>
+				<p>BCOVGoogleCastManager.h<code class="declared-in-ref"></code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/suitableSourceNotFound" title="suitableSourceNotFound"></a>
+	<h3 class="method-title"><code><a href="#//api/name/suitableSourceNotFound">&ndash;&nbsp;adecuadoSourceNotFound</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Este método se llama cuando no se encuentra una fuente adecuada.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (vacío) adecuadoSourceNotFound</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discusión</h4>
+				<p>los <a href="../Classes/BCOVGoogleCastManager.html">BCOVGoogleCastManager</a> buscará la versión HTTPS de HLS v3, luego buscará DASH y finalmente una fuente MP4. Si no se encuentran versiones HTTPS, buscará versiones HTTP de los mismos tipos de fuente. Si no se encuentran versiones HTTP, se llamará a este método.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declarado en</h4>
+				<p>BCOVGoogleCastManager.h<code class="declared-in-ref"></code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/willBuildMediaInformationBuilder:" title="willBuildMediaInformationBuilder:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/willBuildMediaInformationBuilder:">&ndash;&nbsp;willBuildMediaInformationBuilder:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Este método se llama antes de llamar <code>construir</code> en la instancia actual de GCKMediaInformationBuilder configurado para el video actual a punto de ser transmitido. Esto le permitirá agregar valores adicionales al constructor según sea necesario. Puede utilizar este método para pasar datos personalizados al constructor en su aplicación receptora.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (vacío) willBuildMediaInformationBuilder: (GCKMediaInformationBuilder * _Nonnull)<em>constructor</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discusión</h4>
+				<p>Este método se llama antes de llamar <code>construir</code> en la instancia actual de GCKMediaInformationBuilder configurado para el video actual a punto de ser transmitido. Esto le permitirá agregar valores adicionales al constructor según sea necesario. Puede utilizar este método para pasar datos personalizados al constructor en su aplicación receptora.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declarado en</h4>
+				<p>BCOVGoogleCastManager.h<code class="declared-in-ref"></code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/willSendMediaLoadOptions:" title="willSendMediaLoadOptions:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/willSendMediaLoadOptions:">&ndash;&nbsp;willSendMediaLoadOptions:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Este método se llama invocación previa. <code>loadMedia: withOptions</code> en la sesión de reparto actual&rsquo;s remoteMediaClient.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void) willSendMediaLoadOptions: (GCKMediaLoadOptions * _Nonnull)<em>mediaLoadOptions</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discusión</h4>
+				<p>Puede utilizar este método de delegado para configurar GCKMediaLoadOptions según sea necesario antes de que se envíe al remoteMediaClient.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declarado en</h4>
+				<p>BCOVGoogleCastManager.h<code class="declared-in-ref"></code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/useSourceFromSources:" title="useSourceFromSources:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/useSourceFromSources:">&ndash;&nbsp;useSourceFromSources:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Se llama a este método cuando es necesario analizar una fuente antes de convertirla.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BCOVSource * _Nonnull) useSourceFromSources: (NSArray &lt;BCOVSource *&gt; * _Nonnull)<em>fuentes</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discusión</h4>
+				<p>Puede utilizar este método para especificar la fuente que desea utilizar con el receptor de transmisión. Si no implementa este método, <a href="../Classes/BCOVGoogleCastManager.html">BCOVGoogleCastManager</a> realizará la selección de fuente por sí solo (ver <code>suitiableSourceNotFound</code> para más información).</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declarado en</h4>
+				<p>BCOVGoogleCastManager.h<code class="declared-in-ref"></code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/shouldCastVideo:" title="shouldCastVideo:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/shouldCastVideo:">&ndash;&nbsp;shouldCastVideo:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Este método se llama después <a href="../Classes/BCOVGoogleCastManager.html">BCOVGoogleCastManager</a> ha recibido una nueva sesión de reproducción.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BOOL) shouldCastVideo: (BCOVVideo * _Nonnull)<em>video</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discusión</h4>
+				<p>Cuando <a href="../Classes/BCOVGoogleCastManager.html">BCOVGoogleCastManager</a> recibe un nuevo BCOVVideo de una sesión de reproducción, intentará compararlo con el BCOVVideo anterior, si lo hay, para evitar que la sesión de transmisión se reinicie con el mismo video. Puede usar este método para anular la verificación interna de modo que tenga control sobre si el video actual debe transmitirse o no.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declarado en</h4>
+				<p>BCOVGoogleCastManager.h<code class="declared-in-ref"></code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+					</div>
+					
+					
+
+                    
+				</main>
+
+				<footer>
+					<div class="footer-copyright">
+						
+						<p class="copyright">Derechos de autor &copy; 2021 Brightcove. Reservados todos los derechos. Actualizado: 2021-07-08</p>
+						
+						
+						<p class="generator">Generado por <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (compilación 1334)</a>.</p>
+						
+					</div>
+				</footer>
+			</div>
+		</div>
+	</article>
+
+	<script src="../js/script.js"></script>
+</body>
+</html>
